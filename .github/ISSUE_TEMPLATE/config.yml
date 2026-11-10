@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: QA reports
+    url: https://jfix1974qa.github.io/shopify-automation/
+    about: Latest execution report, test scenarios, defect summary and build history

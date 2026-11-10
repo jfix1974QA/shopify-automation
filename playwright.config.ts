@@ -50,5 +50,7 @@ export default defineConfig({
     { name: 'non-functional', testDir: './tests/non-functional', use: desktop },
     { name: 'api', testDir: './tests/api', use: desktop },
     { name: 'regression', testDir: './tests/regression', use: desktop },
+    // Claude-drafted specs (npm run generate). Run on demand; promote into a pack after review.
+    { name: 'generated', testDir: './tests/generated', use: desktop },
   ],
 });

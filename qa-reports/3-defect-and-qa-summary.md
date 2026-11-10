@@ -28,7 +28,7 @@
 | ID | Title | Severity | Priority | Area | Found by | Status |
 |---|---|---|---|---|---|---|
 | [DEF-001](#def-001) | "Sale" badge text fails WCAG 2.1 AA colour contrast (2.22:1, needs 4.5:1) | 🟡 Medium | P1 - fix before launch | Accessibility | NF-05 | Open |
-| [DEF-002](#def-002) | 7 of 13 products have an empty product description | 🟡 Medium | P2 | Content | UI-AI-04, NF-07 | Open |
+| [DEF-002](#def-002) | Most products have an empty description (9 of the 10 reviewed) | 🟡 Medium | P2 | Content | UI-AI-04, NF-07 | Open |
 | [DEF-003](#def-003) | Home page and footer show test copy and development-store sample content | 🟡 Medium | P2 - blocks go-live | Content | UI-AI-01 | Open |
 | [DEF-004](#def-004) | Meta description missing on home, collection and product pages | 🟡 Medium | P3 | SEO | NF-07 | Open |
 | [DEF-005](#def-005) | No social sharing image (og:image) on home and collection pages | ⚪ Low | P3 | SEO | NF-07 | Open |
@@ -100,7 +100,7 @@ Pages: /, /collections/all, /products/the-collection-snowboard-liquid
 
 ### DEF-002
 
-## 7 of 13 products have an empty product description
+## Most products have an empty description (9 of the 10 reviewed)
 
 | Field | Value |
 |---|---|
@@ -121,7 +121,7 @@ Pages: /, /collections/all, /products/the-collection-snowboard-liquid
 
 **Expected result:** Every product has a customer-facing description explaining what it is, its key features and specifications.
 
-**Actual result:** The description is empty on 7 products: the-collection-snowboard-liquid, the-collection-snowboard-oxygen, the-collection-snowboard-hydrogen, the-multi-location-snowboard, the-multi-managed-snowboard, the-3p-fulfilled-snowboard, selling-plans-ski-wax. The product page shows no description at all.
+**Actual result:** Claude's copy review (UI-AI-04) checked the first 10 products in the catalogue and found the description empty on 9: the-collection-snowboard-liquid, the-collection-snowboard-oxygen, the-collection-snowboard-hydrogen, the-multi-location-snowboard, the-multi-managed-snowboard, the-3p-fulfilled-snowboard, selling-plans-ski-wax, the-videographer-snowboard, the-compare-at-price-snowboard. The product page shows no description at all.
 
 **Evidence**
 
@@ -130,7 +130,7 @@ Pages: /, /collections/all, /products/the-collection-snowboard-liquid
 *Product page for The Collection Snowboard: Liquid during test FN-01: no description between the buy buttons and pickup info*
 
 
-*Claude copy review (UI-AI-04), high-severity findings*
+*Claude copy review (UI-AI-04, CI build #3), high-severity findings*
 
 ```
 the-collection-snowboard-liquid: Product description is empty.
@@ -140,6 +140,8 @@ the-multi-location-snowboard: Product description is empty.
 the-multi-managed-snowboard: Product description is empty.
 the-3p-fulfilled-snowboard: Product description is empty.
 selling-plans-ski-wax: Product description is empty.
+the-videographer-snowboard: Product description is empty.
+the-compare-at-price-snowboard: Product description is empty.
 ```
 
 
@@ -150,7 +152,7 @@ selling-plans-ski-wax: Product description is empty.
 **Recommendation:** Write a description for each affected product (aim for at least 50 words, including key features, materials and sizing). Add a content-readiness check to the launch checklist, and keep UI-AI-04 in the regression suite so new products without descriptions are caught automatically.
 
 **Acceptance criteria for closure**
-- [ ] All 13 products have a non-empty, customer-facing description.
+- [ ] Every product has a non-empty, customer-facing description.
 - [ ] UI-AI-04 passes with no high-severity findings.
 - [ ] Each product page renders a meta description (NF-07).
 

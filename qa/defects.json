@@ -46,7 +46,7 @@
     },
     {
       "id": "DEF-002",
-      "title": "7 of 13 products have an empty product description",
+      "title": "Most products have an empty description (9 of the 10 reviewed)",
       "severity": "Medium",
       "priority": "P2",
       "status": "Open",
@@ -63,22 +63,22 @@
         "Repeat for the other affected products listed in the evidence."
       ],
       "expected": "Every product has a customer-facing description explaining what it is, its key features and specifications.",
-      "actual": "The description is empty on 7 products: the-collection-snowboard-liquid, the-collection-snowboard-oxygen, the-collection-snowboard-hydrogen, the-multi-location-snowboard, the-multi-managed-snowboard, the-3p-fulfilled-snowboard, selling-plans-ski-wax. The product page shows no description at all.",
+      "actual": "Claude's copy review (UI-AI-04) checked the first 10 products in the catalogue and found the description empty on 9: the-collection-snowboard-liquid, the-collection-snowboard-oxygen, the-collection-snowboard-hydrogen, the-multi-location-snowboard, the-multi-managed-snowboard, the-3p-fulfilled-snowboard, selling-plans-ski-wax, the-videographer-snowboard, the-compare-at-price-snowboard. The product page shows no description at all.",
       "evidence": [
         {
           "caption": "Product page for The Collection Snowboard: Liquid during test FN-01: no description between the buy buttons and pickup info",
           "fromTest": "FN-01@functional"
         },
         {
-          "caption": "Claude copy review (UI-AI-04), high-severity findings",
-          "text": "the-collection-snowboard-liquid: Product description is empty.\nthe-collection-snowboard-oxygen: Product description is empty.\nthe-collection-snowboard-hydrogen: Product description is empty.\nthe-multi-location-snowboard: Product description is empty.\nthe-multi-managed-snowboard: Product description is empty.\nthe-3p-fulfilled-snowboard: Product description is empty.\nselling-plans-ski-wax: Product description is empty."
+          "caption": "Claude copy review (UI-AI-04, CI build #3), high-severity findings",
+          "text": "the-collection-snowboard-liquid: Product description is empty.\nthe-collection-snowboard-oxygen: Product description is empty.\nthe-collection-snowboard-hydrogen: Product description is empty.\nthe-multi-location-snowboard: Product description is empty.\nthe-multi-managed-snowboard: Product description is empty.\nthe-3p-fulfilled-snowboard: Product description is empty.\nselling-plans-ski-wax: Product description is empty.\nthe-videographer-snowboard: Product description is empty.\nthe-compare-at-price-snowboard: Product description is empty."
         }
       ],
       "impact": "Shoppers cannot see what they are buying, which lowers conversion and raises returns and support questions. Search engines get no product text, and the product page has no meta description because Shopify builds it from the description (see DEF-004). Several affected products are among the most expensive ($749.95 to $2,629.95).",
       "rootCause": "These products came from Shopify's development-store sample data generator, which creates products without descriptions. No content review was done before testing.",
       "recommendation": "Write a description for each affected product (aim for at least 50 words, including key features, materials and sizing). Add a content-readiness check to the launch checklist, and keep UI-AI-04 in the regression suite so new products without descriptions are caught automatically.",
       "acceptanceCriteria": [
-        "All 13 products have a non-empty, customer-facing description.",
+        "Every product has a non-empty, customer-facing description.",
         "UI-AI-04 passes with no high-severity findings.",
         "Each product page renders a meta description (NF-07)."
       ]

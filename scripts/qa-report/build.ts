@@ -56,7 +56,18 @@ const defectsDoc = fs.existsSync(defectsFile) ? JSON.parse(fs.readFileSync(defec
 const defects: Defect[] = defectsDoc.defects ?? [];
 const notes: QaNotes = defectsDoc.notes ?? {};
 
-fs.rmSync(OUT, { recursive: true, force: true });
+// Clear previous report output, but keep what build-history.ts owns (build history page, its charts, badges).
+const KEEP = /^(build-history.(md|html)|badges)$|^build-(results|pass-rate).svg$/;
+if (fs.existsSync(OUT)) {
+  for (const entry of fs.readdirSync(OUT)) {
+    if (KEEP.test(entry)) continue;
+    if (entry === 'charts') {
+      for (const c of fs.readdirSync(path.join(OUT, 'charts'))) if (!KEEP.test(c)) fs.rmSync(path.join(OUT, 'charts', c));
+      continue;
+    }
+    fs.rmSync(path.join(OUT, entry), { recursive: true, force: true });
+  }
+}
 for (const d of ['charts', 'evidence']) fs.mkdirSync(path.join(OUT, d), { recursive: true });
 
 // ---------- blocked results ----------
@@ -629,6 +640,7 @@ Generated from the automated test run on **${runDate}**.
 | 1. Automation execution report | Test execution, pass/fail statistics by pack and priority, requirement coverage | [view](1-automation-execution-report.md) | [html](1-automation-execution-report.html) |
 | 2. Test scripts and scenarios | ${caseIds.length} test cases: steps, expected results, executed steps, actual results, screenshots | [view](2-test-scripts-and-scenarios.md) | [html](2-test-scripts-and-scenarios.html) |
 | 3. Defect and QA summary | ${defects.length} defects with severity, evidence, root cause, recommendations; quality gates and verdict | [view](3-defect-and-qa-summary.md) | [html](3-defect-and-qa-summary.html) |
+| Build history | Results of every CI build, with trend charts | [view](build-history.md) | [html](build-history.html) |
 
 **Headline:** ${t.passed} passed, ${t.failed} failed, ${t.flaky} flaky, ${t.skipped} skipped of ${t.total} executions (${passRate}% pass rate) · ${defects.length} defects · QA verdict: **${verdict}**.
 
@@ -641,6 +653,7 @@ Rebuild after a test run with \`npm run qa-reports\`.
 <div class="card"><h3><a href="1-automation-execution-report.html">1. Automation execution report</a></h3><p>Execution, pass/fail statistics by pack and priority, requirement coverage.</p></div>
 <div class="card"><h3><a href="2-test-scripts-and-scenarios.html">2. Test scripts and scenarios</a></h3><p>${caseIds.length} test cases with steps, expected results, executed steps, actual results and screenshots.</p></div>
 <div class="card"><h3><a href="3-defect-and-qa-summary.html">3. Defect and QA summary</a></h3><p>${defects.length} defects with severity, evidence, root cause and recommendations; quality gates and release verdict.</p></div>
+<div class="card"><h3><a href="build-history.html">Build history</a></h3><p>Results of every CI build, with trend charts.</p></div>
 `, NAV_HTML));
 }
 

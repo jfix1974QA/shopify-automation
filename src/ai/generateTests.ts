@@ -47,9 +47,21 @@ async function main() {
 
   if (!fs.existsSync(STORAGE_STATE)) await globalSetup();
   const browser = await chromium.launch();
-  const context = await browser.newContext({ baseURL: config.storeUrl, storageState: STORAGE_STATE });
-  const page = await context.newPage();
+  let context = await browser.newContext({ baseURL: config.storeUrl, storageState: STORAGE_STATE });
+  let page = await context.newPage();
   await page.goto(target, { waitUntil: 'networkidle' }).catch(() => page.goto(target));
+  if (new URL(page.url()).pathname.startsWith('/password')) {
+    // Saved session expired: log in again, then reopen the page.
+    await context.close();
+    await globalSetup();
+    context = await browser.newContext({ baseURL: config.storeUrl, storageState: STORAGE_STATE });
+    page = await context.newPage();
+    await page.goto(target, { waitUntil: 'networkidle' }).catch(() => page.goto(target));
+  }
+  if (/just a moment|verifying your connection|verify you are human/i.test(await page.title())) {
+    console.error('The store is showing a bot-protection challenge to this machine. Try again later.');
+    process.exit(1);
+  }
 
   const screenshot = (await page.screenshot({ fullPage: false })).toString('base64');
   const snapshot = await interactiveSnapshot(page);

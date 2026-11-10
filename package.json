@@ -20,7 +20,9 @@
     "generate": "tsx src/ai/generateTests.ts",
     "typecheck": "tsc --noEmit",
     "test:edge": "playwright test --grep @edge",
-    "qa-reports": "tsx scripts/qa-report/build.ts"
+    "qa-reports": "tsx scripts/qa-report/build.ts",
+    "build-history": "tsx scripts/qa-report/build-history.ts",
+    "test:generated": "playwright test --project=generated"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.14.0",

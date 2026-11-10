@@ -1,0 +1,78 @@
+name: Defect report
+description: Report a defect found in the storefront (manual or automated testing)
+title: "DEF-XXX: "
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: "Critical: blocks purchasing or exposes data · High: breaks a key journey · Medium: degrades a feature, workaround exists · Low: cosmetic, SEO or minor"
+      options: [Critical, High, Medium, Low]
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options: [Storefront UI, Product, Cart, Checkout, Search, API, Accessibility, Performance, SEO, Security, Content, Other]
+    validations:
+      required: true
+  - type: input
+    id: found-by
+    attributes:
+      label: Found by
+      description: Test case ID(s), or "manual"
+      placeholder: "e.g. NF-05, UI-AI-01"
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Store URL, browser and device, theme, build or commit
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Screenshots, trace links, console or tool output
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+  - type: textarea
+    id: root-cause
+    attributes:
+      label: Root cause (if known)
+  - type: textarea
+    id: recommendation
+    attributes:
+      label: Recommendation
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria for closure
+      value: |
+        - [ ]
