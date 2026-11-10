@@ -3,6 +3,13 @@
 Automated test packs for **james-qa-shop.myshopify.com**, built on Playwright + TypeScript,
 with Claude features on top, HTML reporting, automatic bug drafts and a GitHub Actions pipeline.
 
+**Live QA reports:** https://jfix1974qa.github.io/shopify-automation/
+· [Execution report](https://jfix1974qa.github.io/shopify-automation/qa-reports/1-automation-execution-report.html)
+· [Test scenarios](https://jfix1974qa.github.io/shopify-automation/qa-reports/2-test-scripts-and-scenarios.html)
+· [Defects & QA summary](https://jfix1974qa.github.io/shopify-automation/qa-reports/3-defect-and-qa-summary.html)
+· [Defects raised](https://github.com/jfix1974QA/shopify-automation/issues?q=label%3Abug)
+· [CI runs](https://github.com/jfix1974QA/shopify-automation/actions)
+
 ## Test packs
 
 | Pack | Project(s) | Tests | What it covers |
