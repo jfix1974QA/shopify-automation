@@ -55,6 +55,8 @@ export default class SummaryReporter implements Reporter {
   }
 
   private merge = process.env.SUMMARY_MERGE === '1';
+  private firstStart = Infinity;
+  private lastEnd = 0;
   private runTag = Date.now().toString(36);
 
   onTestEnd(test: TestCase, result: TestResult) {
@@ -63,6 +65,10 @@ export default class SummaryReporter implements Reporter {
     const idMatch = test.title.match(/^([A-Z]+(?:-[A-Z]+)?-\d+):\s*(.*)$/);
     const outcome = test.outcome();
     const failed = result.status === 'failed' || result.status === 'timedOut';
+    // Wall-clock span of the tests themselves (correct even when CI merges shard reports later).
+    const start = result.startTime.getTime();
+    this.firstStart = Math.min(this.firstStart, start);
+    this.lastEnd = Math.max(this.lastEnd, start + result.duration);
     // Copy evidence into reports/assets so the summary works wherever the folder is moved
     // (CI artifacts, merged shard reports). Traces and videos are copied for failures only to keep it small;
     // every test's trace is still in the full HTML report.
@@ -83,7 +89,9 @@ export default class SummaryReporter implements Reporter {
       durationMs: result.duration,
       retries: result.retry,
       error:
-        result.errors.map((e) => stripAnsi(e.message ?? String(e.value ?? ''))).join('\n\n') ||
+        ((failed && [...test.annotations, ...result.annotations].find((a) => a.type === 'blocked')
+          ? `Blocked by Shopify bot protection: ${[...test.annotations, ...result.annotations].find((a) => a.type === 'blocked')!.description}\n\nOriginal error: `
+          : '') + result.errors.map((e) => stripAnsi(e.message ?? String(e.value ?? ''))).join('\n\n')) ||
         (result.status === 'skipped' ? [...test.annotations, ...result.annotations].find((a) => a.type === 'skip')?.description : undefined) ||
         undefined,
       notes: [...test.annotations, ...result.annotations].filter((a) => a.type === 'warning' || a.type === 'observation').map((a) => a.description ?? ''),
@@ -110,11 +118,12 @@ export default class SummaryReporter implements Reporter {
       startedAt = Date.parse(prev.env.date) - prev.env.durationMs || startedAt;
       console.log(`Merged with previous summary: kept ${kept.length} earlier results, replaced/added ${rerun.size}`);
     }
-    const mergedDuration = this.merge ? all.reduce((s, r) => s + r.durationMs, 0) : Date.now() - startedAt;
+    const span = this.lastEnd > this.firstStart ? this.lastEnd - this.firstStart : Date.now() - startedAt;
+    const mergedDuration = this.merge ? all.reduce((s, r) => s + r.durationMs, 0) : span;
     const rows = all.sort((a, b) => a.pack.localeCompare(b.pack) || a.id.localeCompare(b.id, undefined, { numeric: true }));
     const env = {
       store: String(this.config.projects[0]?.use?.baseURL ?? process.env.STORE_URL ?? ''),
-      date: new Date().toISOString(),
+      date: new Date(Number.isFinite(this.firstStart) ? this.firstStart : Date.now()).toISOString(),
       durationMs: mergedDuration,
       os: `${os.type()} ${os.release()}`,
       node: process.version,

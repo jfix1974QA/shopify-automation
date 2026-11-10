@@ -1,4 +1,4 @@
-import { test, expect } from '../../src/fixtures';
+import { test, expect, waitOutBotChallenge } from '../../src/fixtures';
 import {
   addToCart,
   findAvailableProduct,
@@ -141,6 +141,8 @@ test.describe('Functional: browse and search', () => {
     const input = await home.openSearch();
     await input.fill(product.title);
     await input.press('Enter');
+    await page.waitForLoadState('domcontentloaded');
+    await waitOutBotChallenge(page);
     await expect(page).toHaveURL(/\/search\?.*q=/);
     await expect(page.locator(`main a[href*="/products/${product.handle}"]`).filter({ visible: true }).first()).toBeVisible();
   });

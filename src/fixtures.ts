@@ -62,6 +62,12 @@ export const test = base.extend<Fixtures>({
       return response;
     }) as Page['goto'];
     await use(page);
+    // A failure that happened while a challenge page was showing (e.g. after a form submit or click)
+    // is an environment block, not a store result. Mark it so reports classify it as Blocked.
+    const info = test.info();
+    if (info.status !== info.expectedStatus && (await onBotChallenge(page).catch(() => false))) {
+      info.annotations.push({ type: 'blocked', description: `Shopify bot protection challenge was showing on ${page.url()} when the test failed.` });
+    }
   },
   home: async ({ page }, use) => use(new HomePage(page)),
   productPage: async ({ page }, use) => use(new ProductPage(page)),

@@ -1,4 +1,4 @@
-import { test, expect } from '../../src/fixtures';
+import { test, expect, waitOutBotChallenge } from '../../src/fixtures';
 import { findAvailableProduct, getCart } from '../../src/utils/storefront';
 
 /**
@@ -53,6 +53,8 @@ test.describe('Regression: critical journeys', () => {
     const input = await home.openSearch();
     await input.fill(product.title);
     await input.press('Enter');
+    await page.waitForLoadState('domcontentloaded');
+    await waitOutBotChallenge(page);
     await page.locator(`main a[href*="/products/${product.handle}"]`).filter({ visible: true }).first().click();
     await expect(page).toHaveURL(new RegExp(`/products/${product.handle}`));
     await productPage.addToCart();
