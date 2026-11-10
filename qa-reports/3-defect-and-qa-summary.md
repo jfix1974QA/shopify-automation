@@ -2,22 +2,22 @@
 
 [Index](README.md) · [1. Execution report](1-automation-execution-report.md) · [2. Test scripts & scenarios](2-test-scripts-and-scenarios.md) · [3. Defect & QA summary](3-defect-and-qa-summary.md)
 
-**Store:** https://james-qa-shop.myshopify.com · **Run:** 2026-11-10 13:56 UTC · **Defects raised:** 6 · **Quality gates met:** 2/8
+**Store:** https://james-qa-shop.myshopify.com · **Run:** 2026-11-10 14:00 UTC · **Defects raised:** 6 · **Quality gates met:** 3/8
 
-## QA verdict: Not ready for release
+## QA verdict: Not yet verified
 
 ![quality-gates](charts/quality-gates.svg)
 
 | Quality gate | Actual | Status |
 |---|---|---|
-| Overall pass rate ≥ 95% | 91.4% | ❌ Not met |
-| All P1 (high-priority) tests pass | 14/24 verified passing | ❌ Not met |
-| All planned tests executed (none blocked) | 24 blocked | ❌ Not met |
+| Overall pass rate ≥ 95% | 89.1% | ❌ Not met |
+| All P1 (high-priority) tests pass | 13/24 verified passing | ❌ Not met |
+| All planned tests executed (none blocked) | 27 blocked | ❌ Not met |
 | No open Critical or High defects | 0 open | ✅ Met |
 | No serious/critical accessibility violations | Failed | ❌ Not met |
 | Performance budgets met | 3/3 pages | ✅ Met |
 | Security checks pass | 4/5 | ❌ Not met |
-| No flaky tests | 2 | ❌ Not met |
+| No flaky tests | 0 | ✅ Met |
 
 ## Defects at a glance
 
@@ -52,7 +52,7 @@ Severity scale: **Critical** blocks purchasing or exposes data · **High** break
 | Area | Accessibility |
 | Found by | `NF-05` |
 | Environment | james-qa-shop.myshopify.com, Dawn theme; Chromium (desktop) with axe-core 4.x; reproduced on home, /collections/all and product pages |
-| Reported | 2026-11-10 13:56 UTC |
+| Reported | 2026-11-10 14:00 UTC |
 
 **Preconditions:** At least one product on sale (compare-at price set), e.g. The Collection Snowboard: Liquid.
 
@@ -112,7 +112,7 @@ Pages: /, /collections/all, /products/the-collection-snowboard-liquid
 | Area | Content |
 | Found by | `UI-AI-04`, `NF-07` |
 | Environment | james-qa-shop.myshopify.com catalogue (13 products) as served by the storefront on the test date |
-| Reported | 2026-11-10 13:56 UTC |
+| Reported | 2026-11-10 14:00 UTC |
 
 **Steps to reproduce**
 1. Open https://james-qa-shop.myshopify.com/products/the-collection-snowboard-liquid.
@@ -170,7 +170,7 @@ selling-plans-ski-wax: Product description is empty.
 | Area | Content |
 | Found by | `UI-AI-01` |
 | Environment | james-qa-shop.myshopify.com home page; desktop Chrome and iPhone 14 (WebKit) |
-| Reported | 2026-11-10 13:56 UTC |
+| Reported | 2026-11-10 14:00 UTC |
 
 **Steps to reproduce**
 1. Open https://james-qa-shop.myshopify.com/.
@@ -229,7 +229,7 @@ The image-with-text section uses a mismatched heading, 'Stay hydrated', for a sk
 | Area | SEO |
 | Found by | `NF-07` |
 | Environment | james-qa-shop.myshopify.com; page HTML <head> on the test date |
-| Reported | 2026-11-10 13:56 UTC |
+| Reported | 2026-11-10 14:00 UTC |
 
 **Steps to reproduce**
 1. Open https://james-qa-shop.myshopify.com/ and view the page source (Ctrl+U).
@@ -279,7 +279,7 @@ The image-with-text section uses a mismatched heading, 'Stay hydrated', for a sk
 | Area | SEO |
 | Found by | `NF-07` |
 | Environment | james-qa-shop.myshopify.com; page HTML <head> on the test date |
-| Reported | 2026-11-10 13:56 UTC |
+| Reported | 2026-11-10 14:00 UTC |
 
 **Steps to reproduce**
 1. Open https://james-qa-shop.myshopify.com/ and view the page source.
@@ -326,7 +326,7 @@ The image-with-text section uses a mismatched heading, 'Stay hydrated', for a sk
 | Area | Security |
 | Found by | `NF-11` |
 | Environment | james-qa-shop.myshopify.com; Chromium; cookie set after adding an item to the cart |
-| Reported | 2026-11-10 13:56 UTC |
+| Reported | 2026-11-10 14:00 UTC |
 
 **Steps to reproduce**
 1. Open https://james-qa-shop.myshopify.com/ in Chrome and open DevTools > Application > Cookies.

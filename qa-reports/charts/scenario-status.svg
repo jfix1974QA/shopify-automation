@@ -9,18 +9,18 @@
   --seq-0:#2a2a28; --seq-1:#0d366b; --seq-2:#184f95; --seq-3:#256abf; --seq-4:#3987e5; --seq-5:#86b6ef;}}</style>
 <title>Test case outcomes</title>
 <rect width="460" height="220" rx="8" fill="var(--surface)"/>
-<path d="M 110.00,30.00 A 80 80 0 1 1 81.28,184.67 L 90.61,160.40 A 54 54 0 1 0 110.00,56.00 Z" fill="var(--good)" stroke="var(--surface)" stroke-width="2" fill-rule="evenodd"><title>Passed: 43 (56%)</title></path><path d="M 81.28,184.67 A 80 80 0 0 1 54.01,167.14 L 72.21,148.57 A 54 54 0 0 0 90.61,160.40 Z" fill="var(--critical)" stroke="var(--surface)" stroke-width="2" fill-rule="evenodd"><title>Failed: 5 (6%)</title></path><path d="M 54.01,167.14 A 80 80 0 0 1 78.26,36.57 L 88.57,60.43 A 54 54 0 0 0 72.21,148.57 Z" fill="var(--serious)" stroke="var(--surface)" stroke-width="2" fill-rule="evenodd"><title>Blocked: 24 (31%)</title></path><path d="M 78.26,36.57 A 80 80 0 0 1 84.35,34.22 L 92.69,58.85 A 54 54 0 0 0 88.57,60.43 Z" fill="var(--warning)" stroke="var(--surface)" stroke-width="2" fill-rule="evenodd"><title>Flaky: 1 (1%)</title></path><path d="M 84.35,34.22 A 80 80 0 0 1 110.00,30.00 L 110.00,56.00 A 54 54 0 0 0 92.69,58.85 Z" fill="var(--neutral)" stroke="var(--surface)" stroke-width="2" fill-rule="evenodd"><title>Skipped: 4 (5%)</title></path>
+<path d="M 110.00,30.00 A 80 80 0 1 1 93.79,188.34 L 99.06,162.88 A 54 54 0 1 0 110.00,56.00 Z" fill="var(--good)" stroke="var(--surface)" stroke-width="2" fill-rule="evenodd"><title>Passed: 41 (53%)</title></path><path d="M 93.79,188.34 A 80 80 0 0 1 64.04,175.48 L 78.98,154.20 A 54 54 0 0 0 99.06,162.88 Z" fill="var(--critical)" stroke="var(--surface)" stroke-width="2" fill-rule="evenodd"><title>Failed: 5 (6%)</title></path><path d="M 64.04,175.48 A 80 80 0 0 1 84.35,34.22 L 92.69,58.85 A 54 54 0 0 0 78.98,154.20 Z" fill="var(--serious)" stroke="var(--surface)" stroke-width="2" fill-rule="evenodd"><title>Blocked: 27 (35%)</title></path><path d="M 84.35,34.22 A 80 80 0 0 1 110.00,30.00 L 110.00,56.00 A 54 54 0 0 0 92.69,58.85 Z" fill="var(--neutral)" stroke="var(--surface)" stroke-width="2" fill-rule="evenodd"><title>Skipped: 4 (5%)</title></path>
 <text x="110" y="112" text-anchor="middle" font-size="26" font-weight="700" fill="var(--ink)">77</text>
 <text x="110" y="132" text-anchor="middle" font-size="11" fill="var(--ink-2)">test cases</text>
 <rect x="240" y="52" width="12" height="12" rx="2" fill="var(--good)"/>
 <text x="260" y="62" font-size="13" fill="var(--ink)">Passed</text>
-<text x="440" y="62" font-size="13" fill="var(--ink)" text-anchor="end" font-weight="600">43 <tspan fill="var(--ink-2)" font-weight="400">(56%)</tspan></text><rect x="240" y="80" width="12" height="12" rx="2" fill="var(--critical)"/>
+<text x="440" y="62" font-size="13" fill="var(--ink)" text-anchor="end" font-weight="600">41 <tspan fill="var(--ink-2)" font-weight="400">(53%)</tspan></text><rect x="240" y="80" width="12" height="12" rx="2" fill="var(--critical)"/>
 <text x="260" y="90" font-size="13" fill="var(--ink)">Failed</text>
 <text x="440" y="90" font-size="13" fill="var(--ink)" text-anchor="end" font-weight="600">5 <tspan fill="var(--ink-2)" font-weight="400">(6%)</tspan></text><rect x="240" y="108" width="12" height="12" rx="2" fill="var(--serious)"/>
 <text x="260" y="118" font-size="13" fill="var(--ink)">Blocked</text>
-<text x="440" y="118" font-size="13" fill="var(--ink)" text-anchor="end" font-weight="600">24 <tspan fill="var(--ink-2)" font-weight="400">(31%)</tspan></text><rect x="240" y="136" width="12" height="12" rx="2" fill="var(--warning)"/>
+<text x="440" y="118" font-size="13" fill="var(--ink)" text-anchor="end" font-weight="600">27 <tspan fill="var(--ink-2)" font-weight="400">(35%)</tspan></text><rect x="240" y="136" width="12" height="12" rx="2" fill="var(--warning)"/>
 <text x="260" y="146" font-size="13" fill="var(--ink)">Flaky</text>
-<text x="440" y="146" font-size="13" fill="var(--ink)" text-anchor="end" font-weight="600">1 <tspan fill="var(--ink-2)" font-weight="400">(1%)</tspan></text><rect x="240" y="164" width="12" height="12" rx="2" fill="var(--neutral)"/>
+<text x="440" y="146" font-size="13" fill="var(--ink)" text-anchor="end" font-weight="600">0 <tspan fill="var(--ink-2)" font-weight="400">(0%)</tspan></text><rect x="240" y="164" width="12" height="12" rx="2" fill="var(--neutral)"/>
 <text x="260" y="174" font-size="13" fill="var(--ink)">Skipped</text>
 <text x="440" y="174" font-size="13" fill="var(--ink)" text-anchor="end" font-weight="600">4 <tspan fill="var(--ink-2)" font-weight="400">(5%)</tspan></text>
 </svg>
