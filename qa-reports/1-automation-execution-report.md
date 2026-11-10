@@ -2,13 +2,13 @@
 
 [Index](README.md) · [1. Execution report](1-automation-execution-report.md) · [2. Test scripts & scenarios](2-test-scripts-and-scenarios.md) · [3. Defect & QA summary](3-defect-and-qa-summary.md)
 
-**Store:** https://james-qa-shop.myshopify.com · **Run:** 2026-11-10 14:00 UTC · **Environment:** [CI run](https://github.com/jfix1974QA/shopify-automation/actions/runs/42829629022) · Playwright 1.65.0 · Node v22.23.4 · Linux 7.0.0-1019-azure
+**Store:** https://james-qa-shop.myshopify.com · **Run:** 2026-11-10 19:09 UTC · **Environment:** [CI run](https://github.com/jfix1974QA/shopify-automation/actions/runs/42882386969) · Playwright 1.65.0 · Node v22.23.4 · Linux 7.0.0-1019-azure
 
 ## Summary
 
 | Test cases | Executions | Passed | Failed | Blocked | Flaky | Skipped | Pass rate | Requirements covered | Time |
 |---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| 77 | 89 | 49 | 6 | 27 | 0 | 7 | **89.1%** | 23/23 | 4m 38s |
+| 77 | 89 | 50 | 5 | 27 | 0 | 7 | **90.9%** | 23/23 | 3m 22s |
 
 ![status-overview](charts/status-overview.svg)
 
@@ -23,13 +23,13 @@ Pass rate is calculated over verified tests: skipped and blocked tests are exclu
 
 | Pack | Tests | Passed | Failed | Blocked | Flaky | Skipped | Pass rate | Time |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| UI (desktop) | 12 | 9 | 2 | 0 | 0 | 1 | 81.8% | 40.2s |
-| UI (mobile) | 12 | 9 | 1 | 0 | 0 | 2 | 90% | 35.0s |
-| Functional | 28 | 13 | 0 | 11 | 0 | 4 | 100% | 2m 57s |
-| Non-functional | 15 | 12 | 3 | 0 | 0 | 0 | 80% | 1m 38s |
-| API | 17 | 1 | 0 | 16 | 0 | 0 | 100% | 2m 53s |
-| Regression | 5 | 5 | 0 | 0 | 0 | 0 | 100% | 27.2s |
-| **Total** | **89** | **49** | **6** | **27** | **0** | **7** | **89.1%** | **9m 11s** |
+| UI (desktop) | 12 | 9 | 2 | 0 | 0 | 1 | 81.8% | 41.9s |
+| UI (mobile) | 12 | 10 | 0 | 0 | 0 | 2 | 100% | 38.6s |
+| Functional | 28 | 13 | 0 | 11 | 0 | 4 | 100% | 2m 43s |
+| Non-functional | 15 | 12 | 3 | 0 | 0 | 0 | 80% | 1m 31s |
+| API | 17 | 1 | 0 | 16 | 0 | 0 | 100% | 2m 55s |
+| Regression | 5 | 5 | 0 | 0 | 0 | 0 | 100% | 29.4s |
+| **Total** | **89** | **50** | **5** | **27** | **0** | **7** | **90.9%** | **8m 59s** |
 
 ![duration-by-pack](charts/duration-by-pack.svg)
 
@@ -40,7 +40,7 @@ Pass rate is calculated over verified tests: skipped and blocked tests are exclu
 | Priority | Passed | Failed | Blocked | Flaky | Skipped |
 |---|---:|---:|---:|---:|---:|
 | P1 (high) | 13 | 0 | 11 | 0 | 0 |
-| P2 (medium) | 27 | 4 | 10 | 0 | 5 |
+| P2 (medium) | 28 | 3 | 10 | 0 | 5 |
 | P3 (low) | 9 | 2 | 6 | 0 | 2 |
 
 ## Test coverage
@@ -54,7 +54,7 @@ Coverage includes **37** edge/negative test cases, **4** Claude-powered checks a
 
 | ID | Area | Requirement | Test cases | Executions | Passed | Failed | Blocked | Skipped | Status |
 |---|---|---|---|---:|---:|---:|---:|---:|---|
-| R01 | Storefront | Home page renders correctly | UI-01, UI-05, UI-AI-01, REG-03 | 7 | 5 | 2 | 0 | 0 | ❌ Failing |
+| R01 | Storefront | Home page renders correctly | UI-01, UI-05, UI-AI-01, REG-03 | 7 | 6 | 1 | 0 | 0 | ❌ Failing |
 | R02 | Storefront | Navigation and menus | UI-01, UI-07, REG-01 | 5 | 4 | 0 | 0 | 1 | ✅ Passing |
 | R03 | Product | Product page content | UI-02, FN-01, UI-AI-02, REG-04, NF-08 | 7 | 7 | 0 | 0 | 0 | ✅ Passing |
 | R04 | Product | Product variants | FN-05, FN-27 | 2 | 1 | 0 | 1 | 0 | ⚠️ Partly verified |
@@ -90,8 +90,7 @@ Coverage includes **37** edge/negative test cases, **4** Claude-powered checks a
 | NF-07 key pages have title, meta description, canonical and social image | non-functional | P3 | Error: /: meta description |
 | NF-11 session and cart cookies are Secure and HttpOnly where applicable | non-functional | P2 | Error: Session/cart cookies without Secure flag: cart |
 | UI-AI-01 home page looks like a working, professional store | ui | P2 | Error: AI check failed: "The page looks like a professional online store: a header with logo and navigation, a clear hero or featured section, no broken images, |
-| UI-AI-04 product descriptions have no typos or placeholder text | ui | P3 | Error: the-collection-snowboard-liquid: Product description is empty. |
-| UI-AI-01 home page looks like a working, professional store | ui-mobile | P2 | Error: AI check failed: "The page looks like a professional online store: a header with logo and navigation, a clear hero or featured section, no broken images, |
+| UI-AI-04 product descriptions have no typos or placeholder text | ui | P3 | Error: the-collection-snowboard-liquid: Description is empty. |
 
 See [3. Defect & QA summary](3-defect-and-qa-summary.md) for triage and defects raised.
 
