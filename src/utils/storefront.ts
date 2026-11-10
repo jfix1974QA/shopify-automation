@@ -115,20 +115,21 @@ export async function storeFetch<T = unknown>(
   path: string,
   body?: unknown,
 ): Promise<{ status: number; data: T; headers: Record<string, string>; ms: number }> {
+  // Keep the whole retry budget well under the 60s test timeout, so a blocked test fails with a clear reason.
+  const deadline = Date.now() + 40_000;
   for (let attempt = 1; ; attempt++) {
     const res = await rawStoreFetch<T>(page, path, body);
-    const challenged = res.status === 429 && typeof res.data === 'string' && /verifying your connection|just a moment/i.test(res.data);
-    if (!challenged && res.status !== 429) return res;
-    if (attempt >= 5) {
-      throw new Error(`${path} blocked by Shopify bot protection (HTTP 429) after ${attempt} tries: environment issue, not a store defect.`);
+    const blocked =
+      res.status === 0 || // no response within the request timeout
+      res.status === 429 ||
+      (typeof res.data === 'string' && /verifying your connection|just a moment|verify you are human/i.test(res.data) && res.status >= 400);
+    if (!blocked) return res;
+    if (attempt >= 3 || Date.now() + 5000 * attempt > deadline) {
+      throw new Error(
+        `${path} blocked by Shopify bot protection (${res.status === 0 ? 'no response within 15s' : `HTTP ${res.status}`}) after ${attempt} tries: environment issue, not a store defect.`,
+      );
     }
     await page.waitForTimeout(3000 * attempt);
-    if (attempt >= 3) {
-      await page.reload({ waitUntil: 'domcontentloaded' }).catch(() => {});
-      await page
-        .waitForFunction(() => !/just a moment|verifying your connection/i.test(document.title), null, { timeout: 45_000 })
-        .catch(() => {});
-    }
   }
 }
 
@@ -136,11 +137,22 @@ async function rawStoreFetch<T>(page: Page, path: string, body?: unknown) {
   return page.evaluate(
     async ({ path, body }) => {
       const started = performance.now();
-      const res = await fetch(path, {
-        method: body === undefined ? 'GET' : 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: body === undefined ? undefined : JSON.stringify(body),
-      });
+      // Abort after 15s: a request held by bot protection must not hang the test.
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), 15_000);
+      let res: Response;
+      try {
+        res = await fetch(path, {
+          method: body === undefined ? 'GET' : 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: body === undefined ? undefined : JSON.stringify(body),
+          signal: controller.signal,
+        });
+      } catch {
+        return { status: 0, data: 'no response (aborted after 15s)' as unknown as T, headers: {} as Record<string, string>, ms: Math.round(performance.now() - started) };
+      } finally {
+        clearTimeout(timer);
+      }
       const text = await res.text();
       const ms = Math.round(performance.now() - started);
       let data: unknown = text;

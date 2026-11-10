@@ -41,7 +41,7 @@ type QaNotes = {
   recommendations?: string[];
   scope?: { in: string[]; out: string[] };
   /** Results that could not be trusted (e.g. environment blocked the test, or the test was fixed after the run). */
-  reclassify?: { tests: string[]; reason: string }[];
+  reclassify?: { tests: string[]; reason: string; run?: string }[];
 };
 
 // ---------- load ----------
@@ -62,9 +62,13 @@ for (const d of ['charts', 'evidence']) fs.mkdirSync(path.join(OUT, d), { recurs
 // ---------- blocked results ----------
 // A test the environment stopped from running (Shopify bot protection) says nothing about the store,
 // so it is reported as "Blocked", kept out of the pass rate, and never raised as a defect.
-const BOT_BLOCK = /bot protection|verifying your connection|just a moment/i;
+const BOT_BLOCK = /bot protection|verifying your connection|just a moment|verify you are human|connection needs to be verified/i;
 const reclassified = new Map<string, string>();
-for (const rule of notes.reclassify ?? []) for (const key of rule.tests) reclassified.set(key, rule.reason);
+// A reclassification applies only to the run it was written for (rule.run = start of that run's ISO date).
+for (const rule of notes.reclassify ?? []) {
+  if (rule.run && !String(summary.env.date).startsWith(rule.run)) continue;
+  for (const key of rule.tests) reclassified.set(key, rule.reason);
+}
 for (const r of summary.tests) {
   const reason = reclassified.get(`${r.id}@${r.pack}`) ?? reclassified.get(r.id);
   if (reason) {

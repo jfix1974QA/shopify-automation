@@ -15,21 +15,36 @@ type Fixtures = {
   throttle: void;
 };
 
-/** True while Shopify's bot protection ("Just a moment..." / "Verifying your connection") is showing. */
+/**
+ * True while Shopify/Cloudflare bot protection is showing instead of the store: either the automatic
+ * check ("Just a moment..." / "Verifying your connection") or an interactive "Verify you are human" CAPTCHA.
+ * The framework never interacts with these pages; it waits for an automatic check to clear, otherwise it
+ * stops and reports the test as Blocked.
+ */
+export const BOT_CHALLENGE_TEXT = /just a moment|verifying your connection|verify you are human|connection needs to be verified|attention required/i;
+
 export async function onBotChallenge(page: Page) {
   const title = await page.title().catch(() => '');
-  return /just a moment|verifying your connection/i.test(title);
+  if (BOT_CHALLENGE_TEXT.test(title)) return true;
+  const text = await page.evaluate(() => (document.body?.innerText ?? '').slice(0, 400)).catch(() => '');
+  return BOT_CHALLENGE_TEXT.test(text) && !(await page.locator('header, main').count().catch(() => 0));
 }
 
-/** If a bot challenge is showing, wait for it to clear (it usually does within ~15s in a real browser). */
-export async function waitOutBotChallenge(page: Page, timeoutMs = 45_000) {
+/** If a bot challenge is showing, wait for an automatic check to clear (usually ~15s); fail fast otherwise. */
+export async function waitOutBotChallenge(page: Page, timeoutMs = 30_000) {
   if (!(await onBotChallenge(page))) return;
-  await page
-    .waitForFunction(() => !/just a moment|verifying your connection/i.test(document.title), null, { timeout: timeoutMs })
-    .catch(() => {
-      throw new Error(`Blocked by Shopify bot protection on ${page.url()} for ${timeoutMs / 1000}s (environment issue, not a store defect). Wait 15-30 minutes and re-run.`);
-    });
-  await page.waitForLoadState('domcontentloaded');
+  const started = Date.now();
+  while (Date.now() - started < timeoutMs) {
+    await page.waitForTimeout(2000);
+    if (!(await onBotChallenge(page))) {
+      await page.waitForLoadState('domcontentloaded');
+      return;
+    }
+  }
+  throw new Error(
+    `Blocked by Shopify bot protection on ${page.url()} for ${timeoutMs / 1000}s (environment issue, not a store defect). ` +
+      'The store showed a "Verifying your connection" / "Verify you are human" challenge to this machine.',
+  );
 }
 
 export const test = base.extend<Fixtures>({

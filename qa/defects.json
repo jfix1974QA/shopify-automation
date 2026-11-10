@@ -237,19 +237,22 @@
           "API-12@api",
           "API-13@api"
         ],
-        "reason": "Timed out while Shopify bot protection was blocking this machine (other API tests in the same run were explicitly blocked). Not a store result; re-run required."
+        "reason": "Timed out while Shopify bot protection was blocking this machine (other API tests in the same run were explicitly blocked). Not a store result; re-run required.",
+        "run": "2026-11-10T12:46"
       },
       {
         "tests": [
           "FN-07@functional"
         ],
-        "reason": "Test corrected after this run: the cart total is re-rendered after a quantity change and the test now waits for it. Re-test pending (the re-run was blocked by Shopify bot protection)."
+        "reason": "Test corrected after this run: the cart total is re-rendered after a quantity change and the test now waits for it. Re-test pending (the re-run was blocked by Shopify bot protection).",
+        "run": "2026-11-10T12:46"
       },
       {
         "tests": [
           "FN-14@functional"
         ],
-        "reason": "Test corrected after this run: the store's contact form is gated by hCaptcha and has no native required attribute, so the test now checks the empty form is not accepted and records the missing inline message as an observation. Re-test pending (the re-run was blocked by Shopify bot protection)."
+        "reason": "Test corrected after this run: the store's contact form is gated by hCaptcha and has no native required attribute, so the test now checks the empty form is not accepted and records the missing inline message as an observation. Re-test pending (the re-run was blocked by Shopify bot protection).",
+        "run": "2026-11-10T12:46"
       }
     ],
     "observations": [
@@ -267,7 +270,7 @@
       },
       {
         "title": "Shopify bot protection limits automated runs from one IP",
-        "detail": "After about 15 minutes of continuous traffic from one machine, Shopify answers with a 'Verifying your connection' challenge (HTTP 429). The framework waits challenges out, retries API calls and paces tests, and CI runs each pack on its own runner. API and regression packs were re-run after a cool-down; their results are merged into this report."
+        "detail": "Shopify's bot protection (Cloudflare) limits automated traffic. From this PC it showed a 'Verifying your connection' check (HTTP 429) after about 15 minutes of continuous testing. On GitHub Actions runners (shared data-centre IPs) it sometimes showed an interactive 'Verify you are human' CAPTCHA, which automation must not and does not attempt to solve. The framework waits for automatic checks to clear and otherwise reports the test as Blocked (not Failed, never a defect). The API and cart tests are the most affected because they call the storefront Ajax endpoints directly."
       },
       {
         "title": "Visual baselines recorded in this run",
@@ -279,7 +282,7 @@
       "Do a content-readiness pass (DEF-002, DEF-003): product descriptions, hero copy, footer menu. Make UI-AI-01 and UI-AI-04 release gates.",
       "Complete SEO set-up (DEF-004, DEF-005): homepage meta description, social sharing image, collection and product SEO fields.",
       "Raise DEF-006 with Shopify Support if the theme is not setting the cart cookie, and record the decision.",
-      "Run the suite in GitHub Actions on every push and nightly (workflow included). Separate runners avoid the single-IP rate limiting seen locally.",
+      "Run the suite in GitHub Actions on every push and nightly (workflow included). To stop bot protection blocking the API and cart tests: (a) move the API pack to the official Storefront API (GraphQL) using a Storefront access token from a headless channel, which is rate-limited by token rather than bot protection; or (b) run CI on a self-hosted runner on a trusted network.",
       "Commit the Linux visual baselines from the first CI run, and re-approve REG-03/REG-04 after the content and colour fixes.",
       "Enable the product-page quantity selector if multi-unit orders matter, which re-enables FN-03 and FN-15 to FN-17.",
       "Treat every new failure as a bug draft (reports/bugs) and triage it within one working day: confirm it as a defect, fix the test, or log it as an environment issue."
