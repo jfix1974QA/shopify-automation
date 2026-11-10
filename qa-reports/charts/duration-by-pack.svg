@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 180" width="720" height="180" role="img" aria-label="Execution time by pack" class="viz" font-family="system-ui,-apple-system,Segoe UI,sans-serif" style="max-width:100%;height:auto">
+<style>svg{
+  --surface:#fcfcfb; --ink:#0b0b0b; --ink-2:#52514e; --grid:#e4e3df;
+  --good:#0ca30c; --critical:#d03b3b; --serious:#ec835a; --warning:#fab219; --neutral:#b5b4ae;
+  --s1:#2a78d6;
+  --seq-0:#f0efec; --seq-1:#cde2fb; --seq-2:#9ec5f4; --seq-3:#5598e7; --seq-4:#256abf; --seq-5:#104281;} @media (prefers-color-scheme:dark){svg{
+  --surface:#1a1a19; --ink:#f0efec; --ink-2:#c3c2b7; --grid:#383835; --neutral:#6b6a65;
+  --s1:#3987e5;
+  --seq-0:#2a2a28; --seq-1:#0d366b; --seq-2:#184f95; --seq-3:#256abf; --seq-4:#3987e5; --seq-5:#86b6ef;}}</style>
+<title>Execution time by pack</title>
+<rect width="720" height="180" rx="8" fill="var(--surface)"/>
+<text x="160" y="28" font-size="12" fill="var(--ink)" text-anchor="end">UI (desktop)</text>
+<rect x="170" y="16" width="55.7" height="16" rx="3" fill="var(--s1)"><title>UI (desktop): 1m 51s</title></rect>
+<text x="231.7" y="28" font-size="12" fill="var(--ink-2)">1m 51s</text><text x="160" y="54" font-size="12" fill="var(--ink)" text-anchor="end">UI (mobile)</text>
+<rect x="170" y="42" width="48.5" height="16" rx="3" fill="var(--s1)"><title>UI (mobile): 1m 37s</title></rect>
+<text x="224.5" y="54" font-size="12" fill="var(--ink-2)">1m 37s</text><text x="160" y="80" font-size="12" fill="var(--ink)" text-anchor="end">Functional</text>
+<rect x="170" y="68" width="186.3" height="16" rx="3" fill="var(--s1)"><title>Functional: 6m 11s</title></rect>
+<text x="362.3" y="80" font-size="12" fill="var(--ink-2)">6m 11s</text><text x="160" y="106" font-size="12" fill="var(--ink)" text-anchor="end">Non-functional</text>
+<rect x="170" y="94" width="89.6" height="16" rx="3" fill="var(--s1)"><title>Non-functional: 2m 58s</title></rect>
+<text x="265.6" y="106" font-size="12" fill="var(--ink-2)">2m 58s</text><text x="160" y="132" font-size="12" fill="var(--ink)" text-anchor="end">API</text>
+<rect x="170" y="120" width="470.0" height="16" rx="3" fill="var(--s1)"><title>API: 15m 36s</title></rect>
+<text x="646.0" y="132" font-size="12" fill="var(--ink-2)">15m 36s</text><text x="160" y="158" font-size="12" fill="var(--ink)" text-anchor="end">Regression</text>
+<rect x="170" y="146" width="126.2" height="16" rx="3" fill="var(--s1)"><title>Regression: 4m 11s</title></rect>
+<text x="302.2" y="158" font-size="12" fill="var(--ink-2)">4m 11s</text>
+</svg>

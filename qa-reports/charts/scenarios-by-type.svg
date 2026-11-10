@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 202" width="720" height="202" role="img" aria-label="Test cases by pack and type" class="viz" font-family="system-ui,-apple-system,Segoe UI,sans-serif" style="max-width:100%;height:auto">
+<style>svg{
+  --surface:#fcfcfb; --ink:#0b0b0b; --ink-2:#52514e; --grid:#e4e3df;
+  --good:#0ca30c; --critical:#d03b3b; --serious:#ec835a; --warning:#fab219; --neutral:#b5b4ae;
+  --s1:#2a78d6;
+  --seq-0:#f0efec; --seq-1:#cde2fb; --seq-2:#9ec5f4; --seq-3:#5598e7; --seq-4:#256abf; --seq-5:#104281;} @media (prefers-color-scheme:dark){svg{
+  --surface:#1a1a19; --ink:#f0efec; --ink-2:#c3c2b7; --grid:#383835; --neutral:#6b6a65;
+  --s1:#3987e5;
+  --seq-0:#2a2a28; --seq-1:#0d366b; --seq-2:#184f95; --seq-3:#256abf; --seq-4:#3987e5; --seq-5:#86b6ef;}}</style>
+<title>Test cases by pack and type</title>
+<rect width="720" height="202" rx="8" fill="var(--surface)"/>
+<rect x="170" y="13" width="10" height="10" rx="2" fill="var(--s1)"/><text x="185" y="22" font-size="12" fill="var(--ink-2)">Standard</text><rect x="252" y="13" width="10" height="10" rx="2" fill="#eb6834"/><text x="267" y="22" font-size="12" fill="var(--ink-2)">Edge / negative</text><rect x="383" y="13" width="10" height="10" rx="2" fill="#1baf7a"/><text x="398" y="22" font-size="12" fill="var(--ink-2)">Claude-powered</text><text x="160" y="53" font-size="12" fill="var(--ink)" text-anchor="end">UI</text><rect x="170.0" y="40" width="85.5" height="18" rx="3" fill="var(--s1)"><title>UI - Standard: 5</title></rect><rect x="257.5" y="40" width="50.5" height="18" rx="3" fill="#eb6834"><title>UI - Edge / negative: 3</title></rect><rect x="310.0" y="40" width="68.0" height="18" rx="3" fill="#1baf7a"><title>UI - Claude-powered: 4</title></rect>
+<text x="386.0" y="53" font-size="12" fill="var(--ink-2)">12</text><text x="160" y="83" font-size="12" fill="var(--ink)" text-anchor="end">Functional</text><rect x="170.0" y="70" width="173.0" height="18" rx="3" fill="var(--s1)"><title>Functional - Standard: 10</title></rect><rect x="345.0" y="70" width="313.0" height="18" rx="3" fill="#eb6834"><title>Functional - Edge / negative: 18</title></rect>
+<text x="666.0" y="83" font-size="12" fill="var(--ink-2)">28</text><text x="160" y="113" font-size="12" fill="var(--ink)" text-anchor="end">Non-functional</text><rect x="170.0" y="100" width="173.0" height="18" rx="3" fill="var(--s1)"><title>Non-functional - Standard: 10</title></rect><rect x="345.0" y="100" width="85.5" height="18" rx="3" fill="#eb6834"><title>Non-functional - Edge / negative: 5</title></rect>
+<text x="438.5" y="113" font-size="12" fill="var(--ink-2)">15</text><text x="160" y="143" font-size="12" fill="var(--ink)" text-anchor="end">API</text><rect x="170.0" y="130" width="103.0" height="18" rx="3" fill="var(--s1)"><title>API - Standard: 6</title></rect><rect x="275.0" y="130" width="190.5" height="18" rx="3" fill="#eb6834"><title>API - Edge / negative: 11</title></rect>
+<text x="473.5" y="143" font-size="12" fill="var(--ink-2)">17</text><text x="160" y="173" font-size="12" fill="var(--ink)" text-anchor="end">Regression</text><rect x="170.0" y="160" width="85.5" height="18" rx="3" fill="var(--s1)"><title>Regression - Standard: 5</title></rect>
+<text x="263.5" y="173" font-size="12" fill="var(--ink-2)">5</text>
+</svg>

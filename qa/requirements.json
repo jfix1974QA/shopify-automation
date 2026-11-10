@@ -1,0 +1,28 @@
+{
+  "_about": "Store features (requirements) and the test cases that cover them. Drives the coverage section of the execution report. Add a row when you add a feature; add test IDs when you add tests.",
+  "requirements": [
+    { "id": "R01", "area": "Storefront", "name": "Home page renders correctly", "tests": ["UI-01", "UI-05", "UI-AI-01", "REG-03"] },
+    { "id": "R02", "area": "Storefront", "name": "Navigation and menus", "tests": ["UI-01", "UI-07", "REG-01"] },
+    { "id": "R03", "area": "Product", "name": "Product page content", "tests": ["UI-02", "FN-01", "UI-AI-02", "REG-04", "NF-08"] },
+    { "id": "R04", "area": "Product", "name": "Product variants", "tests": ["FN-05", "FN-27"] },
+    { "id": "R05", "area": "Cart", "name": "Add to cart", "tests": ["FN-02", "FN-03", "FN-18", "FN-21", "REG-01", "REG-02", "UI-08"] },
+    { "id": "R06", "area": "Cart", "name": "Quantity validation", "tests": ["FN-15", "FN-16", "FN-17", "API-10", "API-12", "API-13"] },
+    { "id": "R07", "area": "Product", "name": "Inventory and sold-out handling", "tests": ["FN-04", "API-09", "FN-17"] },
+    { "id": "R08", "area": "Cart", "name": "Cart management", "tests": ["FN-06", "FN-07", "FN-08", "FN-19", "FN-20", "UI-04", "UI-AI-03", "REG-05"] },
+    { "id": "R09", "area": "Cart", "name": "Pricing and discounts", "tests": ["FN-01", "FN-19", "FN-22", "FN-23", "API-05"] },
+    { "id": "R10", "area": "Checkout", "name": "Checkout hand-off", "tests": ["FN-09", "REG-01"] },
+    { "id": "R11", "area": "Discovery", "name": "Search", "tests": ["FN-10", "FN-11", "FN-24", "FN-25", "FN-26", "API-04", "REG-02"] },
+    { "id": "R12", "area": "Discovery", "name": "Collections and sorting", "tests": ["UI-03", "FN-12", "FN-13", "FN-28"] },
+    { "id": "R13", "area": "Storefront", "name": "Contact form", "tests": ["FN-14"] },
+    { "id": "R14", "area": "Storefront", "name": "Responsive and mobile layout", "tests": ["UI-06", "UI-07"], "projects": ["ui-mobile"] },
+    { "id": "R15", "area": "Quality", "name": "Accessibility (WCAG 2.1 AA)", "tests": ["NF-05", "NF-06", "UI-08"] },
+    { "id": "R16", "area": "Quality", "name": "Performance", "tests": ["NF-01", "NF-02", "NF-03", "NF-14"] },
+    { "id": "R17", "area": "Quality", "name": "Reliability and error handling", "tests": ["NF-04", "NF-12", "NF-15", "API-03", "API-14"] },
+    { "id": "R18", "area": "Quality", "name": "Security", "tests": ["NF-09", "NF-10", "NF-11", "NF-13", "FN-24"] },
+    { "id": "R19", "area": "Quality", "name": "SEO", "tests": ["NF-07", "NF-08"] },
+    { "id": "R20", "area": "API", "name": "Products API", "tests": ["API-01", "API-02", "API-03", "API-04"] },
+    { "id": "R21", "area": "API", "name": "Cart API", "tests": ["API-05", "API-06", "API-07", "API-08", "API-11", "API-15", "API-16", "API-17"] },
+    { "id": "R22", "area": "Quality", "name": "Content quality", "tests": ["UI-AI-04"] },
+    { "id": "R23", "area": "Quality", "name": "Visual regression", "tests": ["REG-03", "REG-04", "REG-05"] }
+  ]
+}

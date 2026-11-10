@@ -1,0 +1,7 @@
+.ai-cache/
+.env
+blob-report/
+node_modules/
+playwright-report/
+reports/
+test-results/

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 284" width="720" height="284" role="img" aria-label="Slowest 10 tests" class="viz" font-family="system-ui,-apple-system,Segoe UI,sans-serif" style="max-width:100%;height:auto">
+<style>svg{
+  --surface:#fcfcfb; --ink:#0b0b0b; --ink-2:#52514e; --grid:#e4e3df;
+  --good:#0ca30c; --critical:#d03b3b; --serious:#ec835a; --warning:#fab219; --neutral:#b5b4ae;
+  --s1:#2a78d6;
+  --seq-0:#f0efec; --seq-1:#cde2fb; --seq-2:#9ec5f4; --seq-3:#5598e7; --seq-4:#256abf; --seq-5:#104281;} @media (prefers-color-scheme:dark){svg{
+  --surface:#1a1a19; --ink:#f0efec; --ink-2:#c3c2b7; --grid:#383835; --neutral:#6b6a65;
+  --s1:#3987e5;
+  --seq-0:#2a2a28; --seq-1:#0d366b; --seq-2:#184f95; --seq-3:#256abf; --seq-4:#3987e5; --seq-5:#86b6ef;}}</style>
+<title>Slowest 10 tests</title>
+<rect width="720" height="284" rx="8" fill="var(--surface)"/>
+<text x="190" y="28" font-size="12" fill="var(--ink)" text-anchor="end">FN-18 (functional)</text>
+<rect x="200" y="16" width="440.0" height="16" rx="3" fill="var(--s1)"><title>FN-18 (functional): 1m 3s</title></rect>
+<text x="646.0" y="28" font-size="12" fill="var(--ink-2)">1m 3s</text><text x="190" y="54" font-size="12" fill="var(--ink)" text-anchor="end">NF-07 (non-functional)</text>
+<rect x="200" y="42" width="409.1" height="16" rx="3" fill="var(--s1)"><title>NF-07 (non-functional): 58.5s</title></rect>
+<text x="615.1" y="54" font-size="12" fill="var(--ink-2)">58.5s</text><text x="190" y="80" font-size="12" fill="var(--ink)" text-anchor="end">FN-19 (functional)</text>
+<rect x="200" y="68" width="381.0" height="16" rx="3" fill="var(--s1)"><title>FN-19 (functional): 54.4s</title></rect>
+<text x="587.0" y="80" font-size="12" fill="var(--ink-2)">54.4s</text><text x="190" y="106" font-size="12" fill="var(--ink)" text-anchor="end">NF-05 (non-functional)</text>
+<rect x="200" y="94" width="193.0" height="16" rx="3" fill="var(--s1)"><title>NF-05 (non-functional): 27.6s</title></rect>
+<text x="399.0" y="106" font-size="12" fill="var(--ink-2)">27.6s</text><text x="190" y="132" font-size="12" fill="var(--ink)" text-anchor="end">UI-05 (ui)</text>
+<rect x="200" y="120" width="180.3" height="16" rx="3" fill="var(--s1)"><title>UI-05 (ui): 25.8s</title></rect>
+<text x="386.3" y="132" font-size="12" fill="var(--ink-2)">25.8s</text><text x="190" y="158" font-size="12" fill="var(--ink)" text-anchor="end">UI-AI-01 (ui-mobile)</text>
+<rect x="200" y="146" width="118.6" height="16" rx="3" fill="var(--s1)"><title>UI-AI-01 (ui-mobile): 17.0s</title></rect>
+<text x="324.6" y="158" font-size="12" fill="var(--ink-2)">17.0s</text><text x="190" y="184" font-size="12" fill="var(--ink)" text-anchor="end">UI-AI-01 (ui)</text>
+<rect x="200" y="172" width="115.3" height="16" rx="3" fill="var(--s1)"><title>UI-AI-01 (ui): 16.5s</title></rect>
+<text x="321.3" y="184" font-size="12" fill="var(--ink-2)">16.5s</text><text x="190" y="210" font-size="12" fill="var(--ink)" text-anchor="end">NF-14 (non-functional)</text>
+<rect x="200" y="198" width="106.5" height="16" rx="3" fill="var(--s1)"><title>NF-14 (non-functional): 15.2s</title></rect>
+<text x="312.5" y="210" font-size="12" fill="var(--ink-2)">15.2s</text><text x="190" y="236" font-size="12" fill="var(--ink)" text-anchor="end">FN-20 (functional)</text>
+<rect x="200" y="224" width="97.1" height="16" rx="3" fill="var(--s1)"><title>FN-20 (functional): 13.9s</title></rect>
+<text x="303.1" y="236" font-size="12" fill="var(--ink-2)">13.9s</text><text x="190" y="262" font-size="12" fill="var(--ink)" text-anchor="end">FN-23 (functional)</text>
+<rect x="200" y="250" width="96.7" height="16" rx="3" fill="var(--s1)"><title>FN-23 (functional): 13.8s</title></rect>
+<text x="302.7" y="262" font-size="12" fill="var(--ink-2)">13.8s</text>
+</svg>

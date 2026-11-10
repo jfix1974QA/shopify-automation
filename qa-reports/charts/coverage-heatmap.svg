@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 718 266" width="718" height="266" role="img" aria-label="Tests per feature area and pack" class="viz" font-family="system-ui,-apple-system,Segoe UI,sans-serif" style="max-width:100%;height:auto">
+<style>svg{
+  --surface:#fcfcfb; --ink:#0b0b0b; --ink-2:#52514e; --grid:#e4e3df;
+  --good:#0ca30c; --critical:#d03b3b; --serious:#ec835a; --warning:#fab219; --neutral:#b5b4ae;
+  --s1:#2a78d6;
+  --seq-0:#f0efec; --seq-1:#cde2fb; --seq-2:#9ec5f4; --seq-3:#5598e7; --seq-4:#256abf; --seq-5:#104281;} @media (prefers-color-scheme:dark){svg{
+  --surface:#1a1a19; --ink:#f0efec; --ink-2:#c3c2b7; --grid:#383835; --neutral:#6b6a65;
+  --s1:#3987e5;
+  --seq-0:#2a2a28; --seq-1:#0d366b; --seq-2:#184f95; --seq-3:#256abf; --seq-4:#3987e5; --seq-5:#86b6ef;}}</style>
+<title>Tests per feature area and pack</title>
+<rect width="718" height="266" rx="8" fill="var(--surface)"/>
+<text x="196" y="32" font-size="11" fill="var(--ink-2)" text-anchor="middle">UI (desktop)</text><text x="288" y="32" font-size="11" fill="var(--ink-2)" text-anchor="middle">UI (mobile)</text><text x="380" y="32" font-size="11" fill="var(--ink-2)" text-anchor="middle">Functional</text><text x="472" y="32" font-size="11" fill="var(--ink-2)" text-anchor="middle">Non-functional</text><text x="564" y="32" font-size="11" fill="var(--ink-2)" text-anchor="middle">API</text><text x="656" y="32" font-size="11" fill="var(--ink-2)" text-anchor="middle">Regression</text><text x="140" y="63" font-size="12" fill="var(--ink)" text-anchor="end">Storefront</text><rect x="151" y="45" width="90" height="28" rx="3" fill="var(--seq-2)"><title>Storefront × UI (desktop): 5 tests</title></rect>
+<text x="196" y="63" font-size="12" text-anchor="middle" fill="var(--ink)">5</text><rect x="243" y="45" width="90" height="28" rx="3" fill="var(--seq-2)"><title>Storefront × UI (mobile): 5 tests</title></rect>
+<text x="288" y="63" font-size="12" text-anchor="middle" fill="var(--ink)">5</text><rect x="335" y="45" width="90" height="28" rx="3" fill="var(--seq-1)"><title>Storefront × Functional: 1 test</title></rect>
+<text x="380" y="63" font-size="12" text-anchor="middle" fill="var(--ink)">1</text><rect x="427" y="45" width="90" height="28" rx="3" fill="var(--seq-0)"><title>Storefront × Non-functional: 0 tests</title></rect>
+<text x="472" y="63" font-size="12" text-anchor="middle" fill="var(--ink)"></text><rect x="519" y="45" width="90" height="28" rx="3" fill="var(--seq-0)"><title>Storefront × API: 0 tests</title></rect>
+<text x="564" y="63" font-size="12" text-anchor="middle" fill="var(--ink)"></text><rect x="611" y="45" width="90" height="28" rx="3" fill="var(--seq-1)"><title>Storefront × Regression: 2 tests</title></rect>
+<text x="656" y="63" font-size="12" text-anchor="middle" fill="var(--ink)">2</text><text x="140" y="93" font-size="12" fill="var(--ink)" text-anchor="end">Product</text><rect x="151" y="75" width="90" height="28" rx="3" fill="var(--seq-1)"><title>Product × UI (desktop): 2 tests</title></rect>
+<text x="196" y="93" font-size="12" text-anchor="middle" fill="var(--ink)">2</text><rect x="243" y="75" width="90" height="28" rx="3" fill="var(--seq-1)"><title>Product × UI (mobile): 2 tests</title></rect>
+<text x="288" y="93" font-size="12" text-anchor="middle" fill="var(--ink)">2</text><rect x="335" y="75" width="90" height="28" rx="3" fill="var(--seq-2)"><title>Product × Functional: 5 tests</title></rect>
+<text x="380" y="93" font-size="12" text-anchor="middle" fill="var(--ink)">5</text><rect x="427" y="75" width="90" height="28" rx="3" fill="var(--seq-1)"><title>Product × Non-functional: 1 test</title></rect>
+<text x="472" y="93" font-size="12" text-anchor="middle" fill="var(--ink)">1</text><rect x="519" y="75" width="90" height="28" rx="3" fill="var(--seq-1)"><title>Product × API: 1 test</title></rect>
+<text x="564" y="93" font-size="12" text-anchor="middle" fill="var(--ink)">1</text><rect x="611" y="75" width="90" height="28" rx="3" fill="var(--seq-1)"><title>Product × Regression: 1 test</title></rect>
+<text x="656" y="93" font-size="12" text-anchor="middle" fill="var(--ink)">1</text><text x="140" y="123" font-size="12" fill="var(--ink)" text-anchor="end">Cart</text><rect x="151" y="105" width="90" height="28" rx="3" fill="var(--seq-1)"><title>Cart × UI (desktop): 3 tests</title></rect>
+<text x="196" y="123" font-size="12" text-anchor="middle" fill="var(--ink)">3</text><rect x="243" y="105" width="90" height="28" rx="3" fill="var(--seq-1)"><title>Cart × UI (mobile): 3 tests</title></rect>
+<text x="288" y="123" font-size="12" text-anchor="middle" fill="var(--ink)">3</text><rect x="335" y="105" width="90" height="28" rx="3" fill="var(--seq-5)"><title>Cart × Functional: 15 tests</title></rect>
+<text x="380" y="123" font-size="12" text-anchor="middle" fill="#ffffff">15</text><rect x="427" y="105" width="90" height="28" rx="3" fill="var(--seq-0)"><title>Cart × Non-functional: 0 tests</title></rect>
+<text x="472" y="123" font-size="12" text-anchor="middle" fill="var(--ink)"></text><rect x="519" y="105" width="90" height="28" rx="3" fill="var(--seq-2)"><title>Cart × API: 4 tests</title></rect>
+<text x="564" y="123" font-size="12" text-anchor="middle" fill="var(--ink)">4</text><rect x="611" y="105" width="90" height="28" rx="3" fill="var(--seq-1)"><title>Cart × Regression: 3 tests</title></rect>
+<text x="656" y="123" font-size="12" text-anchor="middle" fill="var(--ink)">3</text><text x="140" y="153" font-size="12" fill="var(--ink)" text-anchor="end">Checkout</text><rect x="151" y="135" width="90" height="28" rx="3" fill="var(--seq-0)"><title>Checkout × UI (desktop): 0 tests</title></rect>
+<text x="196" y="153" font-size="12" text-anchor="middle" fill="var(--ink)"></text><rect x="243" y="135" width="90" height="28" rx="3" fill="var(--seq-0)"><title>Checkout × UI (mobile): 0 tests</title></rect>
+<text x="288" y="153" font-size="12" text-anchor="middle" fill="var(--ink)"></text><rect x="335" y="135" width="90" height="28" rx="3" fill="var(--seq-1)"><title>Checkout × Functional: 1 test</title></rect>
+<text x="380" y="153" font-size="12" text-anchor="middle" fill="var(--ink)">1</text><rect x="427" y="135" width="90" height="28" rx="3" fill="var(--seq-0)"><title>Checkout × Non-functional: 0 tests</title></rect>
+<text x="472" y="153" font-size="12" text-anchor="middle" fill="var(--ink)"></text><rect x="519" y="135" width="90" height="28" rx="3" fill="var(--seq-0)"><title>Checkout × API: 0 tests</title></rect>
+<text x="564" y="153" font-size="12" text-anchor="middle" fill="var(--ink)"></text><rect x="611" y="135" width="90" height="28" rx="3" fill="var(--seq-1)"><title>Checkout × Regression: 1 test</title></rect>
+<text x="656" y="153" font-size="12" text-anchor="middle" fill="var(--ink)">1</text><text x="140" y="183" font-size="12" fill="var(--ink)" text-anchor="end">Discovery</text><rect x="151" y="165" width="90" height="28" rx="3" fill="var(--seq-1)"><title>Discovery × UI (desktop): 1 test</title></rect>
+<text x="196" y="183" font-size="12" text-anchor="middle" fill="var(--ink)">1</text><rect x="243" y="165" width="90" height="28" rx="3" fill="var(--seq-1)"><title>Discovery × UI (mobile): 1 test</title></rect>
+<text x="288" y="183" font-size="12" text-anchor="middle" fill="var(--ink)">1</text><rect x="335" y="165" width="90" height="28" rx="3" fill="var(--seq-3)"><title>Discovery × Functional: 8 tests</title></rect>
+<text x="380" y="183" font-size="12" text-anchor="middle" fill="var(--ink)">8</text><rect x="427" y="165" width="90" height="28" rx="3" fill="var(--seq-0)"><title>Discovery × Non-functional: 0 tests</title></rect>
+<text x="472" y="183" font-size="12" text-anchor="middle" fill="var(--ink)"></text><rect x="519" y="165" width="90" height="28" rx="3" fill="var(--seq-1)"><title>Discovery × API: 1 test</title></rect>
+<text x="564" y="183" font-size="12" text-anchor="middle" fill="var(--ink)">1</text><rect x="611" y="165" width="90" height="28" rx="3" fill="var(--seq-1)"><title>Discovery × Regression: 1 test</title></rect>
+<text x="656" y="183" font-size="12" text-anchor="middle" fill="var(--ink)">1</text><text x="140" y="213" font-size="12" fill="var(--ink)" text-anchor="end">Quality</text><rect x="151" y="195" width="90" height="28" rx="3" fill="var(--seq-1)"><title>Quality × UI (desktop): 2 tests</title></rect>
+<text x="196" y="213" font-size="12" text-anchor="middle" fill="var(--ink)">2</text><rect x="243" y="195" width="90" height="28" rx="3" fill="var(--seq-1)"><title>Quality × UI (mobile): 2 tests</title></rect>
+<text x="288" y="213" font-size="12" text-anchor="middle" fill="var(--ink)">2</text><rect x="335" y="195" width="90" height="28" rx="3" fill="var(--seq-1)"><title>Quality × Functional: 1 test</title></rect>
+<text x="380" y="213" font-size="12" text-anchor="middle" fill="var(--ink)">1</text><rect x="427" y="195" width="90" height="28" rx="3" fill="var(--seq-5)"><title>Quality × Non-functional: 15 tests</title></rect>
+<text x="472" y="213" font-size="12" text-anchor="middle" fill="#ffffff">15</text><rect x="519" y="195" width="90" height="28" rx="3" fill="var(--seq-1)"><title>Quality × API: 2 tests</title></rect>
+<text x="564" y="213" font-size="12" text-anchor="middle" fill="var(--ink)">2</text><rect x="611" y="195" width="90" height="28" rx="3" fill="var(--seq-1)"><title>Quality × Regression: 3 tests</title></rect>
+<text x="656" y="213" font-size="12" text-anchor="middle" fill="var(--ink)">3</text><text x="140" y="243" font-size="12" fill="var(--ink)" text-anchor="end">API</text><rect x="151" y="225" width="90" height="28" rx="3" fill="var(--seq-0)"><title>API × UI (desktop): 0 tests</title></rect>
+<text x="196" y="243" font-size="12" text-anchor="middle" fill="var(--ink)"></text><rect x="243" y="225" width="90" height="28" rx="3" fill="var(--seq-0)"><title>API × UI (mobile): 0 tests</title></rect>
+<text x="288" y="243" font-size="12" text-anchor="middle" fill="var(--ink)"></text><rect x="335" y="225" width="90" height="28" rx="3" fill="var(--seq-0)"><title>API × Functional: 0 tests</title></rect>
+<text x="380" y="243" font-size="12" text-anchor="middle" fill="var(--ink)"></text><rect x="427" y="225" width="90" height="28" rx="3" fill="var(--seq-0)"><title>API × Non-functional: 0 tests</title></rect>
+<text x="472" y="243" font-size="12" text-anchor="middle" fill="var(--ink)"></text><rect x="519" y="225" width="90" height="28" rx="3" fill="var(--seq-4)"><title>API × API: 12 tests</title></rect>
+<text x="564" y="243" font-size="12" text-anchor="middle" fill="#ffffff">12</text><rect x="611" y="225" width="90" height="28" rx="3" fill="var(--seq-0)"><title>API × Regression: 0 tests</title></rect>
+<text x="656" y="243" font-size="12" text-anchor="middle" fill="var(--ink)"></text>
+</svg>

@@ -1,0 +1,168 @@
+name: Storefront tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: '0 6 * * *' # daily at 06:00 UTC
+  workflow_dispatch:
+    inputs:
+      packs:
+        description: 'Packs to run (comma separated): ui,functional,non-functional,api,regression'
+        default: 'ui,functional,non-functional,api,regression'
+      file_issues:
+        description: 'File GitHub issues for failed tests'
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: storefront-tests-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  STORE_URL: ${{ vars.STORE_URL || 'https://james-qa-shop.myshopify.com' }}
+  STORE_PASSWORD: ${{ secrets.STORE_PASSWORD }}
+  ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+  WORKERS: 2
+
+jobs:
+  # Each test pack runs on its own runner, in parallel. Separate runners also spread
+  # traffic across IPs, which keeps Shopify's per-IP rate limiting from kicking in.
+  test:
+    name: ${{ matrix.pack }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - pack: ui
+            args: --project=ui --project=ui-mobile
+          - pack: functional
+            args: --project=functional
+          - pack: non-functional
+            args: --project=non-functional
+          - pack: api
+            args: --project=api
+          - pack: regression
+            args: --project=regression
+    steps:
+      - name: Skip packs not selected
+        id: select
+        run: |
+          packs="${{ github.event.inputs.packs || 'ui,functional,non-functional,api,regression' }}"
+          if [[ ",${packs// /}," == *",${{ matrix.pack }},"* ]]; then echo "run=true" >> "$GITHUB_OUTPUT"; else echo "run=false" >> "$GITHUB_OUTPUT"; fi
+
+      - uses: actions/checkout@v4
+        if: steps.select.outputs.run == 'true'
+
+      - uses: actions/setup-node@v4
+        if: steps.select.outputs.run == 'true'
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        if: steps.select.outputs.run == 'true'
+        run: npm ci
+
+      - name: Install browsers
+        if: steps.select.outputs.run == 'true'
+        run: npx playwright install --with-deps chromium ${{ matrix.pack == 'ui' && 'webkit' || '' }}
+
+      - name: Type-check
+        if: steps.select.outputs.run == 'true'
+        run: npx tsc --noEmit
+
+      - name: Run ${{ matrix.pack }} pack
+        if: steps.select.outputs.run == 'true'
+        run: npx playwright test ${{ matrix.args }}
+
+      - name: Upload blob report
+        if: always() && steps.select.outputs.run == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: blob-${{ matrix.pack }}
+          path: reports/blob
+          retention-days: 7
+
+      - name: Upload new visual baselines
+        # First CI run records Linux baselines. Download and commit them so later runs compare against them.
+        if: always() && matrix.pack == 'regression' && steps.select.outputs.run == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: visual-baselines-linux
+          path: tests/regression/__screenshots__/linux
+          if-no-files-found: ignore
+
+  report:
+    name: Test report
+    needs: test
+    if: always()
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+
+      - name: Download blob reports
+        uses: actions/download-artifact@v4
+        with:
+          pattern: blob-*
+          path: all-blobs
+          merge-multiple: true
+
+      - name: Merge into one report (HTML, JUnit, summary, bug drafts)
+        run: npx playwright merge-reports --config merge.config.ts all-blobs
+
+      - name: Build QA reports (execution, scenarios, defects)
+        run: npm run qa-reports
+
+      - name: Upload test report
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-report
+          path: |
+            reports/html
+            reports/summary.html
+            reports/summary.json
+            reports/assets
+            reports/bugs
+            reports/junit.xml
+            qa-reports
+          retention-days: 30
+
+      - name: Write job summary
+        run: |
+          node -e '
+            const s = require("./reports/summary.json");
+            const t = s.totals;
+            let md = `## Storefront test results\n\n`;
+            md += `**${t.passed} passed, ${t.failed} failed, ${t.flaky} flaky, ${t.skipped} skipped** of ${t.total} tests\n\n`;
+            md += `| Pack | Passed | Failed | Flaky | Skipped |\n|---|---|---|---|---|\n`;
+            for (const [name, p] of Object.entries(s.packs)) md += `| ${name} | ${p.passed} | ${p.failed} | ${p.flaky} | ${p.skipped} |\n`;
+            const failed = s.tests.filter(x => x.status === "failed" || x.status === "timedOut");
+            if (failed.length) md += `\n### Failed\n` + failed.map(x => `- **${x.pack}** ${x.id} ${x.title}`).join("\n") + "\n";
+            md += `\nDownload the **test-report** artifact and open \`summary.html\` or \`html/index.html\` for screenshots and traces.\n`;
+            require("fs").appendFileSync(process.env.GITHUB_STEP_SUMMARY, md);
+          '
+
+      - name: File GitHub issues for failures
+        # Not on pull requests: failures there belong to the PR, not the issue tracker.
+        if: github.event_name != 'pull_request' && (github.event_name != 'workflow_dispatch' || github.event.inputs.file_issues == 'true')
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/file-github-issues.mjs reports/bugs/bugs.json
+
+      - name: Fail the workflow if any test failed
+        run: node -e 'const t=require("./reports/summary.json").totals; if (t.failed) { console.error(t.failed + " test(s) failed"); process.exit(1); }'

@@ -1,0 +1,38 @@
+{
+  "name": "shopify-automation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI-assisted Playwright test framework for a Shopify storefront",
+  "type": "module",
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test --project=ui --project=ui-mobile",
+    "test:functional": "playwright test --project=functional",
+    "test:non-functional": "playwright test --project=non-functional",
+    "test:api": "playwright test --project=api",
+    "test:regression": "playwright test --grep @regression",
+    "test:smoke": "playwright test --grep @P1 --project=ui --project=functional --project=api",
+    "test:no-ai": "playwright test --grep-invert @ai",
+    "test:ai": "playwright test --grep @ai",
+    "test:headed": "playwright test --headed --project=functional",
+    "update-baselines": "playwright test --project=regression --grep @visual --update-snapshots",
+    "report": "playwright show-report reports/html",
+    "generate": "tsx src/ai/generateTests.ts",
+    "typecheck": "tsc --noEmit",
+    "test:edge": "playwright test --grep @edge",
+    "qa-reports": "tsx scripts/qa-report/build.ts"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.65.0",
+    "@types/node": "^26.6.6",
+    "dotenv": "^18.0.10",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "yaml": "^2.9.1"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.6.0",
+    "zod": "^4.6.7"
+  }
+}

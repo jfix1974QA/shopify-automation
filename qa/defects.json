@@ -1,0 +1,306 @@
+{
+  "_about": "Triaged defects (source of truth for 3-defect-and-qa-summary). Auto-drafted bugs in reports/bugs/ are triaged into this file: confirmed product defects only; test or environment issues are fixed in the tests or listed under notes.observations.",
+  "defects": [
+    {
+      "id": "DEF-001",
+      "title": "\"Sale\" badge text fails WCAG 2.1 AA colour contrast (2.22:1, needs 4.5:1)",
+      "severity": "Medium",
+      "priority": "P1 - fix before launch",
+      "status": "Open",
+      "area": "Accessibility",
+      "type": "Accessibility (WCAG 2.1 SC 1.4.3)",
+      "foundBy": [
+        "NF-05"
+      ],
+      "environment": "james-qa-shop.myshopify.com, Dawn theme; Chromium (desktop) with axe-core 4.x; reproduced on home, /collections/all and product pages",
+      "preconditions": "At least one product on sale (compare-at price set), e.g. The Collection Snowboard: Liquid.",
+      "steps": [
+        "Open https://james-qa-shop.myshopify.com/collections/all (enter the storefront password if asked).",
+        "Find the product card for \"The Collection Snowboard: Liquid\", which shows a \"Sale\" badge.",
+        "Inspect the badge (span.badge.color-accent-2) and read its computed text and background colours, or run axe DevTools / Lighthouse accessibility audit on the page."
+      ],
+      "expected": "Badge text (12px, normal weight) has a contrast ratio of at least 4.5:1 against its background (WCAG 2.1 AA, SC 1.4.3).",
+      "actual": "White text #ffffff on teal #45c0b6 gives 2.22:1. axe reports a serious color-contrast violation on every page that shows a sale badge (home featured collection, collection grid, product page).",
+      "evidence": [
+        {
+          "caption": "Sale badge contrast: current colours vs two compliant options (illustration from axe-measured colours)",
+          "file": "qa/evidence/def-001-contrast-swatch.svg"
+        },
+        {
+          "caption": "axe-core output (NF-05)",
+          "text": "[serious] color-contrast: Elements must meet minimum color contrast ratio thresholds\n  -> span.badge.badge--bottom-left.color-accent-2  \"Sale\"\n  Element has insufficient color contrast of 2.21 (foreground color: #ffffff, background color: #45c0b6,\n  font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1\nPages: /, /collections/all, /products/the-collection-snowboard-liquid"
+        }
+      ],
+      "impact": "Shoppers with low vision or colour-vision deficiency, or anyone on a phone in bright light, may not be able to read the Sale label, so they miss discounts. It is a WCAG 2.1 AA failure on every page with sale items, which creates compliance risk (ADA in the US, European Accessibility Act in force since June 2025).",
+      "rootCause": "The badge uses the theme's \"Accent 2\" colour scheme (class color-accent-2): white foreground on a light teal background. The scheme was not checked for contrast when it was chosen.",
+      "recommendation": "In the theme editor go to Theme settings > Colors and change the colour scheme used for sale badges (Theme settings > Badges > Sale badge color scheme) to one that passes. Two compliant options: keep the teal and switch the text to #121212 (8.45:1), or keep white text on a darker teal such as #1f7a73 (5.13:1). Check other places that use the same scheme. Keep NF-05 as a release gate so the issue cannot come back.",
+      "acceptanceCriteria": [
+        "Sale badge text contrast is at least 4.5:1 (verified with axe or a contrast checker).",
+        "NF-05 passes with no serious or critical axe violations on home, collection, product and cart pages.",
+        "Visual baseline REG-04 updated to the new badge colours after review."
+      ],
+      "references": [
+        "https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html",
+        "https://dequeuniversity.com/rules/axe/4.10/color-contrast"
+      ]
+    },
+    {
+      "id": "DEF-002",
+      "title": "7 of 13 products have an empty product description",
+      "severity": "Medium",
+      "priority": "P2",
+      "status": "Open",
+      "area": "Content",
+      "type": "Content / data quality",
+      "foundBy": [
+        "UI-AI-04",
+        "NF-07"
+      ],
+      "environment": "james-qa-shop.myshopify.com catalogue (13 products) as served by the storefront on the test date",
+      "steps": [
+        "Open https://james-qa-shop.myshopify.com/products/the-collection-snowboard-liquid.",
+        "Look below the price and Add to cart button for the product description.",
+        "Repeat for the other affected products listed in the evidence."
+      ],
+      "expected": "Every product has a customer-facing description explaining what it is, its key features and specifications.",
+      "actual": "The description is empty on 7 products: the-collection-snowboard-liquid, the-collection-snowboard-oxygen, the-collection-snowboard-hydrogen, the-multi-location-snowboard, the-multi-managed-snowboard, the-3p-fulfilled-snowboard, selling-plans-ski-wax. The product page shows no description at all.",
+      "evidence": [
+        {
+          "caption": "Product page for The Collection Snowboard: Liquid during test FN-01: no description between the buy buttons and pickup info",
+          "fromTest": "FN-01@functional"
+        },
+        {
+          "caption": "Claude copy review (UI-AI-04), high-severity findings",
+          "text": "the-collection-snowboard-liquid: Product description is empty.\nthe-collection-snowboard-oxygen: Product description is empty.\nthe-collection-snowboard-hydrogen: Product description is empty.\nthe-multi-location-snowboard: Product description is empty.\nthe-multi-managed-snowboard: Product description is empty.\nthe-3p-fulfilled-snowboard: Product description is empty.\nselling-plans-ski-wax: Product description is empty."
+        }
+      ],
+      "impact": "Shoppers cannot see what they are buying, which lowers conversion and raises returns and support questions. Search engines get no product text, and the product page has no meta description because Shopify builds it from the description (see DEF-004). Several affected products are among the most expensive ($749.95 to $2,629.95).",
+      "rootCause": "These products came from Shopify's development-store sample data generator, which creates products without descriptions. No content review was done before testing.",
+      "recommendation": "Write a description for each affected product (aim for at least 50 words, including key features, materials and sizing). Add a content-readiness check to the launch checklist, and keep UI-AI-04 in the regression suite so new products without descriptions are caught automatically.",
+      "acceptanceCriteria": [
+        "All 13 products have a non-empty, customer-facing description.",
+        "UI-AI-04 passes with no high-severity findings.",
+        "Each product page renders a meta description (NF-07)."
+      ]
+    },
+    {
+      "id": "DEF-003",
+      "title": "Home page and footer show test copy and development-store sample content",
+      "severity": "Medium",
+      "priority": "P2 - blocks go-live",
+      "status": "Open",
+      "area": "Content",
+      "type": "Content / launch readiness",
+      "foundBy": [
+        "UI-AI-01"
+      ],
+      "environment": "james-qa-shop.myshopify.com home page; desktop Chrome and iPhone 14 (WebKit)",
+      "steps": [
+        "Open https://james-qa-shop.myshopify.com/.",
+        "Read the hero banner text.",
+        "Scroll to the image-with-text section and to the footer."
+      ],
+      "expected": "All visible copy is final, customer-facing content. No internal, test or platform-generated text or links.",
+      "actual": "The hero says \"James QA Test Store\" / \"A Test Store to facilitate AI Assisted Test Automation\". The footer has a \"Resources\" menu linking to \"Generated test data docs\" and \"GraphiQL API explorer\", and uses \"© 2023 / Shopify, Inc.\" as a heading. The image-with-text section has the heading \"Stay hydrated\" on a ski wax promotion (\"Get waxy now\"). Claude flagged this on both desktop and mobile.",
+      "evidence": [
+        {
+          "caption": "Home page hero during UI-AI-01 (desktop): \"A Test Store to facilitate AI Assisted Test Automation\"",
+          "fromTest": "UI-AI-01@ui"
+        },
+        {
+          "caption": "Home page during UI-AI-01 (iPhone 14)",
+          "fromTest": "UI-AI-01@ui-mobile"
+        },
+        {
+          "caption": "Claude visual review (UI-AI-01, desktop)",
+          "text": "Hero subheading reads 'A Test Store to facilitate AI Assisted Test Automation', which is test/internal copy.\nFooter contains leftover generated-store content: 'Generated test data docs' and 'GraphiQL API explorer' links, and '© 2023 / Shopify, Inc.' used as a footer heading.\nThe image-with-text section uses a mismatched heading, 'Stay hydrated', for a ski wax CTA ('Get waxy now')."
+        }
+      ],
+      "impact": "On a live store this would look unfinished and untrustworthy, and the footer links send shoppers to developer tools. It is intentional for a QA store, but it must be fixed before launch. Raised so it is tracked as a go-live blocker.",
+      "rootCause": "Store content still comes from the development-store setup (hero text written for testing, sample-data footer menu, theme default section copy).",
+      "recommendation": "Before launch: rewrite the hero heading and subheading; delete the \"Resources\" footer menu (Online Store > Navigation) or replace it with customer links (Shipping, Returns, Contact); replace the footer heading with the brand name and current year; correct the \"Stay hydrated\" heading. Keep UI-AI-01 as a release gate.",
+      "acceptanceCriteria": [
+        "No test, sample or developer text or links anywhere on the home page or footer.",
+        "UI-AI-01 passes on desktop and mobile.",
+        "Visual baseline REG-03 updated after content sign-off."
+      ]
+    },
+    {
+      "id": "DEF-004",
+      "title": "Meta description missing on home, collection and product pages",
+      "severity": "Medium",
+      "priority": "P3",
+      "status": "Open",
+      "area": "SEO",
+      "type": "SEO / configuration",
+      "foundBy": [
+        "NF-07"
+      ],
+      "environment": "james-qa-shop.myshopify.com; page HTML <head> on the test date",
+      "steps": [
+        "Open https://james-qa-shop.myshopify.com/ and view the page source (Ctrl+U).",
+        "Search the <head> for <meta name=\"description\">.",
+        "Repeat for /collections/all and /products/the-collection-snowboard-liquid."
+      ],
+      "expected": "Each key page has a unique meta description of roughly 50-160 characters that summarises the page for search results.",
+      "actual": "No <meta name=\"description\"> tag is output on the home page, the collection page or the product page tested.",
+      "evidence": [
+        {
+          "caption": "NF-07 assertion output",
+          "text": "/: meta description -> element(s) not found\n/collections/all: meta description -> element(s) not found\n/products/the-collection-snowboard-liquid: meta description -> element(s) not found"
+        }
+      ],
+      "impact": "Search engines generate their own snippet, often from navigation or random page text, which lowers click-through from search results. It affects every page type tested.",
+      "rootCause": "The homepage meta description is blank (Online Store > Preferences). The collection and product have no SEO description, and Dawn only outputs the tag when page_description has a value. For products this falls back to the description, which is empty (DEF-002).",
+      "recommendation": "Set a homepage meta description in Online Store > Preferences. Add SEO descriptions in the \"Search engine listing\" section of each collection and product. Fixing DEF-002 also gives products a fallback description.",
+      "acceptanceCriteria": [
+        "Home, collection and product pages each output a meta description of 50-160 characters.",
+        "NF-07 meta description checks pass."
+      ],
+      "references": [
+        "https://help.shopify.com/en/manual/promoting-marketing/seo/adding-keywords"
+      ]
+    },
+    {
+      "id": "DEF-005",
+      "title": "No social sharing image (og:image) on home and collection pages",
+      "severity": "Low",
+      "priority": "P3",
+      "status": "Open",
+      "area": "SEO",
+      "type": "SEO / configuration",
+      "foundBy": [
+        "NF-07"
+      ],
+      "environment": "james-qa-shop.myshopify.com; page HTML <head> on the test date",
+      "steps": [
+        "Open https://james-qa-shop.myshopify.com/ and view the page source.",
+        "Search the <head> for <meta property=\"og:image\">.",
+        "Repeat for /collections/all."
+      ],
+      "expected": "Home and collection pages output an og:image so links shared on social media and messaging apps show a preview image.",
+      "actual": "No og:image tag on the home page or /collections/all. (Product pages do have one, taken from the product image.)",
+      "evidence": [
+        {
+          "caption": "NF-07 assertion output",
+          "text": "/: og:image -> element(s) not found\n/collections/all: og:image -> element(s) not found"
+        }
+      ],
+      "impact": "Links to the store shared on Facebook, LinkedIn, WhatsApp, Slack and similar show no image, which makes them less likely to be clicked.",
+      "rootCause": "No social sharing image is set in Online Store > Preferences, and the collection has no image.",
+      "recommendation": "Upload a social sharing image (1200 x 628 px recommended) in Online Store > Preferences, and add collection images. Check the preview with a link-preview tool.",
+      "acceptanceCriteria": [
+        "Home and collection pages output og:image with a valid image URL.",
+        "NF-07 og:image checks pass."
+      ]
+    },
+    {
+      "id": "DEF-006",
+      "title": "\"cart\" cookie is issued without the Secure attribute",
+      "severity": "Low",
+      "priority": "P3",
+      "status": "Open",
+      "area": "Security",
+      "type": "Security / cookie configuration",
+      "foundBy": [
+        "NF-11"
+      ],
+      "environment": "james-qa-shop.myshopify.com; Chromium; cookie set after adding an item to the cart",
+      "steps": [
+        "Open https://james-qa-shop.myshopify.com/ in Chrome and open DevTools > Application > Cookies.",
+        "Add any in-stock product to the cart.",
+        "Select the \"cart\" cookie and check the Secure column."
+      ],
+      "expected": "Cookies that identify a shopper's cart or session are set with the Secure attribute, so browsers only send them over HTTPS.",
+      "actual": "The \"cart\" cookie (the cart token) has Secure = false. Other session cookies (e.g. _shopify_essential) are Secure.",
+      "evidence": [
+        {
+          "caption": "NF-11 assertion output (cookie names only; values are never recorded)",
+          "text": "Session/cart cookies without Secure flag: cart\nChecked after adding an item to the cart. _shopify_essential and other session cookies were Secure."
+        }
+      ],
+      "impact": "Low in practice: the store sends HSTS and redirects HTTP to HTTPS (NF-09 and NF-10 pass), so the cookie is unlikely to travel over plain HTTP. Without Secure, though, a cart token could leak on a first-visit HTTP request or on a misconfigured network, letting someone view or change that cart. Security scanners and PCI-style reviews flag this.",
+      "rootCause": "The cart cookie is set by Shopify's storefront cart code without the Secure attribute. It is not set by the theme (to confirm: search the theme's assets for document.cookie).",
+      "recommendation": "Confirm the theme does not write the cart cookie. If it does, add \"; Secure; SameSite=Lax\". If it doesn't, raise it with Shopify Support as a platform hardening request. Make sure HSTS covers the custom domain once one is connected.",
+      "acceptanceCriteria": [
+        "The cart cookie has the Secure attribute, or Shopify confirms it is platform-managed and the risk is accepted and documented.",
+        "NF-11 passes, or is updated to reflect the accepted risk."
+      ]
+    }
+  ],
+  "notes": {
+    "reclassify": [
+      {
+        "tests": [
+          "API-07@api",
+          "API-08@api",
+          "API-12@api",
+          "API-13@api"
+        ],
+        "reason": "Timed out while Shopify bot protection was blocking this machine (other API tests in the same run were explicitly blocked). Not a store result; re-run required."
+      },
+      {
+        "tests": [
+          "FN-07@functional"
+        ],
+        "reason": "Test corrected after this run: the cart total is re-rendered after a quantity change and the test now waits for it. Re-test pending (the re-run was blocked by Shopify bot protection)."
+      },
+      {
+        "tests": [
+          "FN-14@functional"
+        ],
+        "reason": "Test corrected after this run: the store's contact form is gated by hCaptcha and has no native required attribute, so the test now checks the empty form is not accepted and records the missing inline message as an observation. Re-test pending (the re-run was blocked by Shopify bot protection)."
+      }
+    ],
+    "observations": [
+      {
+        "title": "No quantity selector on product pages",
+        "detail": "The theme's product information section has the quantity selector turned off, so shoppers can only add one at a time and change quantity in the cart. FN-03, FN-15, FN-16 and FN-17 are skipped for this reason; quantity rules are still tested through the cart API (API-10, API-12, API-13). Recommendation: enable \"Quantity selector\" in the theme editor (Product information block) if multi-unit purchases are expected."
+      },
+      {
+        "title": "Contact form has no inline validation for a missing email",
+        "detail": "The email field is marked with * and aria-required but has no native required attribute, so the browser does not stop an empty submission, and the request is gated by Shopify's hCaptcha. The empty form was not accepted, but no message told the user why. Recommendation: add the required attribute to the email field in the contact form section so the browser shows a message straight away."
+      },
+      {
+        "title": "Preference cookies without Secure flag",
+        "detail": "localization and cart_currency are set without Secure. They hold country and currency preferences, not identity, so they are not raised as a defect."
+      },
+      {
+        "title": "Shopify bot protection limits automated runs from one IP",
+        "detail": "After about 15 minutes of continuous traffic from one machine, Shopify answers with a 'Verifying your connection' challenge (HTTP 429). The framework waits challenges out, retries API calls and paces tests, and CI runs each pack on its own runner. API and regression packs were re-run after a cool-down; their results are merged into this report."
+      },
+      {
+        "title": "Visual baselines recorded in this run",
+        "detail": "REG-03 to REG-05 recorded their first screenshots in this run, so they pass by definition. From the next run on they compare against these baselines. Re-approve them after DEF-001 and DEF-003 are fixed."
+      }
+    ],
+    "recommendations": [
+      "Fix DEF-001 (Sale badge contrast) before launch. It is quick to fix and removes an accessibility compliance risk.",
+      "Do a content-readiness pass (DEF-002, DEF-003): product descriptions, hero copy, footer menu. Make UI-AI-01 and UI-AI-04 release gates.",
+      "Complete SEO set-up (DEF-004, DEF-005): homepage meta description, social sharing image, collection and product SEO fields.",
+      "Raise DEF-006 with Shopify Support if the theme is not setting the cart cookie, and record the decision.",
+      "Run the suite in GitHub Actions on every push and nightly (workflow included). Separate runners avoid the single-IP rate limiting seen locally.",
+      "Commit the Linux visual baselines from the first CI run, and re-approve REG-03/REG-04 after the content and colour fixes.",
+      "Enable the product-page quantity selector if multi-unit orders matter, which re-enables FN-03 and FN-15 to FN-17.",
+      "Treat every new failure as a bug draft (reports/bugs) and triage it within one working day: confirm it as a defect, fix the test, or log it as an environment issue."
+    ],
+    "scope": {
+      "in": [
+        "Storefront UI on desktop Chrome and iPhone 14 (WebKit)",
+        "Shopping journeys up to the Shopify checkout page",
+        "Storefront Ajax API (products, cart, predictive search)",
+        "Performance budgets, accessibility (WCAG 2.1 AA, automated), SEO tags, security headers and cookies",
+        "Content quality via Claude visual and copy review",
+        "Visual regression of home, product and empty cart"
+      ],
+      "out": [
+        "Payment and order placement (Shopify checkout is not modified; tests stop at checkout)",
+        "Shopify admin and back-office workflows",
+        "Customer accounts (new customer accounts are hosted by Shopify)",
+        "Manual exploratory and usability testing",
+        "Load and stress testing",
+        "Browsers other than Chromium and WebKit (e.g. Firefox)"
+      ]
+    }
+  }
+}
