@@ -289,6 +289,7 @@ Updated automatically by CI after every build.
 
 | Build | Date | Commit | Trigger | Executions | ✅ Passed | ❌ Failed | 🚧 Blocked | ⏭️ Skipped | Pass rate | Open defects | Time | Status |
 |---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| [#7](https://github.com/jfix1974QA/shopify-automation/actions/runs/43381935024) | 2026-11-13 06:54 UTC | [`82200f0`](https://github.com/jfix1974QA/shopify-automation/commit/82200f0) | schedule | 89 | 50 | 6 | 26 | 7 | 89.3% | 6 | 4m 20s | ❌ Failing |
 | [#6](https://github.com/jfix1974QA/shopify-automation/actions/runs/43171562542) | 2026-11-12 06:55 UTC | [`78d2e56`](https://github.com/jfix1974QA/shopify-automation/commit/78d2e56) | schedule | 89 | 53 | 5 | 24 | 7 | 91.4% | 6 | 4m 9s | ❌ Failing |
 | [#5](https://github.com/jfix1974QA/shopify-automation/actions/runs/42975692104) | 2026-11-11 06:54 UTC | [`f2e9fbd`](https://github.com/jfix1974QA/shopify-automation/commit/f2e9fbd) | schedule | 89 | 51 | 4 | 27 | 7 | 92.7% | 6 | 4m 14s | ❌ Failing |
 | [#4](https://github.com/jfix1974QA/shopify-automation/actions/runs/42882386969) | 2026-11-10 19:09 UTC | [`e6a951e`](https://github.com/jfix1974QA/shopify-automation/commit/e6a951e) | push | 89 | 50 | 5 | 27 | 7 | 90.9% | 6 | 4m 23s | ❌ Failing |
@@ -351,22 +352,22 @@ budgets met, security checks pass, no flaky tests.
 ## Metrics
 
 <!-- METRICS:START -->
-_Latest build [#6](https://github.com/jfix1974QA/shopify-automation/actions/runs/43171562542) · 2026-11-12 06:55 UTC · commit `78d2e56` · updated automatically by CI_
+_Latest build [#7](https://github.com/jfix1974QA/shopify-automation/actions/runs/43381935024) · 2026-11-13 06:54 UTC · commit `82200f0` · updated automatically by CI_
 
 | Metric | Value |
 |---|---|
 | Test cases | **77** (89 executions across desktop and mobile) |
-| Passed / Failed / Blocked / Skipped | **53** / **5** / **24** / **7** |
-| Pass rate (verified tests) | **91.4%** |
+| Passed / Failed / Blocked / Skipped | **50** / **6** / **26** / **7** |
+| Pass rate (verified tests) | **89.3%** |
 | Requirements covered | **23/23** |
 | Open defects | **6** (Critical 0 · High 0 · Medium 4 · Low 2) |
-| CI build time | **4m 9s** (whole pipeline; packs run in parallel) |
+| CI build time | **4m 20s** (whole pipeline; packs run in parallel) |
 
 | Pack | Passed | Failed | Blocked | Skipped |
 |---|---:|---:|---:|---:|
 | ui | 9 | 2 | 0 | 1 |
-| ui-mobile | 10 | 0 | 0 | 2 |
-| functional | 16 | 0 | 8 | 4 |
+| ui-mobile | 9 | 1 | 0 | 2 |
+| functional | 14 | 0 | 10 | 4 |
 | non-functional | 12 | 3 | 0 | 0 |
 | api | 1 | 0 | 16 | 0 |
 | regression | 5 | 0 | 0 | 0 |

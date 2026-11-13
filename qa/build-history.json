@@ -376,5 +376,68 @@
         "skipped": 2
       }
     }
+  },
+  {
+    "number": 7,
+    "id": "43381935024",
+    "url": "https://github.com/jfix1974QA/shopify-automation/actions/runs/43381935024",
+    "commit": "82200f0",
+    "event": "schedule",
+    "date": "2026-11-13T06:54:20Z",
+    "durationMs": 259566,
+    "testCases": 77,
+    "executions": 89,
+    "passed": 50,
+    "failed": 6,
+    "blocked": 26,
+    "flaky": 0,
+    "skipped": 7,
+    "passRate": 89.3,
+    "requirementsCovered": 23,
+    "requirementsTotal": 23,
+    "openDefects": {
+      "Critical": 0,
+      "High": 0,
+      "Medium": 4,
+      "Low": 2
+    },
+    "packs": {
+      "api": {
+        "passed": 1,
+        "failed": 0,
+        "blocked": 16,
+        "skipped": 0
+      },
+      "functional": {
+        "passed": 14,
+        "failed": 0,
+        "blocked": 10,
+        "skipped": 4
+      },
+      "non-functional": {
+        "passed": 12,
+        "failed": 3,
+        "blocked": 0,
+        "skipped": 0
+      },
+      "regression": {
+        "passed": 5,
+        "failed": 0,
+        "blocked": 0,
+        "skipped": 0
+      },
+      "ui": {
+        "passed": 9,
+        "failed": 2,
+        "blocked": 0,
+        "skipped": 1
+      },
+      "ui-mobile": {
+        "passed": 9,
+        "failed": 1,
+        "blocked": 0,
+        "skipped": 2
+      }
+    }
   }
 ]
