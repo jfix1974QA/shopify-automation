@@ -2,7 +2,7 @@
 
 [Index](README.md) · [1. Execution report](1-automation-execution-report.md) · [2. Test scripts & scenarios](2-test-scripts-and-scenarios.md) · [3. Defect & QA summary](3-defect-and-qa-summary.md)
 
-**Store:** https://james-qa-shop.myshopify.com · **Run:** 2026-11-14 06:44 UTC · **77 test cases** in 5 packs (89 executions)
+**Store:** https://james-qa-shop.myshopify.com · **Run:** 2026-11-15 06:47 UTC · **77 test cases** in 5 packs (89 executions)
 
 Each test case lists its planned steps and expected result (from the test definition), the steps the automation
 actually performed in this run (browser actions and assertions, with outcome), and the actual result.
@@ -16,83 +16,83 @@ Source code for every scenario is linked by file and line.
 
 | ID | Test case | Pack | Priority | Type | Result | Time |
 |---|---|---|---|---|---|---:|
-| [UI-01](#ui-01) | home page header, hero and footer render | ui | P1 | Standard | ✅ Passed | 0.8s / 1.4s |
-| [UI-02](#ui-02) | product page shows title, price, image, add to cart | ui | P1 | Standard | ✅ Passed | 0.8s / 1.3s |
-| [UI-03](#ui-03) | collection page shows a grid of product cards | ui | P2 | Standard | ✅ Passed | 1.2s / 1.5s |
-| [UI-04](#ui-04) | empty cart shows an empty-state message and a way back to shopping | ui | P2 | Edge | ✅ Passed | 1.1s / 0.9s |
-| [UI-05](#ui-05) | no images on the home page are broken | ui | P2 | Standard | ✅ Passed | 5.0s / 2.5s |
-| [UI-06](#ui-06) | page does not scroll horizontally (no layout overflow) | ui | P2 | Edge | ✅ Passed | 1.5s / 2.8s |
-| [UI-07](#ui-07) | mobile menu opens and lists the main navigation | ui | P2 | Standard | ✅ Passed | 0.2s / 2.9s |
+| [UI-01](#ui-01) | home page header, hero and footer render | ui | P1 | Standard | ✅ Passed | 1.2s / 1.4s |
+| [UI-02](#ui-02) | product page shows title, price, image, add to cart | ui | P1 | Standard | ✅ Passed | 1.2s / 1.3s |
+| [UI-03](#ui-03) | collection page shows a grid of product cards | ui | P2 | Standard | ✅ Passed | 1.5s / 1.4s |
+| [UI-04](#ui-04) | empty cart shows an empty-state message and a way back to shopping | ui | P2 | Edge | ✅ Passed | 0.8s / 1.1s |
+| [UI-05](#ui-05) | no images on the home page are broken | ui | P2 | Standard | ✅ Passed | 5.1s / 2.9s |
+| [UI-06](#ui-06) | page does not scroll horizontally (no layout overflow) | ui | P2 | Edge | ✅ Passed | 1.7s / 2.5s |
+| [UI-07](#ui-07) | mobile menu opens and lists the main navigation | ui | P2 | Standard | ✅ Passed | 0.2s / 2.5s |
 | [UI-08](#ui-08) | keyboard-only shopper can add to cart and reach the cart | ui | P2 | Edge | ✅ Passed | 2.5s / 0.6s |
-| [UI-AI-01](#ui-ai-01) | home page looks like a working, professional store | ui | P2 | Claude | ❌ Failed | 8.9s / 7.8s |
-| [UI-AI-02](#ui-ai-02) | product page shows everything a shopper needs | ui | P2 | Claude | ✅ Passed | 4.2s / 6.6s |
-| [UI-AI-03](#ui-ai-03) | cart page clearly shows the item and how to check out | ui | P2 | Claude | ✅ Passed | 3.9s / 5.1s |
-| [UI-AI-04](#ui-ai-04) | product descriptions have no typos or placeholder text | ui | P3 | Claude | ❌ Failed | 4.2s / 0.0s |
-| [FN-01](#fn-01) | product page data matches the catalogue | functional | P1 | Standard | ✅ Passed | 0.8s |
-| [FN-02](#fn-02) | Add to cart adds the selected variant | functional | P1 | Standard | 🚧 Blocked | 10.2s |
-| [FN-03](#fn-03) | quantity selector adds the chosen amount | functional | P2 | Standard | ⏭️ Skipped | 1.0s |
+| [UI-AI-01](#ui-ai-01) | home page looks like a working, professional store | ui | P2 | Claude | ❌ Failed | 9.2s / 5.2s |
+| [UI-AI-02](#ui-ai-02) | product page shows everything a shopper needs | ui | P2 | Claude | ✅ Passed | 4.9s / 4.7s |
+| [UI-AI-03](#ui-ai-03) | cart page clearly shows the item and how to check out | ui | P2 | Claude | ✅ Passed | 4.0s / 4.7s |
+| [UI-AI-04](#ui-ai-04) | product descriptions have no typos or placeholder text | ui | P3 | Claude | ❌ Failed | 4.0s / 0.0s |
+| [FN-01](#fn-01) | product page data matches the catalogue | functional | P1 | Standard | ✅ Passed | 1.0s |
+| [FN-02](#fn-02) | Add to cart adds the selected variant | functional | P1 | Standard | 🚧 Blocked | 10.1s |
+| [FN-03](#fn-03) | quantity selector adds the chosen amount | functional | P2 | Standard | ⏭️ Skipped | 1.1s |
 | [FN-04](#fn-04) | sold-out product cannot be added to cart | functional | P1 | Edge | ✅ Passed | 0.9s |
 | [FN-05](#fn-05) | choosing a different variant updates the URL and price | functional | P2 | Standard | ✅ Passed | 1.0s |
-| [FN-06](#fn-06) | cart page lists the item with subtotal and checkout | functional | P1 | Standard | 🚧 Blocked | 10.2s |
-| [FN-07](#fn-07) | changing quantity in the cart updates the total | functional | P1 | Standard | 🚧 Blocked | 10.1s |
-| [FN-08](#fn-08) | removing the only item empties the cart | functional | P1 | Edge | 🚧 Blocked | 10.1s |
-| [FN-09](#fn-09) | Checkout button opens Shopify checkout | functional | P1 | Standard | 🚧 Blocked | 10.2s |
-| [FN-10](#fn-10) | search by product name returns that product | functional | P1 | Standard | 🚧 Blocked | 31.4s |
-| [FN-11](#fn-11) | search with no matches shows a no-results message | functional | P2 | Edge | ✅ Passed | 0.9s |
+| [FN-06](#fn-06) | cart page lists the item with subtotal and checkout | functional | P1 | Standard | 🚧 Blocked | 10.1s |
+| [FN-07](#fn-07) | changing quantity in the cart updates the total | functional | P1 | Standard | 🚧 Blocked | 10.0s |
+| [FN-08](#fn-08) | removing the only item empties the cart | functional | P1 | Edge | 🚧 Blocked | 10.2s |
+| [FN-09](#fn-09) | Checkout button opens Shopify checkout | functional | P1 | Standard | 🚧 Blocked | 10.0s |
+| [FN-10](#fn-10) | search by product name returns that product | functional | P1 | Standard | 🚧 Blocked | 31.7s |
+| [FN-11](#fn-11) | search with no matches shows a no-results message | functional | P2 | Edge | ✅ Passed | 0.8s |
 | [FN-12](#fn-12) | sort by price low to high orders products correctly | functional | P2 | Standard | ✅ Passed | 0.7s |
-| [FN-13](#fn-13) | every catalogue product is reachable from the collection page | functional | P3 | Standard | ✅ Passed | 0.7s |
-| [FN-14](#fn-14) | contact form rejects a submission without an email | functional | P3 | Edge | ✅ Passed | 3.9s |
-| [FN-15](#fn-15) | product quantity input does not allow 0 or negative values | functional | P2 | Edge | ⏭️ Skipped | 1.4s |
-| [FN-16](#fn-16) | non-numeric quantity is never added as a broken line | functional | P3 | Edge | ⏭️ Skipped | 1.4s |
-| [FN-17](#fn-17) | requesting far more than is in stock is limited or rejected with a message | functional | P2 | Edge | ⏭️ Skipped | 1.2s |
-| [FN-18](#fn-18) | adding the same product twice merges into one line | functional | P1 | Edge | ✅ Passed | 3.9s |
-| [FN-19](#fn-19) | cart with two different products shows both and the correct subtotal | functional | P1 | Edge | ✅ Passed | 2.7s |
-| [FN-20](#fn-20) | cart survives a page reload and opening a new tab | functional | P1 | Edge | ✅ Passed | 2.7s |
-| [FN-21](#fn-21) | double-clicking Add to cart adds only one item | functional | P2 | Edge | ✅ Passed | 4.4s |
-| [FN-22](#fn-22) | invalid discount link does not change the cart total | functional | P3 | Edge | ✅ Passed | 2.1s |
-| [FN-23](#fn-23) | sale product shows original and sale price everywhere | functional | P2 | Edge | 🚧 Blocked | 10.3s |
-| [FN-24](#fn-24) | search escapes HTML and script input (no XSS) | functional | P1 | Edge | ✅ Passed | 2.0s |
-| [FN-25](#fn-25) | very long search query is handled without errors | functional | P3 | Edge | ✅ Passed | 0.7s |
-| [FN-26](#fn-26) | search ignores letter case and surrounding spaces | functional | P2 | Edge | ✅ Passed | 0.9s |
-| [FN-27](#fn-27) | product link with an invalid variant id falls back to a buyable variant | functional | P2 | Edge | 🚧 Blocked | 10.5s |
-| [FN-28](#fn-28) | unknown collection returns 404 | functional | P3 | Edge | ✅ Passed | 0.6s |
-| [NF-01](#nf-01) | home page loads within performance budget | non-functional | P2 | Standard | ✅ Passed | 2.6s |
-| [NF-02](#nf-02) | collection page loads within performance budget | non-functional | P2 | Standard | ✅ Passed | 2.6s |
-| [NF-03](#nf-03) | product page loads within performance budget | non-functional | P2 | Standard | ✅ Passed | 2.6s |
-| [NF-04](#nf-04) | no JavaScript errors on key pages | non-functional | P2 | Standard | ✅ Passed | 2.6s |
-| [NF-05](#nf-05) | no critical or serious WCAG 2.1 AA violations on key pages | non-functional | P2 | Standard | ❌ Failed | 6.8s |
-| [NF-06](#nf-06) | all images have alt text | non-functional | P3 | Standard | ✅ Passed | 3.6s |
-| [NF-07](#nf-07) | key pages have title, meta description, canonical and social image | non-functional | P3 | Standard | ❌ Failed | 52.7s |
-| [NF-08](#nf-08) | product page has Product structured data with price | non-functional | P3 | Standard | ✅ Passed | 1.2s |
-| [NF-09](#nf-09) | HTTP redirects to HTTPS | non-functional | P1 | Edge | ✅ Passed | 1.0s |
-| [NF-10](#nf-10) | security headers are present | non-functional | P2 | Standard | ✅ Passed | 1.0s |
-| [NF-11](#nf-11) | session and cart cookies are Secure and HttpOnly where applicable | non-functional | P2 | Standard | ❌ Failed | 2.2s |
-| [NF-12](#nf-12) | unknown URLs return a proper 404 page | non-functional | P3 | Edge | ✅ Passed | 1.1s |
-| [NF-13](#nf-13) | without the storefront password, pages redirect to the password page | non-functional | P1 | Edge | ✅ Passed | 1.1s |
-| [NF-14](#nf-14) | product page is usable on a slow 3G connection | non-functional | P2 | Edge | ✅ Passed | 13.0s |
-| [NF-15](#nf-15) | going offline during Add to cart fails cleanly and recovers | non-functional | P3 | Edge | ✅ Passed | 4.1s |
-| [API-01](#api-01) | GET /products/{handle}.js returns a valid product | api | P1 | Standard | 🚧 Blocked | 10.3s |
-| [API-02](#api-02) | catalogue data is complete (titles, prices, images, variants) | api | P2 | Standard | ✅ Passed | 1.0s |
-| [API-03](#api-03) | GET unknown product returns 404 | api | P2 | Edge | 🚧 Blocked | 10.4s |
-| [API-04](#api-04) | predictive search API returns matching products | api | P2 | Standard | 🚧 Blocked | 10.3s |
-| [API-05](#api-05) | POST /cart/add.js adds an item and totals are correct | api | P1 | Standard | 🚧 Blocked | 10.4s |
-| [API-06](#api-06) | POST /cart/change.js updates quantity; 0 removes the line | api | P1 | Edge | 🚧 Blocked | 10.2s |
-| [API-07](#api-07) | POST /cart/clear.js empties the cart | api | P2 | Standard | 🚧 Blocked | 10.2s |
-| [API-08](#api-08) | adding an invalid variant is rejected with an error | api | P2 | Edge | 🚧 Blocked | 10.1s |
-| [API-09](#api-09) | adding a sold-out variant is rejected | api | P1 | Edge | 🚧 Blocked | 10.2s |
-| [API-10](#api-10) | negative quantity is rejected | api | P3 | Edge | 🚧 Blocked | 10.1s |
-| [API-11](#api-11) | GET /cart.js returns the documented shape | api | P3 | Standard | 🚧 Blocked | 10.2s |
-| [API-12](#api-12) | quantity 0 on add is rejected or ignored | api | P2 | Edge | 🚧 Blocked | 10.5s |
-| [API-13](#api-13) | very large quantity is limited by stock or rejected | api | P2 | Edge | 🚧 Blocked | 10.6s |
-| [API-14](#api-14) | malformed JSON body returns a 4xx, not a server error | api | P2 | Edge | 🚧 Blocked | 10.6s |
+| [FN-13](#fn-13) | every catalogue product is reachable from the collection page | functional | P3 | Standard | ✅ Passed | 0.6s |
+| [FN-14](#fn-14) | contact form rejects a submission without an email | functional | P3 | Edge | ✅ Passed | 3.8s |
+| [FN-15](#fn-15) | product quantity input does not allow 0 or negative values | functional | P2 | Edge | ⏭️ Skipped | 1.6s |
+| [FN-16](#fn-16) | non-numeric quantity is never added as a broken line | functional | P3 | Edge | ⏭️ Skipped | 1.7s |
+| [FN-17](#fn-17) | requesting far more than is in stock is limited or rejected with a message | functional | P2 | Edge | ⏭️ Skipped | 1.3s |
+| [FN-18](#fn-18) | adding the same product twice merges into one line | functional | P1 | Edge | ✅ Passed | 4.1s |
+| [FN-19](#fn-19) | cart with two different products shows both and the correct subtotal | functional | P1 | Edge | ✅ Passed | 2.8s |
+| [FN-20](#fn-20) | cart survives a page reload and opening a new tab | functional | P1 | Edge | ✅ Passed | 2.5s |
+| [FN-21](#fn-21) | double-clicking Add to cart adds only one item | functional | P2 | Edge | ✅ Passed | 4.3s |
+| [FN-22](#fn-22) | invalid discount link does not change the cart total | functional | P3 | Edge | ✅ Passed | 2.4s |
+| [FN-23](#fn-23) | sale product shows original and sale price everywhere | functional | P2 | Edge | ✅ Passed | 2.0s |
+| [FN-24](#fn-24) | search escapes HTML and script input (no XSS) | functional | P1 | Edge | ✅ Passed | 2.1s |
+| [FN-25](#fn-25) | very long search query is handled without errors | functional | P3 | Edge | ✅ Passed | 0.9s |
+| [FN-26](#fn-26) | search ignores letter case and surrounding spaces | functional | P2 | Edge | ✅ Passed | 1.1s |
+| [FN-27](#fn-27) | product link with an invalid variant id falls back to a buyable variant | functional | P2 | Edge | ✅ Passed | 1.9s |
+| [FN-28](#fn-28) | unknown collection returns 404 | functional | P3 | Edge | ✅ Passed | 0.9s |
+| [NF-01](#nf-01) | home page loads within performance budget | non-functional | P2 | Standard | ✅ Passed | 2.2s |
+| [NF-02](#nf-02) | collection page loads within performance budget | non-functional | P2 | Standard | ✅ Passed | 2.2s |
+| [NF-03](#nf-03) | product page loads within performance budget | non-functional | P2 | Standard | ✅ Passed | 2.2s |
+| [NF-04](#nf-04) | no JavaScript errors on key pages | non-functional | P2 | Standard | ✅ Passed | 1.8s |
+| [NF-05](#nf-05) | no critical or serious WCAG 2.1 AA violations on key pages | non-functional | P2 | Standard | ❌ Failed | 4.1s |
+| [NF-06](#nf-06) | all images have alt text | non-functional | P3 | Standard | ✅ Passed | 2.5s |
+| [NF-07](#nf-07) | key pages have title, meta description, canonical and social image | non-functional | P3 | Standard | ❌ Failed | 51.7s |
+| [NF-08](#nf-08) | product page has Product structured data with price | non-functional | P3 | Standard | ✅ Passed | 0.7s |
+| [NF-09](#nf-09) | HTTP redirects to HTTPS | non-functional | P1 | Edge | ✅ Passed | 0.7s |
+| [NF-10](#nf-10) | security headers are present | non-functional | P2 | Standard | ✅ Passed | 0.6s |
+| [NF-11](#nf-11) | session and cart cookies are Secure and HttpOnly where applicable | non-functional | P2 | Standard | ❌ Failed | 1.4s |
+| [NF-12](#nf-12) | unknown URLs return a proper 404 page | non-functional | P3 | Edge | ✅ Passed | 0.8s |
+| [NF-13](#nf-13) | without the storefront password, pages redirect to the password page | non-functional | P1 | Edge | ✅ Passed | 1.0s |
+| [NF-14](#nf-14) | product page is usable on a slow 3G connection | non-functional | P2 | Edge | ✅ Passed | 12.7s |
+| [NF-15](#nf-15) | going offline during Add to cart fails cleanly and recovers | non-functional | P3 | Edge | ✅ Passed | 3.6s |
+| [API-01](#api-01) | GET /products/{handle}.js returns a valid product | api | P1 | Standard | 🚧 Blocked | 10.4s |
+| [API-02](#api-02) | catalogue data is complete (titles, prices, images, variants) | api | P2 | Standard | ✅ Passed | 1.1s |
+| [API-03](#api-03) | GET unknown product returns 404 | api | P2 | Edge | 🚧 Blocked | 10.5s |
+| [API-04](#api-04) | predictive search API returns matching products | api | P2 | Standard | 🚧 Blocked | 10.5s |
+| [API-05](#api-05) | POST /cart/add.js adds an item and totals are correct | api | P1 | Standard | 🚧 Blocked | 10.5s |
+| [API-06](#api-06) | POST /cart/change.js updates quantity; 0 removes the line | api | P1 | Edge | 🚧 Blocked | 10.4s |
+| [API-07](#api-07) | POST /cart/clear.js empties the cart | api | P2 | Standard | 🚧 Blocked | 10.5s |
+| [API-08](#api-08) | adding an invalid variant is rejected with an error | api | P2 | Edge | 🚧 Blocked | 10.5s |
+| [API-09](#api-09) | adding a sold-out variant is rejected | api | P1 | Edge | 🚧 Blocked | 10.6s |
+| [API-10](#api-10) | negative quantity is rejected | api | P3 | Edge | 🚧 Blocked | 10.4s |
+| [API-11](#api-11) | GET /cart.js returns the documented shape | api | P3 | Standard | 🚧 Blocked | 10.4s |
+| [API-12](#api-12) | quantity 0 on add is rejected or ignored | api | P2 | Edge | 🚧 Blocked | 11.2s |
+| [API-13](#api-13) | very large quantity is limited by stock or rejected | api | P2 | Edge | 🚧 Blocked | 11.1s |
+| [API-14](#api-14) | malformed JSON body returns a 4xx, not a server error | api | P2 | Edge | 🚧 Blocked | 10.8s |
 | [API-15](#api-15) | changing a line that is not in the cart returns a 4xx | api | P3 | Edge | 🚧 Blocked | 10.5s |
-| [API-16](#api-16) | /cart/update.js sets several line quantities at once | api | P3 | Edge | 🚧 Blocked | 10.4s |
-| [API-17](#api-17) | string, decimal and missing ids are rejected cleanly | api | P3 | Edge | 🚧 Blocked | 10.5s |
-| [REG-01](#reg-01) | browse → product → add to cart → checkout | regression | P1 | Standard | ✅ Passed | 6.7s |
-| [REG-02](#reg-02) | search → product → add to cart | regression | P1 | Standard | ✅ Passed | 4.9s |
-| [REG-03](#reg-03) | home page above the fold matches baseline | regression | P2 | Standard | ✅ Passed | 5.6s |
-| [REG-04](#reg-04) | product page matches baseline | regression | P2 | Standard | ✅ Passed | 4.9s |
-| [REG-05](#reg-05) | empty cart page matches baseline | regression | P3 | Standard | ✅ Passed | 4.9s |
+| [API-16](#api-16) | /cart/update.js sets several line quantities at once | api | P3 | Edge | 🚧 Blocked | 10.7s |
+| [API-17](#api-17) | string, decimal and missing ids are rejected cleanly | api | P3 | Edge | 🚧 Blocked | 10.8s |
+| [REG-01](#reg-01) | browse → product → add to cart → checkout | regression | P1 | Standard | ✅ Passed | 5.3s |
+| [REG-02](#reg-02) | search → product → add to cart | regression | P1 | Standard | ✅ Passed | 3.9s |
+| [REG-03](#reg-03) | home page above the fold matches baseline | regression | P2 | Standard | ✅ Passed | 7.1s |
+| [REG-04](#reg-04) | product page matches baseline | regression | P2 | Standard | ✅ Passed | 5.6s |
+| [REG-05](#reg-05) | empty cart page matches baseline | regression | P3 | Standard | ✅ Passed | 5.6s |
 
 ## UI pack
 
@@ -108,7 +108,7 @@ Source code for every scenario is linked by file and line.
 | Tags | `@ui` `@P1` `@regression` |
 | Script | `tests/ui/layout.spec.ts:9` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | UI (desktop): ✅ Passed (0.8s) · UI (mobile): ✅ Passed (1.4s) |
+| Result | UI (desktop): ✅ Passed (1.2s) · UI (mobile): ✅ Passed (1.4s) |
 
 **Test steps**
 1. Open home page.
@@ -118,12 +118,12 @@ Source code for every scenario is linked by file and line.
 
 <details><summary>Steps executed in this run (6)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (284ms)
-2. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:14)` (9ms)
-3. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:18)` (7ms)
-4. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:20)` (6ms)
-5. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:21)` (9ms)
-6. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:22)` (6ms)
+1. ✓ `Navigate (fixtures.ts:55)` (325ms)
+2. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:14)` (27ms)
+3. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:18)` (12ms)
+4. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:20)` (14ms)
+5. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:21)` (28ms)
+6. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:22)` (16ms)
 
 </details>
 
@@ -144,7 +144,7 @@ Source code for every scenario is linked by file and line.
 | Tags | `@ui` `@P1` `@regression` |
 | Script | `tests/ui/layout.spec.ts:25` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | UI (desktop): ✅ Passed (0.8s) · UI (mobile): ✅ Passed (1.3s) |
+| Result | UI (desktop): ✅ Passed (1.2s) · UI (mobile): ✅ Passed (1.3s) |
 
 **Test steps**
 1. Open an in-stock product.
@@ -154,11 +154,11 @@ Source code for every scenario is linked by file and line.
 
 <details><summary>Steps executed in this run (5)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (292ms)
-2. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:31)` (10ms)
-3. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:32)` (14ms)
-4. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:33)` (12ms)
-5. ✓ **Assert** `Expect "toBeEnabled" (layout.spec.ts:34)` (10ms)
+1. ✓ `Navigate (fixtures.ts:55)` (414ms)
+2. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:31)` (11ms)
+3. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:32)` (11ms)
+4. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:33)` (9ms)
+5. ✓ **Assert** `Expect "toBeEnabled" (layout.spec.ts:34)` (8ms)
 
 </details>
 
@@ -179,7 +179,7 @@ Source code for every scenario is linked by file and line.
 | Tags | `@ui` `@P2` |
 | Script | `tests/ui/layout.spec.ts:37` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | UI (desktop): ✅ Passed (1.2s) · UI (mobile): ✅ Passed (1.5s) |
+| Result | UI (desktop): ✅ Passed (1.5s) · UI (mobile): ✅ Passed (1.4s) |
 
 **Test steps**
 1. Open /collections/all.
@@ -189,21 +189,21 @@ Source code for every scenario is linked by file and line.
 
 <details><summary>Steps executed in this run (15)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (634ms)
-2. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:43)` (26ms)
-3. ✓ **Assert** `Expect "toBeGreaterThan" (layout.spec.ts:45)` (1ms)
-4. ✓ **Assert** `card 0 link (layout.spec.ts:48)` (16ms)
-5. ✓ **Assert** `card 0 price (layout.spec.ts:49)` (13ms)
-6. ✓ **Assert** `card 1 link (layout.spec.ts:48)` (11ms)
-7. ✓ **Assert** `card 1 price (layout.spec.ts:49)` (11ms)
+1. ✓ `Navigate (fixtures.ts:55)` (582ms)
+2. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:43)` (39ms)
+3. ✓ **Assert** `Expect "toBeGreaterThan" (layout.spec.ts:45)` (0ms)
+4. ✓ **Assert** `card 0 link (layout.spec.ts:48)` (15ms)
+5. ✓ **Assert** `card 0 price (layout.spec.ts:49)` (12ms)
+6. ✓ **Assert** `card 1 link (layout.spec.ts:48)` (9ms)
+7. ✓ **Assert** `card 1 price (layout.spec.ts:49)` (10ms)
 8. ✓ **Assert** `card 2 link (layout.spec.ts:48)` (11ms)
-9. ✓ **Assert** `card 2 price (layout.spec.ts:49)` (12ms)
-10. ✓ **Assert** `card 3 link (layout.spec.ts:48)` (28ms)
-11. ✓ **Assert** `card 3 price (layout.spec.ts:49)` (12ms)
-12. ✓ **Assert** `card 4 link (layout.spec.ts:48)` (12ms)
-13. ✓ **Assert** `card 4 price (layout.spec.ts:49)` (14ms)
-14. ✓ **Assert** `card 5 link (layout.spec.ts:48)` (17ms)
-15. ✓ **Assert** `card 5 price (layout.spec.ts:49)` (12ms)
+9. ✓ **Assert** `card 2 price (layout.spec.ts:49)` (26ms)
+10. ✓ **Assert** `card 3 link (layout.spec.ts:48)` (13ms)
+11. ✓ **Assert** `card 3 price (layout.spec.ts:49)` (22ms)
+12. ✓ **Assert** `card 4 link (layout.spec.ts:48)` (21ms)
+13. ✓ **Assert** `card 4 price (layout.spec.ts:49)` (44ms)
+14. ✓ **Assert** `card 5 link (layout.spec.ts:48)` (21ms)
+15. ✓ **Assert** `card 5 price (layout.spec.ts:49)` (21ms)
 
 </details>
 
@@ -224,7 +224,7 @@ Source code for every scenario is linked by file and line.
 | Tags | `@ui` `@edge` `@P2` |
 | Script | `tests/ui/layout.spec.ts:53` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | UI (desktop): ✅ Passed (1.1s) · UI (mobile): ✅ Passed (0.9s) |
+| Result | UI (desktop): ✅ Passed (0.8s) · UI (mobile): ✅ Passed (1.1s) |
 
 **Test steps**
 1. Open /cart with no items.
@@ -234,9 +234,9 @@ Source code for every scenario is linked by file and line.
 
 <details><summary>Steps executed in this run (3)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (281ms)
-2. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:58)` (9ms)
-3. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:59)` (9ms)
+1. ✓ `Navigate (fixtures.ts:55)` (336ms)
+2. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:58)` (13ms)
+3. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:59)` (16ms)
 
 </details>
 
@@ -257,7 +257,7 @@ Source code for every scenario is linked by file and line.
 | Tags | `@ui` `@P2` |
 | Script | `tests/ui/layout.spec.ts:62` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | UI (desktop): ✅ Passed (5.0s) · UI (mobile): ✅ Passed (2.5s) |
+| Result | UI (desktop): ✅ Passed (5.1s) · UI (mobile): ✅ Passed (2.9s) |
 
 **Test steps**
 1. Scroll the home page so lazy images load.
@@ -267,7 +267,7 @@ Source code for every scenario is linked by file and line.
 
 <details><summary>Steps executed in this run (2)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (331ms)
+1. ✓ `Navigate (fixtures.ts:55)` (495ms)
 2. ✓ **Assert** `Broken images:  (layout.spec.ts:75)` (0ms)
 
 </details>
@@ -289,7 +289,7 @@ Source code for every scenario is linked by file and line.
 | Tags | `@ui` `@edge` `@P2` |
 | Script | `tests/ui/layout.spec.ts:78` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | UI (desktop): ✅ Passed (1.5s) · UI (mobile): ✅ Passed (2.8s) |
+| Result | UI (desktop): ✅ Passed (1.7s) · UI (mobile): ✅ Passed (2.5s) |
 
 **Test steps**
 1. On home, collection and product pages, the document must not be wider than the viewport.
@@ -299,11 +299,11 @@ Source code for every scenario is linked by file and line.
 
 <details><summary>Steps executed in this run (6)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (446ms)
-2. ✓ **Assert** `/ overflows horizontally by 0px (layout.spec.ts:86)` (0ms)
-3. ✓ `Navigate (fixtures.ts:55)` (314ms)
+1. ✓ `Navigate (fixtures.ts:55)` (617ms)
+2. ✓ **Assert** `/ overflows horizontally by 0px (layout.spec.ts:86)` (1ms)
+3. ✓ `Navigate (fixtures.ts:55)` (339ms)
 4. ✓ **Assert** `/collections/all overflows horizontally by 0px (layout.spec.ts:86)` (0ms)
-5. ✓ `Navigate (fixtures.ts:55)` (352ms)
+5. ✓ `Navigate (fixtures.ts:55)` (343ms)
 6. ✓ **Assert** `/products/the-collection-snowboard-liquid overflows horizontally by 0px (layout.spec.ts:86)` (0ms)
 
 </details>
@@ -325,7 +325,7 @@ Source code for every scenario is linked by file and line.
 | Tags | `@ui` `@P2` |
 | Script | `tests/ui/layout.spec.ts:134` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | UI (desktop): ⏭️ Skipped (0.2s) · UI (mobile): ✅ Passed (2.9s) |
+| Result | UI (desktop): ⏭️ Skipped (0.2s) · UI (mobile): ✅ Passed (2.5s) |
 
 **Test steps**
 1. Mobile only.
@@ -362,35 +362,35 @@ Source code for every scenario is linked by file and line.
 
 <details><summary>Steps executed in this run (29)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (297ms)
+1. ✓ `Navigate (fixtures.ts:55)` (336ms)
 2. ✓ `Press "Tab" (layout.spec.ts:100)` (11ms)
-3. ✓ `Press "Tab" (layout.spec.ts:100)` (13ms)
+3. ✓ `Press "Tab" (layout.spec.ts:100)` (11ms)
 4. ✓ `Press "Tab" (layout.spec.ts:100)` (6ms)
-5. ✓ `Press "Tab" (layout.spec.ts:100)` (5ms)
-6. ✓ `Press "Tab" (layout.spec.ts:100)` (7ms)
-7. ✓ `Press "Tab" (layout.spec.ts:100)` (10ms)
-8. ✓ `Press "Tab" (layout.spec.ts:100)` (9ms)
+5. ✓ `Press "Tab" (layout.spec.ts:100)` (9ms)
+6. ✓ `Press "Tab" (layout.spec.ts:100)` (6ms)
+7. ✓ `Press "Tab" (layout.spec.ts:100)` (14ms)
+8. ✓ `Press "Tab" (layout.spec.ts:100)` (6ms)
 9. ✓ `Press "Tab" (layout.spec.ts:100)` (6ms)
-10. ✓ `Press "Tab" (layout.spec.ts:100)` (8ms)
-11. ✓ `Press "Tab" (layout.spec.ts:100)` (7ms)
-12. ✓ `Press "Tab" (layout.spec.ts:100)` (9ms)
+10. ✓ `Press "Tab" (layout.spec.ts:100)` (11ms)
+11. ✓ `Press "Tab" (layout.spec.ts:100)` (10ms)
+12. ✓ `Press "Tab" (layout.spec.ts:100)` (11ms)
 13. ✓ **Assert** `Add to cart should show a visible focus indicator (layout.spec.ts:107)` (0ms)
-14. ✓ `Press "Enter" (layout.spec.ts:116)` (25ms)
-15. ✓ **Assert** `Expect "poll toBe" (layout.spec.ts:118)` (146ms)
-16. ✓ `Press "Escape" (layout.spec.ts:121)` (19ms)
-17. ✓ `Navigate (fixtures.ts:55)` (362ms)
-18. ✓ `Press "Tab" (layout.spec.ts:100)` (12ms)
-19. ✓ `Press "Tab" (layout.spec.ts:100)` (24ms)
-20. ✓ `Press "Tab" (layout.spec.ts:100)` (12ms)
-21. ✓ `Press "Tab" (layout.spec.ts:100)` (9ms)
-22. ✓ `Press "Tab" (layout.spec.ts:100)` (10ms)
-23. ✓ `Press "Tab" (layout.spec.ts:100)` (11ms)
-24. ✓ `Press "Tab" (layout.spec.ts:100)` (28ms)
-25. ✓ `Press "Tab" (layout.spec.ts:100)` (15ms)
+14. ✓ `Press "Enter" (layout.spec.ts:116)` (14ms)
+15. ✓ **Assert** `Expect "poll toBe" (layout.spec.ts:118)` (126ms)
+16. ✓ `Press "Escape" (layout.spec.ts:121)` (6ms)
+17. ✓ `Navigate (fixtures.ts:55)` (331ms)
+18. ✓ `Press "Tab" (layout.spec.ts:100)` (17ms)
+19. ✓ `Press "Tab" (layout.spec.ts:100)` (15ms)
+20. ✓ `Press "Tab" (layout.spec.ts:100)` (10ms)
+21. ✓ `Press "Tab" (layout.spec.ts:100)` (8ms)
+22. ✓ `Press "Tab" (layout.spec.ts:100)` (8ms)
+23. ✓ `Press "Tab" (layout.spec.ts:100)` (7ms)
+24. ✓ `Press "Tab" (layout.spec.ts:100)` (9ms)
+25. ✓ `Press "Tab" (layout.spec.ts:100)` (11ms)
 26. ✓ **Assert** `cart icon should show a visible focus indicator (layout.spec.ts:107)` (0ms)
-27. ✓ `Press "Enter" (layout.spec.ts:124)` (11ms)
-28. ✓ **Assert** `Expect "toPass" (layout.spec.ts:130)` (143ms)
-29. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:131)` (8ms)
+27. ✓ `Press "Enter" (layout.spec.ts:124)` (8ms)
+28. ✓ **Assert** `Expect "toPass" (layout.spec.ts:130)` (138ms)
+29. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:131)` (11ms)
 
 </details>
 
@@ -411,7 +411,7 @@ Source code for every scenario is linked by file and line.
 | Tags | `@ui` `@ai` `@P2` |
 | Script | `tests/ui/ai-visual.spec.ts:13` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | UI (desktop): ❌ Failed (8.9s) · UI (mobile): ❌ Failed (7.8s) |
+| Result | UI (desktop): ❌ Failed (9.2s) · UI (mobile): ⚠️ Flaky (5.2s) |
 
 **Test steps**
 1. Claude reviews a screenshot for layout bugs, broken images, overlapping text and placeholder copy.
@@ -421,17 +421,17 @@ Source code for every scenario is linked by file and line.
 
 <details><summary>Steps executed in this run (2)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (332ms)
-2. ✗ **Assert** `AI check failed: "The page looks like a professional online store: a header with logo and navigation, a clear hero or featured section, no broken images, no ove (aiAssert.ts:52)` (1ms)
+1. ✓ `Navigate (fixtures.ts:55)` (356ms)
+2. ✗ **Assert** `AI check failed: "The page looks like a professional online store: a header with logo and navigation, a clear hero or featured section, no broken images, no ove (aiAssert.ts:52)` (2ms)
 
 </details>
 
-**Actual result:** ❌ *UI (desktop):* Failed: Error: AI check failed: "The page looks like a professional online store: a header with logo and navigation, a clear hero or featured section, no broken images, no overlapping or cut-off text, and no leftover placeholder or template copy."<br>*UI (mobile):* Failed: Error: AI check failed: "The page looks like a professional online store: a header with logo and navigation, a clear hero or featured section, no broken images, no overlapping or cut-off text, and no leftover placeholder or template copy."
+**Actual result:** ❌ *UI (desktop):* Failed: Error: AI check failed: "The page looks like a professional online store: a header with logo and navigation, a clear hero or featured section, no broken images, no overlapping or cut-off text, and no leftover placeholder or template copy."<br>*UI (mobile):* As expected. 1/1 assertions passed. Passed on retry (flaky).
 
 ```
 Error: AI check failed: "The page looks like a professional online store: a header with logo and navigation, a clear hero or featured section, no broken images, no overlapping or cut-off text, and no leftover placeholder or template copy."
-The visible header, hero and CTA render cleanly with no broken images or overlapping text. However, the page carries leftover development-store template copy, so the no-placeholder requirement is not met. The visible hero text also reads as a test store rather than a professional shop.
-Issues: Hero copy reads 'James QA Test Store' / 'A Test Store to facilitate AI Assisted Test Automation', which is test copy rather than a professional storefront message.; The footer (per the element list) contains leftover Shopify dev-store template content: '© 2023 / Shopify, Inc.', plus 'Generated test data docs' and 'GraphiQL API explorer' links.; The header logo is plain text ('James QA Shop'), not a logo image.; Only the top of the page is visible in the screenshot; product cards and lower sections cannot be checked for broken images or cut-off text.
+The visible area looks clean: a header with text logo and navigation, a clear hero with an intact image, and no overlapping text. However, the element list shows leftover Shopify dev-store template copy, so the page does not fully meet the 'no leftover placeholder or template copy' requirement.
+Issues: Footer contains a 'Resources' block linking to 'Generated test data docs' and 'GraphiQL API explorer', which is leftover development-store template content.; Footer heading reads '© 2023 / Shopify, Inc.' rather than the store's own copyright, which looks like template copy.; The hero subtitle 'A Test Store to facilitate AI Assisted Test Automation' reads as test or placeholder copy, not professional storefront messaging.; Store naming is inconsistent: the header says 'James QA Shop' while the hero says 'James QA Test Store'.; The logo is plain text with no brand image, and the 'Featured products' grid falls below the fold, so its images and prices cannot be verified visually.
 expect(received).toBe(expected) // Object.is equality
 Expected: true
 Received: false
@@ -452,7 +452,7 @@ Received: false
 | Tags | `@ui` `@ai` `@P2` |
 | Script | `tests/ui/ai-visual.spec.ts:25` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | UI (desktop): ✅ Passed (4.2s) · UI (mobile): ✅ Passed (6.6s) |
+| Result | UI (desktop): ✅ Passed (4.9s) · UI (mobile): ✅ Passed (4.7s) |
 
 **Test steps**
 1. Claude checks the product name, price, a matching photo and a visible Add to cart button.
@@ -462,8 +462,8 @@ Received: false
 
 <details><summary>Steps executed in this run (2)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (556ms)
-2. ✓ **Assert** `AI check failed: "This is the product page for "The Collection Snowboard: Liquid". It shows that product name, a price, a product photo that matches the product (aiAssert.ts:52)` (0ms)
+1. ✓ `Navigate (fixtures.ts:55)` (591ms)
+2. ✓ **Assert** `AI check failed: "This is the product page for "The Collection Snowboard: Liquid". It shows that product name, a price, a product photo that matches the product (aiAssert.ts:52)` (1ms)
 
 </details>
 
@@ -484,7 +484,7 @@ Received: false
 | Tags | `@ui` `@ai` `@P2` |
 | Script | `tests/ui/ai-visual.spec.ts:37` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | UI (desktop): ✅ Passed (3.9s) · UI (mobile): ✅ Passed (5.1s) |
+| Result | UI (desktop): ✅ Passed (4.0s) · UI (mobile): ✅ Passed (4.7s) |
 
 **Test steps**
 1. Claude checks the cart shows the line item, price, quantity control, subtotal and checkout button.
@@ -494,8 +494,8 @@ Received: false
 
 <details><summary>Steps executed in this run (3)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (390ms)
-2. ✓ `Navigate (fixtures.ts:55)` (235ms)
+1. ✓ `Navigate (fixtures.ts:55)` (439ms)
+2. ✓ `Navigate (fixtures.ts:55)` (261ms)
 3. ✓ **Assert** `AI check failed: "The cart shows one line item for "The Collection Snowboard: Liquid" with a price, a quantity control, a subtotal, and a visible checkout butto (aiAssert.ts:52)` (0ms)
 
 </details>
@@ -517,7 +517,7 @@ Received: false
 | Tags | `@ui` `@ai` `@P3` |
 | Script | `tests/ui/ai-visual.spec.ts:50` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | UI (desktop): ❌ Failed (4.2s) · UI (mobile): ⏭️ Skipped (0.0s) |
+| Result | UI (desktop): ❌ Failed (4.0s) · UI (mobile): ⏭️ Skipped (0.0s) |
 
 **Test steps**
 1. Claude reviews up to 10 product descriptions for spelling mistakes, placeholder text and title mismatches.
@@ -527,21 +527,21 @@ Received: false
 
 <details><summary>Steps executed in this run (1)</summary>
 
-1. ✗ **Assert** `the-collection-snowboard-liquid: Description is empty. the-collection-snowboard-oxygen: Description is empty. the-collection-snowboard-hydrogen: Description is  (ai-visual.spec.ts:72)` (3ms)
+1. ✗ **Assert** `the-collection-snowboard-liquid: Product description is empty. the-collection-snowboard-oxygen: Product description is empty. the-collection-snowboard-hydrogen: (ai-visual.spec.ts:72)` (3ms)
 
 </details>
 
-**Actual result:** ❌ *UI (desktop):* Failed: Error: the-collection-snowboard-liquid: Description is empty.<br>*UI (mobile):* Not executed: Content check runs once, on desktop
+**Actual result:** ❌ *UI (desktop):* Failed: Error: the-collection-snowboard-liquid: Product description is empty.<br>*UI (mobile):* Not executed: Content check runs once, on desktop
 
 ```
-Error: the-collection-snowboard-liquid: Description is empty.
-the-collection-snowboard-oxygen: Description is empty.
-the-collection-snowboard-hydrogen: Description is empty.
-the-multi-location-snowboard: Description is empty.
-the-multi-managed-snowboard: Description is empty.
-the-3p-fulfilled-snowboard: Description is empty.
-selling-plans-ski-wax: Description is empty.
-the-videographer-snowboard: Description is empty.
+Error: the-collection-snowboard-liquid: Product description is empty.
+the-collection-snowboard-oxygen: Product description is empty.
+the-collection-snowboard-hydrogen: Product description is empty.
+the-multi-location-snowboard: Product description is empty.
+the-multi-managed-snowboard: Product description is empty.
+the-3p-fulfilled-snowboard: Product description is empty.
+selling-plans-ski-wax: Product description is empty.
+the-videographer-snowboard: Product description is empty.
 ```
 
 
@@ -559,7 +559,7 @@ the-videographer-snowboard: Description is empty.
 | Tags | `@functional` `@P1` `@regression` |
 | Script | `tests/functional/shopping.spec.ts:14` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: ✅ Passed (0.8s) |
+| Result | Functional: ✅ Passed (1.0s) |
 
 **Test steps**
 1. Open an in-stock product.
@@ -569,9 +569,9 @@ the-videographer-snowboard: Description is empty.
 
 <details><summary>Steps executed in this run (3)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (277ms)
-2. ✓ **Assert** `Expect "toHaveText" (shopping.spec.ts:20)` (14ms)
-3. ✓ **Assert** `Expect "toContain" (shopping.spec.ts:22)` (2ms)
+1. ✓ `Navigate (fixtures.ts:55)` (355ms)
+2. ✓ **Assert** `Expect "toHaveText" (shopping.spec.ts:20)` (21ms)
+3. ✓ **Assert** `Expect "toContain" (shopping.spec.ts:22)` (0ms)
 
 </details>
 
@@ -592,7 +592,7 @@ the-videographer-snowboard: Description is empty.
 | Tags | `@functional` `@P1` `@regression` |
 | Script | `tests/functional/shopping.spec.ts:25` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: 🚧 Blocked (10.2s) |
+| Result | Functional: 🚧 Blocked (10.1s) |
 
 **Test steps**
 1. Click Add to cart.
@@ -602,8 +602,8 @@ the-videographer-snowboard: Description is empty.
 
 <details><summary>Steps executed in this run (2)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (430ms)
-2. ✓ `Click (ProductPage.ts:57)` (59ms)
+1. ✓ `Navigate (fixtures.ts:55)` (329ms)
+2. ✓ `Click (ProductPage.ts:57)` (56ms)
 
 </details>
 
@@ -624,7 +624,7 @@ the-videographer-snowboard: Description is empty.
 | Tags | `@functional` `@P2` |
 | Script | `tests/functional/shopping.spec.ts:38` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: ⏭️ Skipped (1.0s) |
+| Result | Functional: ⏭️ Skipped (1.1s) |
 
 **Test steps**
 1. Set quantity to 3 on the product page and add to cart.
@@ -634,7 +634,7 @@ the-videographer-snowboard: Description is empty.
 
 <details><summary>Steps executed in this run (1)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (500ms)
+1. ✓ `Navigate (fixtures.ts:55)` (349ms)
 
 </details>
 
@@ -665,9 +665,9 @@ the-videographer-snowboard: Description is empty.
 
 <details><summary>Steps executed in this run (3)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (443ms)
-2. ✓ **Assert** `Expect "toBeDisabled" (shopping.spec.ts:59)` (21ms)
-3. ✓ **Assert** `Expect "toContainText" (shopping.spec.ts:60)` (18ms)
+1. ✓ `Navigate (fixtures.ts:55)` (413ms)
+2. ✓ **Assert** `Expect "toBeDisabled" (shopping.spec.ts:59)` (17ms)
+3. ✓ **Assert** `Expect "toContainText" (shopping.spec.ts:60)` (15ms)
 
 </details>
 
@@ -698,9 +698,9 @@ the-videographer-snowboard: Description is empty.
 
 <details><summary>Steps executed in this run (3)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (464ms)
-2. ✓ `Click (shopping.spec.ts:77)` (73ms)
-3. ✓ **Assert** `Expect "toHaveURL" (shopping.spec.ts:79)` (18ms)
+1. ✓ `Navigate (fixtures.ts:55)` (360ms)
+2. ✓ `Click (shopping.spec.ts:77)` (69ms)
+3. ✓ **Assert** `Expect "toHaveURL" (shopping.spec.ts:79)` (14ms)
 
 </details>
 
@@ -721,7 +721,7 @@ the-videographer-snowboard: Description is empty.
 | Tags | `@functional` `@P1` `@regression` |
 | Script | `tests/functional/shopping.spec.ts:90` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: 🚧 Blocked (10.2s) |
+| Result | Functional: 🚧 Blocked (10.1s) |
 
 **Test steps**
 1. With 1 item in the cart, /cart must list 1 line item, a subtotal and an enabled Checkout button.
@@ -746,7 +746,7 @@ the-videographer-snowboard: Description is empty.
 | Tags | `@functional` `@P1` |
 | Script | `tests/functional/shopping.spec.ts:100` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: 🚧 Blocked (10.1s) |
+| Result | Functional: 🚧 Blocked (10.0s) |
 
 **Test steps**
 1. Set the line quantity to 2.
@@ -771,7 +771,7 @@ the-videographer-snowboard: Description is empty.
 | Tags | `@functional` `@edge` `@P1` |
 | Script | `tests/functional/shopping.spec.ts:114` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: 🚧 Blocked (10.1s) |
+| Result | Functional: 🚧 Blocked (10.2s) |
 
 **Test steps**
 1. Click Remove on the line item.
@@ -796,7 +796,7 @@ the-videographer-snowboard: Description is empty.
 | Tags | `@functional` `@P1` `@regression` |
 | Script | `tests/functional/shopping.spec.ts:124` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: 🚧 Blocked (10.2s) |
+| Result | Functional: 🚧 Blocked (10.0s) |
 
 **Test steps**
 1. Click Checkout.
@@ -822,7 +822,7 @@ the-videographer-snowboard: Description is empty.
 | Tags | `@functional` `@P1` `@regression` |
 | Script | `tests/functional/shopping.spec.ts:135` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: 🚧 Blocked (31.4s) |
+| Result | Functional: 🚧 Blocked (31.7s) |
 
 **Test steps**
 1. Open search from the header, type a product name, press Enter.
@@ -832,9 +832,9 @@ the-videographer-snowboard: Description is empty.
 
 <details><summary>Steps executed in this run (4)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (366ms)
-2. ✓ `Click (BasePage.ts:52)` (62ms)
-3. ✓ `Fill "The Collection Snowboard: Liquid" (shopping.spec.ts:142)` (49ms)
+1. ✓ `Navigate (fixtures.ts:55)` (333ms)
+2. ✓ `Click (BasePage.ts:52)` (67ms)
+3. ✓ `Fill "The Collection Snowboard: Liquid" (shopping.spec.ts:142)` (39ms)
 4. ✓ `Press "Enter" (shopping.spec.ts:143)` (122ms)
 
 </details>
@@ -856,7 +856,7 @@ the-videographer-snowboard: Description is empty.
 | Tags | `@functional` `@edge` `@P2` |
 | Script | `tests/functional/shopping.spec.ts:150` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: ✅ Passed (0.9s) |
+| Result | Functional: ✅ Passed (0.8s) |
 
 **Test steps**
 1. Search for a nonsense term.
@@ -866,9 +866,9 @@ the-videographer-snowboard: Description is empty.
 
 <details><summary>Steps executed in this run (3)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (553ms)
-2. ✓ **Assert** `Expect "toHaveCount" (shopping.spec.ts:155)` (24ms)
-3. ✓ **Assert** `Expect "toBeVisible" (shopping.spec.ts:156)` (12ms)
+1. ✓ `Navigate (fixtures.ts:55)` (493ms)
+2. ✓ **Assert** `Expect "toHaveCount" (shopping.spec.ts:155)` (23ms)
+3. ✓ **Assert** `Expect "toBeVisible" (shopping.spec.ts:156)` (11ms)
 
 </details>
 
@@ -899,8 +899,8 @@ the-videographer-snowboard: Description is empty.
 
 <details><summary>Steps executed in this run (3)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (488ms)
-2. ✓ **Assert** `Expect "toBeGreaterThan" (shopping.spec.ts:169)` (1ms)
+1. ✓ `Navigate (fixtures.ts:55)` (444ms)
+2. ✓ **Assert** `Expect "toBeGreaterThan" (shopping.spec.ts:169)` (0ms)
 3. ✓ **Assert** `Expect "toEqual" (shopping.spec.ts:170)` (1ms)
 
 </details>
@@ -922,7 +922,7 @@ the-videographer-snowboard: Description is empty.
 | Tags | `@functional` `@P3` |
 | Script | `tests/functional/shopping.spec.ts:173` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: ✅ Passed (0.7s) |
+| Result | Functional: ✅ Passed (0.6s) |
 
 **Test steps**
 1. Each product in the catalogue must appear as a link on /collections/all (first page, up to 24).
@@ -932,7 +932,7 @@ the-videographer-snowboard: Description is empty.
 
 <details><summary>Steps executed in this run (2)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (433ms)
+1. ✓ `Navigate (fixtures.ts:55)` (402ms)
 2. ✓ **Assert** `Not listed on /collections/all:  (shopping.spec.ts:183)` (0ms)
 
 </details>
@@ -954,7 +954,7 @@ the-videographer-snowboard: Description is empty.
 | Tags | `@functional` `@edge` `@P3` |
 | Script | `tests/functional/shopping.spec.ts:186` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: ✅ Passed (3.9s) |
+| Result | Functional: ✅ Passed (3.8s) |
 
 **Test steps**
 1. Open /pages/contact and submit the form empty.
@@ -965,11 +965,11 @@ the-videographer-snowboard: Description is empty.
 
 <details><summary>Steps executed in this run (6)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (424ms)
-2. ✓ **Assert** `Expect "toBeVisible" (shopping.spec.ts:193)` (22ms)
-3. ✓ **Assert** `Expect "toHaveAttribute" (shopping.spec.ts:194)` (10ms)
-4. ✓ `Click (shopping.spec.ts:195)` (38ms)
-5. ✓ **Assert** `Expect "not toHaveURL" (shopping.spec.ts:199)` (10ms)
+1. ✓ `Navigate (fixtures.ts:55)` (357ms)
+2. ✓ **Assert** `Expect "toBeVisible" (shopping.spec.ts:193)` (20ms)
+3. ✓ **Assert** `Expect "toHaveAttribute" (shopping.spec.ts:194)` (8ms)
+4. ✓ `Click (shopping.spec.ts:195)` (41ms)
+5. ✓ **Assert** `Expect "not toHaveURL" (shopping.spec.ts:199)` (9ms)
 6. ✓ **Assert** `Expect "toHaveCount" (shopping.spec.ts:200)` (10ms)
 
 </details>
@@ -991,7 +991,7 @@ the-videographer-snowboard: Description is empty.
 | Tags | `@functional` `@edge` `@P2` |
 | Script | `tests/functional/edge-cases.spec.ts:13` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: ⏭️ Skipped (1.4s) |
+| Result | Functional: ⏭️ Skipped (1.6s) |
 
 **Test steps**
 1. Set the product page quantity to 0, then -1, and try to add to cart.
@@ -1001,7 +1001,7 @@ the-videographer-snowboard: Description is empty.
 
 <details><summary>Steps executed in this run (1)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (586ms)
+1. ✓ `Navigate (fixtures.ts:55)` (783ms)
 
 </details>
 
@@ -1022,7 +1022,7 @@ the-videographer-snowboard: Description is empty.
 | Tags | `@functional` `@edge` `@P3` |
 | Script | `tests/functional/edge-cases.spec.ts:32` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: ⏭️ Skipped (1.4s) |
+| Result | Functional: ⏭️ Skipped (1.7s) |
 
 **Test steps**
 1. Force the quantity field to "abc" and add to cart.
@@ -1032,7 +1032,7 @@ the-videographer-snowboard: Description is empty.
 
 <details><summary>Steps executed in this run (1)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (782ms)
+1. ✓ `Navigate (fixtures.ts:55)` (854ms)
 
 </details>
 
@@ -1053,7 +1053,7 @@ the-videographer-snowboard: Description is empty.
 | Tags | `@functional` `@edge` `@P2` |
 | Script | `tests/functional/edge-cases.spec.ts:50` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: ⏭️ Skipped (1.2s) |
+| Result | Functional: ⏭️ Skipped (1.3s) |
 
 **Test steps**
 1. Set quantity to 99999 and add to cart.
@@ -1064,7 +1064,7 @@ the-videographer-snowboard: Description is empty.
 
 <details><summary>Steps executed in this run (1)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (626ms)
+1. ✓ `Navigate (fixtures.ts:55)` (614ms)
 
 </details>
 
@@ -1085,7 +1085,7 @@ the-videographer-snowboard: Description is empty.
 | Tags | `@functional` `@edge` `@P1` `@regression` |
 | Script | `tests/functional/edge-cases.spec.ts:75` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: ✅ Passed (3.9s) |
+| Result | Functional: ✅ Passed (4.1s) |
 
 **Test steps**
 1. Add the same variant twice from the product page.
@@ -1095,15 +1095,15 @@ the-videographer-snowboard: Description is empty.
 
 <details><summary>Steps executed in this run (9)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (424ms)
-2. ✓ `Click (ProductPage.ts:57)` (76ms)
-3. ✓ `Navigate (fixtures.ts:55)` (345ms)
-4. ✓ `Click (ProductPage.ts:57)` (55ms)
+1. ✓ `Navigate (fixtures.ts:55)` (750ms)
+2. ✓ `Click (ProductPage.ts:57)` (128ms)
+3. ✓ `Navigate (fixtures.ts:55)` (406ms)
+4. ✓ `Click (ProductPage.ts:57)` (71ms)
 5. ✓ **Assert** `Expect "toHaveLength" (edge-cases.spec.ts:85)` (0ms)
 6. ✓ **Assert** `Expect "toBe" (edge-cases.spec.ts:86)` (0ms)
-7. ✓ `Navigate (fixtures.ts:55)` (342ms)
-8. ✓ **Assert** `Expect "toHaveCount" (edge-cases.spec.ts:88)` (14ms)
-9. ✓ **Assert** `Expect "toHaveValue" (edge-cases.spec.ts:89)` (17ms)
+7. ✓ `Navigate (fixtures.ts:55)` (337ms)
+8. ✓ **Assert** `Expect "toHaveCount" (edge-cases.spec.ts:88)` (11ms)
+9. ✓ **Assert** `Expect "toHaveValue" (edge-cases.spec.ts:89)` (23ms)
 
 </details>
 
@@ -1124,7 +1124,7 @@ the-videographer-snowboard: Description is empty.
 | Tags | `@functional` `@edge` `@P1` |
 | Script | `tests/functional/edge-cases.spec.ts:92` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: ✅ Passed (2.7s) |
+| Result | Functional: ✅ Passed (2.8s) |
 
 **Test steps**
 1. Add two different products.
@@ -1134,11 +1134,11 @@ the-videographer-snowboard: Description is empty.
 
 <details><summary>Steps executed in this run (5)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (618ms)
-2. ✓ `Navigate (fixtures.ts:55)` (361ms)
-3. ✓ **Assert** `Expect "toHaveCount" (edge-cases.spec.ts:101)` (15ms)
-4. ✓ **Assert** `Expect "toBe" (edge-cases.spec.ts:103)` (0ms)
-5. ✓ **Assert** `Expect "toContain" (edge-cases.spec.ts:105)` (0ms)
+1. ✓ `Navigate (fixtures.ts:55)` (689ms)
+2. ✓ `Navigate (fixtures.ts:55)` (354ms)
+3. ✓ **Assert** `Expect "toHaveCount" (edge-cases.spec.ts:101)` (20ms)
+4. ✓ **Assert** `Expect "toBe" (edge-cases.spec.ts:103)` (1ms)
+5. ✓ **Assert** `Expect "toContain" (edge-cases.spec.ts:105)` (1ms)
 
 </details>
 
@@ -1159,7 +1159,7 @@ the-videographer-snowboard: Description is empty.
 | Tags | `@functional` `@edge` `@P1` |
 | Script | `tests/functional/edge-cases.spec.ts:108` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: ✅ Passed (2.7s) |
+| Result | Functional: ✅ Passed (2.5s) |
 
 **Test steps**
 1. Add an item, reload the page, then open the cart in a new tab of the same browser session.
@@ -1169,13 +1169,13 @@ the-videographer-snowboard: Description is empty.
 
 <details><summary>Steps executed in this run (7)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (579ms)
-2. ✓ `Reload (edge-cases.spec.ts:115)` (467ms)
+1. ✓ `Navigate (fixtures.ts:55)` (526ms)
+2. ✓ `Reload (edge-cases.spec.ts:115)` (349ms)
 3. ✓ **Assert** `Expect "toBe" (edge-cases.spec.ts:116)` (0ms)
-4. ✓ `Create page (edge-cases.spec.ts:117)` (55ms)
-5. ✓ `Navigate (edge-cases.spec.ts:118)` (402ms)
+4. ✓ `Create page (edge-cases.spec.ts:117)` (49ms)
+5. ✓ `Navigate (edge-cases.spec.ts:118)` (393ms)
 6. ✓ **Assert** `Expect "toBe" (edge-cases.spec.ts:119)` (0ms)
-7. ✓ `Close page (edge-cases.spec.ts:120)` (44ms)
+7. ✓ `Close page (edge-cases.spec.ts:120)` (65ms)
 
 </details>
 
@@ -1196,7 +1196,7 @@ the-videographer-snowboard: Description is empty.
 | Tags | `@functional` `@edge` `@P2` |
 | Script | `tests/functional/edge-cases.spec.ts:123` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: ✅ Passed (4.4s) |
+| Result | Functional: ✅ Passed (4.3s) |
 
 **Test steps**
 1. Double-click Add to cart quickly.
@@ -1206,8 +1206,8 @@ the-videographer-snowboard: Description is empty.
 
 <details><summary>Steps executed in this run (3)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (479ms)
-2. ✓ `Double click (edge-cases.spec.ts:129)` (58ms)
+1. ✓ `Navigate (fixtures.ts:55)` (441ms)
+2. ✓ `Double click (edge-cases.spec.ts:129)` (55ms)
 3. ✓ **Assert** `Expect "toBe" (edge-cases.spec.ts:131)` (0ms)
 
 </details>
@@ -1229,7 +1229,7 @@ the-videographer-snowboard: Description is empty.
 | Tags | `@functional` `@edge` `@P3` |
 | Script | `tests/functional/edge-cases.spec.ts:134` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: ✅ Passed (2.1s) |
+| Result | Functional: ✅ Passed (2.4s) |
 
 **Test steps**
 1. With an item in the cart, open /discount/NOT-A-REAL-CODE.
@@ -1239,9 +1239,9 @@ the-videographer-snowboard: Description is empty.
 
 <details><summary>Steps executed in this run (4)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (507ms)
-2. ✓ `Navigate (fixtures.ts:55)` (673ms)
-3. ✓ **Assert** `Expect "toBeLessThan" (edge-cases.spec.ts:143)` (0ms)
+1. ✓ `Navigate (fixtures.ts:55)` (443ms)
+2. ✓ `Navigate (fixtures.ts:55)` (833ms)
+3. ✓ **Assert** `Expect "toBeLessThan" (edge-cases.spec.ts:143)` (1ms)
 4. ✓ **Assert** `Expect "toBe" (edge-cases.spec.ts:144)` (0ms)
 
 </details>
@@ -1263,7 +1263,7 @@ the-videographer-snowboard: Description is empty.
 | Tags | `@functional` `@edge` `@P2` |
 | Script | `tests/functional/edge-cases.spec.ts:147` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: 🚧 Blocked (10.3s) |
+| Result | Functional: ✅ Passed (2.0s) |
 
 **Test steps**
 1. For a variant with a compare-at price, the product page must show both the sale price and the struck-through original price, and the cart must charge the sale price.
@@ -1271,16 +1271,17 @@ the-videographer-snowboard: Description is empty.
 **Expected result**
 - For a variant with a compare-at price, the product page must show both the sale price and the struck-through original price, and the cart must charge the sale price.
 
-<details><summary>Steps executed in this run (4)</summary>
+<details><summary>Steps executed in this run (5)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (397ms)
-2. ✓ **Assert** `Expect "toBeVisible" (edge-cases.spec.ts:157)` (19ms)
-3. ✓ **Assert** `Expect "toBeVisible" (edge-cases.spec.ts:158)` (15ms)
-4. ✓ `Click (ProductPage.ts:57)` (60ms)
+1. ✓ `Navigate (fixtures.ts:55)` (458ms)
+2. ✓ **Assert** `Expect "toBeVisible" (edge-cases.spec.ts:157)` (20ms)
+3. ✓ **Assert** `Expect "toBeVisible" (edge-cases.spec.ts:158)` (19ms)
+4. ✓ `Click (ProductPage.ts:57)` (86ms)
+5. ✓ **Assert** `Expect "toBe" (edge-cases.spec.ts:160)` (0ms)
 
 </details>
 
-**Actual result:** 🚧 Not verified: Blocked by Shopify bot protection (HTTP 429 "Verifying your connection") before the test could check anything. Environment issue, not a store defect; re-run from CI or after a cool-down.
+**Actual result:** ✅ As expected. 3/3 assertions passed.
 
 <img src="evidence/fn-23-functional.png" alt="FN-23 screenshot" width="420">
 
@@ -1297,7 +1298,7 @@ the-videographer-snowboard: Description is empty.
 | Tags | `@functional` `@edge` `@security` `@P1` |
 | Script | `tests/functional/edge-cases.spec.ts:165` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: ✅ Passed (2.0s) |
+| Result | Functional: ✅ Passed (2.1s) |
 
 **Test steps**
 1. Search for a script/HTML payload.
@@ -1307,9 +1308,9 @@ the-videographer-snowboard: Description is empty.
 
 <details><summary>Steps executed in this run (5)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (631ms)
+1. ✓ `Navigate (fixtures.ts:55)` (679ms)
 2. ✓ **Assert** `Expect "toBe" (edge-cases.spec.ts:173)` (0ms)
-3. ✓ **Assert** `Expect "toBeUndefined" (edge-cases.spec.ts:175)` (1ms)
+3. ✓ **Assert** `Expect "toBeUndefined" (edge-cases.spec.ts:175)` (0ms)
 4. ✓ **Assert** `Expect "toBe" (edge-cases.spec.ts:176)` (0ms)
 5. ✓ **Assert** `Expect "toBe" (edge-cases.spec.ts:177)` (0ms)
 
@@ -1332,7 +1333,7 @@ the-videographer-snowboard: Description is empty.
 | Tags | `@functional` `@edge` `@P3` |
 | Script | `tests/functional/edge-cases.spec.ts:180` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: ✅ Passed (0.7s) |
+| Result | Functional: ✅ Passed (0.9s) |
 
 **Test steps**
 1. Search for a 1,000-character string.
@@ -1342,7 +1343,7 @@ the-videographer-snowboard: Description is empty.
 
 <details><summary>Steps executed in this run (3)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (479ms)
+1. ✓ `Navigate (fixtures.ts:55)` (537ms)
 2. ✓ **Assert** `Expect "toBeLessThan" (edge-cases.spec.ts:185)` (0ms)
 3. ✓ **Assert** `Expect "toBeVisible" (edge-cases.spec.ts:186)` (23ms)
 
@@ -1365,7 +1366,7 @@ the-videographer-snowboard: Description is empty.
 | Tags | `@functional` `@edge` `@P2` |
 | Script | `tests/functional/edge-cases.spec.ts:189` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: ✅ Passed (0.9s) |
+| Result | Functional: ✅ Passed (1.1s) |
 
 **Test steps**
 1. Search for a product name in UPPER CASE with leading and trailing spaces.
@@ -1375,8 +1376,8 @@ the-videographer-snowboard: Description is empty.
 
 <details><summary>Steps executed in this run (2)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (591ms)
-2. ✓ **Assert** `Expect "toBeVisible" (edge-cases.spec.ts:195)` (24ms)
+1. ✓ `Navigate (fixtures.ts:55)` (734ms)
+2. ✓ **Assert** `Expect "toBeVisible" (edge-cases.spec.ts:195)` (31ms)
 
 </details>
 
@@ -1397,7 +1398,7 @@ the-videographer-snowboard: Description is empty.
 | Tags | `@functional` `@edge` `@P2` |
 | Script | `tests/functional/edge-cases.spec.ts:200` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: 🚧 Blocked (10.5s) |
+| Result | Functional: ✅ Passed (1.9s) |
 
 **Test steps**
 1. Open /products/<handle>?variant=123 (not a real variant).
@@ -1405,16 +1406,17 @@ the-videographer-snowboard: Description is empty.
 **Expected result**
 - The page must load (200) and Add to cart must still work.
 
-<details><summary>Steps executed in this run (4)</summary>
+<details><summary>Steps executed in this run (5)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (529ms)
+1. ✓ `Navigate (fixtures.ts:55)` (637ms)
 2. ✓ **Assert** `Expect "toBe" (edge-cases.spec.ts:206)` (0ms)
-3. ✓ **Assert** `Expect "toHaveText" (edge-cases.spec.ts:207)` (20ms)
-4. ✓ `Click (ProductPage.ts:57)` (64ms)
+3. ✓ **Assert** `Expect "toHaveText" (edge-cases.spec.ts:207)` (13ms)
+4. ✓ `Click (ProductPage.ts:57)` (104ms)
+5. ✓ **Assert** `Expect "toBe" (edge-cases.spec.ts:209)` (0ms)
 
 </details>
 
-**Actual result:** 🚧 Not verified: Blocked by Shopify bot protection (HTTP 429 "Verifying your connection") before the test could check anything. Environment issue, not a store defect; re-run from CI or after a cool-down.
+**Actual result:** ✅ As expected. 3/3 assertions passed.
 
 <img src="evidence/fn-27-functional.png" alt="FN-27 screenshot" width="420">
 
@@ -1431,7 +1433,7 @@ the-videographer-snowboard: Description is empty.
 | Tags | `@functional` `@edge` `@P3` |
 | Script | `tests/functional/edge-cases.spec.ts:212` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: ✅ Passed (0.6s) |
+| Result | Functional: ✅ Passed (0.9s) |
 
 **Test steps**
 1. Open /collections/this-collection-does-not-exist.
@@ -1441,7 +1443,7 @@ the-videographer-snowboard: Description is empty.
 
 <details><summary>Steps executed in this run (2)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (391ms)
+1. ✓ `Navigate (fixtures.ts:55)` (554ms)
 2. ✓ **Assert** `Expect "toBe" (edge-cases.spec.ts:217)` (0ms)
 
 </details>
@@ -1465,7 +1467,7 @@ the-videographer-snowboard: Description is empty.
 | Tags | `@non-functional` `@performance` `@P2` |
 | Script | `tests/non-functional/performance.spec.ts:42` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Non-functional: ✅ Passed (2.6s) |
+| Result | Non-functional: ✅ Passed (2.2s) |
 
 **Test steps**
 1. Measure TTFB (<1500ms), DOMContentLoaded (<4000ms), load (<8000ms), LCP (<4000ms) and transfer size (<4000KB).
@@ -1475,16 +1477,16 @@ the-videographer-snowboard: Description is empty.
 
 <details><summary>Steps executed in this run (6)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (540ms)
-2. ✓ **Assert** `ttfbMs 12 exceeds budget 1500 (performance.spec.ts:53)` (0ms)
-3. ✓ **Assert** `domContentLoadedMs 322 exceeds budget 4000 (performance.spec.ts:53)` (0ms)
-4. ✓ **Assert** `loadMs 519 exceeds budget 8000 (performance.spec.ts:53)` (0ms)
-5. ✓ **Assert** `lcpMs 372 exceeds budget 4000 (performance.spec.ts:53)` (0ms)
-6. ✓ **Assert** `pageWeightKb 1162 exceeds budget 4000 (performance.spec.ts:53)` (0ms)
+1. ✓ `Navigate (fixtures.ts:55)` (385ms)
+2. ✓ **Assert** `ttfbMs 82 exceeds budget 1500 (performance.spec.ts:53)` (0ms)
+3. ✓ **Assert** `domContentLoadedMs 249 exceeds budget 4000 (performance.spec.ts:53)` (0ms)
+4. ✓ **Assert** `loadMs 369 exceeds budget 8000 (performance.spec.ts:53)` (0ms)
+5. ✓ **Assert** `lcpMs 276 exceeds budget 4000 (performance.spec.ts:53)` (0ms)
+6. ✓ **Assert** `pageWeightKb 1063 exceeds budget 4000 (performance.spec.ts:53)` (0ms)
 
 </details>
 
-**Actual result:** ✅ As expected. 5/5 assertions passed. Measured: ttfbMs=12, domContentLoadedMs=322, loadMs=519, lcpMs=372, pageWeightKb=1162.
+**Actual result:** ✅ As expected. 5/5 assertions passed. Measured: ttfbMs=82, domContentLoadedMs=249, loadMs=369, lcpMs=276, pageWeightKb=1063.
 
 <img src="evidence/nf-01-non-functional.png" alt="NF-01 screenshot" width="420">
 
@@ -1501,7 +1503,7 @@ the-videographer-snowboard: Description is empty.
 | Tags | `@non-functional` `@performance` `@P2` |
 | Script | `tests/non-functional/performance.spec.ts:42` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Non-functional: ✅ Passed (2.6s) |
+| Result | Non-functional: ✅ Passed (2.2s) |
 
 **Test steps**
 1. Measure TTFB (<1500ms), DOMContentLoaded (<4000ms), load (<8000ms), LCP (<4000ms) and transfer size (<4000KB).
@@ -1511,16 +1513,16 @@ the-videographer-snowboard: Description is empty.
 
 <details><summary>Steps executed in this run (6)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (572ms)
+1. ✓ `Navigate (fixtures.ts:55)` (373ms)
 2. ✓ **Assert** `ttfbMs 15 exceeds budget 1500 (performance.spec.ts:53)` (0ms)
-3. ✓ **Assert** `domContentLoadedMs 363 exceeds budget 4000 (performance.spec.ts:53)` (0ms)
-4. ✓ **Assert** `loadMs 535 exceeds budget 8000 (performance.spec.ts:53)` (0ms)
-5. ✓ **Assert** `lcpMs 344 exceeds budget 4000 (performance.spec.ts:53)` (0ms)
-6. ✓ **Assert** `pageWeightKb 1183 exceeds budget 4000 (performance.spec.ts:53)` (0ms)
+3. ✓ **Assert** `domContentLoadedMs 295 exceeds budget 4000 (performance.spec.ts:53)` (0ms)
+4. ✓ **Assert** `loadMs 351 exceeds budget 8000 (performance.spec.ts:53)` (0ms)
+5. ✓ **Assert** `lcpMs 232 exceeds budget 4000 (performance.spec.ts:53)` (0ms)
+6. ✓ **Assert** `pageWeightKb 1104 exceeds budget 4000 (performance.spec.ts:53)` (1ms)
 
 </details>
 
-**Actual result:** ✅ As expected. 5/5 assertions passed. Measured: ttfbMs=15, domContentLoadedMs=363, loadMs=535, lcpMs=344, pageWeightKb=1183.
+**Actual result:** ✅ As expected. 5/5 assertions passed. Measured: ttfbMs=15, domContentLoadedMs=295, loadMs=351, lcpMs=232, pageWeightKb=1104.
 
 <img src="evidence/nf-02-non-functional.png" alt="NF-02 screenshot" width="420">
 
@@ -1537,7 +1539,7 @@ the-videographer-snowboard: Description is empty.
 | Tags | `@non-functional` `@performance` `@P2` |
 | Script | `tests/non-functional/performance.spec.ts:42` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Non-functional: ✅ Passed (2.6s) |
+| Result | Non-functional: ✅ Passed (2.2s) |
 
 **Test steps**
 1. Measure TTFB (<1500ms), DOMContentLoaded (<4000ms), load (<8000ms), LCP (<4000ms) and transfer size (<4000KB).
@@ -1547,16 +1549,16 @@ the-videographer-snowboard: Description is empty.
 
 <details><summary>Steps executed in this run (6)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (598ms)
-2. ✓ **Assert** `ttfbMs 9 exceeds budget 1500 (performance.spec.ts:53)` (0ms)
-3. ✓ **Assert** `domContentLoadedMs 316 exceeds budget 4000 (performance.spec.ts:53)` (0ms)
-4. ✓ **Assert** `loadMs 570 exceeds budget 8000 (performance.spec.ts:53)` (0ms)
-5. ✓ **Assert** `lcpMs 272 exceeds budget 4000 (performance.spec.ts:53)` (0ms)
-6. ✓ **Assert** `pageWeightKb 1250 exceeds budget 4000 (performance.spec.ts:53)` (0ms)
+1. ✓ `Navigate (fixtures.ts:55)` (429ms)
+2. ✓ **Assert** `ttfbMs 20 exceeds budget 1500 (performance.spec.ts:53)` (0ms)
+3. ✓ **Assert** `domContentLoadedMs 258 exceeds budget 4000 (performance.spec.ts:53)` (0ms)
+4. ✓ **Assert** `loadMs 410 exceeds budget 8000 (performance.spec.ts:53)` (0ms)
+5. ✓ **Assert** `lcpMs 276 exceeds budget 4000 (performance.spec.ts:53)` (0ms)
+6. ✓ **Assert** `pageWeightKb 1078 exceeds budget 4000 (performance.spec.ts:53)` (0ms)
 
 </details>
 
-**Actual result:** ✅ As expected. 5/5 assertions passed. Measured: ttfbMs=9, domContentLoadedMs=316, loadMs=570, lcpMs=272, pageWeightKb=1250.
+**Actual result:** ✅ As expected. 5/5 assertions passed. Measured: ttfbMs=20, domContentLoadedMs=258, loadMs=410, lcpMs=276, pageWeightKb=1078.
 
 <img src="evidence/nf-03-non-functional.png" alt="NF-03 screenshot" width="420">
 
@@ -1573,7 +1575,7 @@ the-videographer-snowboard: Description is empty.
 | Tags | `@non-functional` `@P2` `@regression` |
 | Script | `tests/non-functional/performance.spec.ts:58` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Non-functional: ✅ Passed (2.6s) |
+| Result | Non-functional: ✅ Passed (1.8s) |
 
 **Test steps**
 1. Visit home, collection, product and cart pages.
@@ -1585,11 +1587,11 @@ the-videographer-snowboard: Description is empty.
 
 <details><summary>Steps executed in this run (5)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (748ms)
-2. ✓ `Navigate (fixtures.ts:55)` (464ms)
-3. ✓ `Navigate (fixtures.ts:55)` (457ms)
-4. ✓ `Navigate (fixtures.ts:55)` (336ms)
-5. ✓ **Assert** `Expect "toEqual" (performance.spec.ts:68)` (1ms)
+1. ✓ `Navigate (fixtures.ts:55)` (358ms)
+2. ✓ `Navigate (fixtures.ts:55)` (277ms)
+3. ✓ `Navigate (fixtures.ts:55)` (265ms)
+4. ✓ `Navigate (fixtures.ts:55)` (397ms)
+5. ✓ **Assert** `Expect "toEqual" (performance.spec.ts:68)` (0ms)
 
 </details>
 
@@ -1610,7 +1612,7 @@ the-videographer-snowboard: Description is empty.
 | Tags | `@non-functional` `@a11y` `@P2` |
 | Script | `tests/non-functional/accessibility-seo.spec.ts:11` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Non-functional: ❌ Failed (6.8s) |
+| Result | Non-functional: ❌ Failed (4.1s) |
 
 **Test steps**
 1. Run axe-core (WCAG 2.0/2.1 A + AA rules) on home, collection, product and cart pages.
@@ -1622,21 +1624,21 @@ the-videographer-snowboard: Description is empty.
 
 <details><summary>Steps executed in this run (16)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (603ms)
-2. ✓ `Create page (index.mjs:315)` (49ms)
-3. ✓ `Close page (index.mjs:336)` (32ms)
-4. ✗ **Assert** `/ (accessibility-seo.spec.ts:28)` (5ms)
-5. ✓ `Navigate (fixtures.ts:55)` (479ms)
-6. ✓ `Create page (index.mjs:315)` (47ms)
-7. ✓ `Close page (index.mjs:336)` (122ms)
-8. ✗ **Assert** `/collections/all (accessibility-seo.spec.ts:28)` (1ms)
-9. ✓ `Navigate (fixtures.ts:55)` (460ms)
-10. ✓ `Create page (index.mjs:315)` (42ms)
-11. ✓ `Close page (index.mjs:336)` (132ms)
-12. ✗ **Assert** `/products/the-collection-snowboard-liquid (accessibility-seo.spec.ts:28)` (1ms)
-13. ✓ `Navigate (fixtures.ts:55)` (333ms)
-14. ✓ `Create page (index.mjs:315)` (46ms)
-15. ✓ `Close page (index.mjs:336)` (30ms)
+1. ✓ `Navigate (fixtures.ts:55)` (385ms)
+2. ✓ `Create page (index.mjs:315)` (33ms)
+3. ✓ `Close page (index.mjs:336)` (21ms)
+4. ✗ **Assert** `/ (accessibility-seo.spec.ts:28)` (3ms)
+5. ✓ `Navigate (fixtures.ts:55)` (329ms)
+6. ✓ `Create page (index.mjs:315)` (30ms)
+7. ✓ `Close page (index.mjs:336)` (18ms)
+8. ✗ **Assert** `/collections/all (accessibility-seo.spec.ts:28)` (0ms)
+9. ✓ `Navigate (fixtures.ts:55)` (303ms)
+10. ✓ `Create page (index.mjs:315)` (30ms)
+11. ✓ `Close page (index.mjs:336)` (73ms)
+12. ✗ **Assert** `/products/the-collection-snowboard-liquid (accessibility-seo.spec.ts:28)` (0ms)
+13. ✓ `Navigate (fixtures.ts:55)` (205ms)
+14. ✓ `Create page (index.mjs:315)` (34ms)
+15. ✓ `Close page (index.mjs:336)` (18ms)
 16. ✓ **Assert** `/cart (accessibility-seo.spec.ts:28)` (0ms)
 
 </details>
@@ -1669,7 +1671,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@non-functional` `@a11y` `@P3` |
 | Script | `tests/non-functional/accessibility-seo.spec.ts:33` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Non-functional: ✅ Passed (3.6s) |
+| Result | Non-functional: ✅ Passed (2.5s) |
 
 **Test steps**
 1. Every <img> on key pages must have an alt attribute (empty alt allowed for decorative images).
@@ -1679,13 +1681,13 @@ expect(received).toEqual(expected) // deep equality
 
 <details><summary>Steps executed in this run (8)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (939ms)
+1. ✓ `Navigate (fixtures.ts:55)` (609ms)
 2. ✓ **Assert** `/: images without alt (accessibility-seo.spec.ts:40)` (1ms)
-3. ✓ `Navigate (fixtures.ts:55)` (569ms)
+3. ✓ `Navigate (fixtures.ts:55)` (588ms)
 4. ✓ **Assert** `/collections/all: images without alt (accessibility-seo.spec.ts:40)` (0ms)
-5. ✓ `Navigate (fixtures.ts:55)` (686ms)
-6. ✓ **Assert** `/products/the-collection-snowboard-liquid: images without alt (accessibility-seo.spec.ts:40)` (1ms)
-7. ✓ `Navigate (fixtures.ts:55)` (361ms)
+5. ✓ `Navigate (fixtures.ts:55)` (356ms)
+6. ✓ **Assert** `/products/the-collection-snowboard-liquid: images without alt (accessibility-seo.spec.ts:40)` (0ms)
+7. ✓ `Navigate (fixtures.ts:55)` (390ms)
 8. ✓ **Assert** `/cart: images without alt (accessibility-seo.spec.ts:40)` (0ms)
 
 </details>
@@ -1707,7 +1709,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@non-functional` `@seo` `@P3` |
 | Script | `tests/non-functional/accessibility-seo.spec.ts:46` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Non-functional: ❌ Failed (52.7s) |
+| Result | Non-functional: ❌ Failed (51.7s) |
 
 **Test steps**
 1. Home, collection and product pages need a <title>, meta description (20+ chars), canonical URL and og:image.
@@ -1717,21 +1719,21 @@ expect(received).toEqual(expected) // deep equality
 
 <details><summary>Steps executed in this run (15)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (531ms)
-2. ✓ **Assert** `/: title (accessibility-seo.spec.ts:52)` (36ms)
-3. ✗ **Assert** `/: meta description (accessibility-seo.spec.ts:53)` (10014ms)
-4. ✓ **Assert** `/: canonical (accessibility-seo.spec.ts:54)` (9ms)
-5. ✗ **Assert** `/: og:image (accessibility-seo.spec.ts:55)` (10013ms)
-6. ✓ `Navigate (fixtures.ts:55)` (502ms)
-7. ✓ **Assert** `/collections/all: title (accessibility-seo.spec.ts:52)` (33ms)
-8. ✗ **Assert** `/collections/all: meta description (accessibility-seo.spec.ts:53)` (10014ms)
-9. ✓ **Assert** `/collections/all: canonical (accessibility-seo.spec.ts:54)` (12ms)
-10. ✗ **Assert** `/collections/all: og:image (accessibility-seo.spec.ts:55)` (10010ms)
-11. ✓ `Navigate (fixtures.ts:55)` (457ms)
-12. ✓ **Assert** `/products/the-collection-snowboard-liquid: title (accessibility-seo.spec.ts:52)` (58ms)
-13. ✗ **Assert** `/products/the-collection-snowboard-liquid: meta description (accessibility-seo.spec.ts:53)` (10016ms)
-14. ✓ **Assert** `/products/the-collection-snowboard-liquid: canonical (accessibility-seo.spec.ts:54)` (11ms)
-15. ✓ **Assert** `/products/the-collection-snowboard-liquid: og:image (accessibility-seo.spec.ts:55)` (13ms)
+1. ✓ `Navigate (fixtures.ts:55)` (417ms)
+2. ✓ **Assert** `/: title (accessibility-seo.spec.ts:52)` (21ms)
+3. ✗ **Assert** `/: meta description (accessibility-seo.spec.ts:53)` (10008ms)
+4. ✓ **Assert** `/: canonical (accessibility-seo.spec.ts:54)` (8ms)
+5. ✗ **Assert** `/: og:image (accessibility-seo.spec.ts:55)` (10006ms)
+6. ✓ `Navigate (fixtures.ts:55)` (271ms)
+7. ✓ **Assert** `/collections/all: title (accessibility-seo.spec.ts:52)` (27ms)
+8. ✗ **Assert** `/collections/all: meta description (accessibility-seo.spec.ts:53)` (10010ms)
+9. ✓ **Assert** `/collections/all: canonical (accessibility-seo.spec.ts:54)` (9ms)
+10. ✗ **Assert** `/collections/all: og:image (accessibility-seo.spec.ts:55)` (10006ms)
+11. ✓ `Navigate (fixtures.ts:55)` (280ms)
+12. ✓ **Assert** `/products/the-collection-snowboard-liquid: title (accessibility-seo.spec.ts:52)` (31ms)
+13. ✗ **Assert** `/products/the-collection-snowboard-liquid: meta description (accessibility-seo.spec.ts:53)` (10012ms)
+14. ✓ **Assert** `/products/the-collection-snowboard-liquid: canonical (accessibility-seo.spec.ts:54)` (7ms)
+15. ✓ **Assert** `/products/the-collection-snowboard-liquid: og:image (accessibility-seo.spec.ts:55)` (7ms)
 
 </details>
 
@@ -1763,7 +1765,7 @@ Call log:
 | Tags | `@non-functional` `@seo` `@P3` |
 | Script | `tests/non-functional/accessibility-seo.spec.ts:59` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Non-functional: ✅ Passed (1.2s) |
+| Result | Non-functional: ✅ Passed (0.7s) |
 
 **Test steps**
 1. Product page must include JSON-LD of @type Product with offers and a price, for Google rich results.
@@ -1773,9 +1775,9 @@ Call log:
 
 <details><summary>Steps executed in this run (3)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (634ms)
+1. ✓ `Navigate (fixtures.ts:55)` (411ms)
 2. ✓ **Assert** `No Product JSON-LD (accessibility-seo.spec.ts:67)` (0ms)
-3. ✓ **Assert** `Expect "toMatch" (accessibility-seo.spec.ts:68)` (0ms)
+3. ✓ **Assert** `Expect "toMatch" (accessibility-seo.spec.ts:68)` (1ms)
 
 </details>
 
@@ -1796,7 +1798,7 @@ Call log:
 | Tags | `@non-functional` `@edge` `@security` `@P1` |
 | Script | `tests/non-functional/accessibility-seo.spec.ts:73` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Non-functional: ✅ Passed (1.0s) |
+| Result | Non-functional: ✅ Passed (0.7s) |
 
 **Test steps**
 1. Requesting the store over http:// must end on an https:// URL.
@@ -1806,7 +1808,7 @@ Call log:
 
 <details><summary>Steps executed in this run (2)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (567ms)
+1. ✓ `Navigate (fixtures.ts:55)` (436ms)
 2. ✓ **Assert** `Expect "toMatch" (accessibility-seo.spec.ts:78)` (0ms)
 
 </details>
@@ -1828,7 +1830,7 @@ Call log:
 | Tags | `@non-functional` `@security` `@P2` |
 | Script | `tests/non-functional/accessibility-seo.spec.ts:81` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Non-functional: ✅ Passed (1.0s) |
+| Result | Non-functional: ✅ Passed (0.6s) |
 
 **Test steps**
 1. Home page response must send HSTS, X-Content-Type-Options: nosniff, and clickjacking protection (CSP frame-ancestors or X-Frame-Options).
@@ -1838,7 +1840,7 @@ Call log:
 
 <details><summary>Steps executed in this run (4)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (533ms)
+1. ✓ `Navigate (fixtures.ts:55)` (388ms)
 2. ✓ **Assert** `Strict-Transport-Security (accessibility-seo.spec.ts:88)` (0ms)
 3. ✓ **Assert** `X-Content-Type-Options (accessibility-seo.spec.ts:89)` (0ms)
 4. ✓ **Assert** `CSP frame-ancestors or X-Frame-Options (accessibility-seo.spec.ts:91)` (0ms)
@@ -1862,7 +1864,7 @@ Call log:
 | Tags | `@non-functional` `@security` `@P2` |
 | Script | `tests/non-functional/accessibility-seo.spec.ts:94` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Non-functional: ❌ Failed (2.2s) |
+| Result | Non-functional: ❌ Failed (1.4s) |
 
 **Test steps**
 1. Preference cookies (e.g.
@@ -1873,9 +1875,9 @@ Call log:
 
 <details><summary>Steps executed in this run (3)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (934ms)
-2. ✓ **Assert** `expected at least one session/cart cookie (accessibility-seo.spec.ts:107)` (1ms)
-3. ✗ **Assert** `Session/cart cookies without Secure flag: cart (accessibility-seo.spec.ts:109)` (4ms)
+1. ✓ `Navigate (fixtures.ts:55)` (413ms)
+2. ✓ **Assert** `expected at least one session/cart cookie (accessibility-seo.spec.ts:107)` (0ms)
+3. ✗ **Assert** `Session/cart cookies without Secure flag: cart (accessibility-seo.spec.ts:109)` (2ms)
 
 </details>
 
@@ -1907,7 +1909,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@non-functional` `@edge` `@P3` |
 | Script | `tests/non-functional/accessibility-seo.spec.ts:114` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Non-functional: ✅ Passed (1.1s) |
+| Result | Non-functional: ✅ Passed (0.8s) |
 
 **Test steps**
 1. A non-existent product URL must return HTTP 404 with a friendly page, not a server error.
@@ -1917,9 +1919,9 @@ expect(received).toEqual(expected) // deep equality
 
 <details><summary>Steps executed in this run (3)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (693ms)
-2. ✓ **Assert** `Expect "toBe" (accessibility-seo.spec.ts:119)` (0ms)
-3. ✓ **Assert** `Expect "toBeVisible" (accessibility-seo.spec.ts:120)` (33ms)
+1. ✓ `Navigate (fixtures.ts:55)` (579ms)
+2. ✓ **Assert** `Expect "toBe" (accessibility-seo.spec.ts:119)` (1ms)
+3. ✓ **Assert** `Expect "toBeVisible" (accessibility-seo.spec.ts:120)` (19ms)
 
 </details>
 
@@ -1940,7 +1942,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@non-functional` `@edge` `@security` `@P1` |
 | Script | `tests/non-functional/edge-cases.spec.ts:10` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Non-functional: ✅ Passed (1.1s) |
+| Result | Non-functional: ✅ Passed (1.0s) |
 
 **Test steps**
 1. In a new session with no password cookie, open home, a product and the cart.
@@ -1950,15 +1952,15 @@ expect(received).toEqual(expected) // deep equality
 
 <details><summary>Steps executed in this run (9)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (300ms)
-2. ✓ **Assert** `/ should redirect to /password (edge-cases.spec.ts:18)` (28ms)
-3. ✓ **Assert** `/ password form (edge-cases.spec.ts:19)` (6ms)
-4. ✓ `Navigate (fixtures.ts:55)` (292ms)
-5. ✓ **Assert** `/products/the-collection-snowboard-liquid should redirect to /password (edge-cases.spec.ts:18)` (27ms)
-6. ✓ **Assert** `/products/the-collection-snowboard-liquid password form (edge-cases.spec.ts:19)` (4ms)
-7. ✓ `Navigate (fixtures.ts:55)` (283ms)
-8. ✓ **Assert** `/cart should redirect to /password (edge-cases.spec.ts:18)` (32ms)
-9. ✓ **Assert** `/cart password form (edge-cases.spec.ts:19)` (6ms)
+1. ✓ `Navigate (fixtures.ts:55)` (289ms)
+2. ✓ **Assert** `/ should redirect to /password (edge-cases.spec.ts:18)` (18ms)
+3. ✓ **Assert** `/ password form (edge-cases.spec.ts:19)` (5ms)
+4. ✓ `Navigate (fixtures.ts:55)` (252ms)
+5. ✓ **Assert** `/products/the-collection-snowboard-liquid should redirect to /password (edge-cases.spec.ts:18)` (14ms)
+6. ✓ **Assert** `/products/the-collection-snowboard-liquid password form (edge-cases.spec.ts:19)` (3ms)
+7. ✓ `Navigate (fixtures.ts:55)` (238ms)
+8. ✓ **Assert** `/cart should redirect to /password (edge-cases.spec.ts:18)` (17ms)
+9. ✓ **Assert** `/cart password form (edge-cases.spec.ts:19)` (5ms)
 
 </details>
 
@@ -1979,7 +1981,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@non-functional` `@edge` `@performance` `@P2` |
 | Script | `tests/non-functional/edge-cases.spec.ts:25` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Non-functional: ✅ Passed (13.0s) |
+| Result | Non-functional: ✅ Passed (12.7s) |
 
 **Test steps**
 1. Throttle to slow 3G (400 ms latency, ~400 kbps).
@@ -1989,13 +1991,13 @@ expect(received).toEqual(expected) // deep equality
 
 <details><summary>Steps executed in this run (3)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (12450ms)
-2. ✓ **Assert** `Expect "toBeVisible" (edge-cases.spec.ts:42)` (34ms)
-3. ✓ **Assert** `Expect "toBeEnabled" (edge-cases.spec.ts:43)` (13ms)
+1. ✓ `Navigate (fixtures.ts:55)` (12389ms)
+2. ✓ **Assert** `Expect "toBeVisible" (edge-cases.spec.ts:42)` (21ms)
+3. ✓ **Assert** `Expect "toBeEnabled" (edge-cases.spec.ts:43)` (8ms)
 
 </details>
 
-**Actual result:** ✅ As expected. 2/2 assertions passed. Measured: usable after 12569ms on slow 3G.
+**Actual result:** ✅ As expected. 2/2 assertions passed. Measured: usable after 12447ms on slow 3G.
 
 <img src="evidence/nf-14-non-functional.png" alt="NF-14 screenshot" width="420">
 
@@ -2012,7 +2014,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@non-functional` `@edge` `@P3` |
 | Script | `tests/non-functional/edge-cases.spec.ts:47` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Non-functional: ✅ Passed (4.1s) |
+| Result | Non-functional: ✅ Passed (3.6s) |
 
 **Test steps**
 1. Load a product, go offline, click Add to cart.
@@ -2023,13 +2025,13 @@ expect(received).toEqual(expected) // deep equality
 
 <details><summary>Steps executed in this run (8)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (537ms)
+1. ✓ `Navigate (fixtures.ts:55)` (322ms)
 2. ✓ `Set offline mode (edge-cases.spec.ts:55)` (1ms)
-3. ✓ `Click (edge-cases.spec.ts:56)` (76ms)
+3. ✓ `Click (edge-cases.spec.ts:56)` (60ms)
 4. ✓ `Set offline mode (edge-cases.spec.ts:58)` (1ms)
 5. ✓ **Assert** `offline click must not add anything (edge-cases.spec.ts:60)` (0ms)
-6. ✓ **Assert** `Expect "toBeVisible" (edge-cases.spec.ts:61)` (17ms)
-7. ✓ `Click (ProductPage.ts:57)` (44ms)
+6. ✓ **Assert** `Expect "toBeVisible" (edge-cases.spec.ts:61)` (6ms)
+7. ✓ `Click (ProductPage.ts:57)` (22ms)
 8. ✓ **Assert** `Expect "toBe" (edge-cases.spec.ts:63)` (0ms)
 
 </details>
@@ -2053,7 +2055,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@api` `@P1` `@regression` |
 | Script | `tests/api/storefront-api.spec.ts:15` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup); requests sent from inside the browser session |
-| Result | API: 🚧 Blocked (10.3s) |
+| Result | API: 🚧 Blocked (10.4s) |
 
 **Test steps**
 1. Fetch an in-stock product.
@@ -2078,7 +2080,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@api` `@P2` |
 | Script | `tests/api/storefront-api.spec.ts:32` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup); requests sent from inside the browser session |
-| Result | API: ✅ Passed (1.0s) |
+| Result | API: ✅ Passed (1.1s) |
 
 **Test steps**
 1. Every product in the catalogue must have a title, at least one variant, at least one image, and prices above zero.
@@ -2088,16 +2090,16 @@ expect(received).toEqual(expected) // deep equality
 
 <details><summary>Steps executed in this run (60)</summary>
 
-1. ✓ **Assert** `Expect "toBeGreaterThan" (storefront-api.spec.ts:37)` (0ms)
+1. ✓ **Assert** `Expect "toBeGreaterThan" (storefront-api.spec.ts:37)` (1ms)
 2. ✓ **Assert** `product 8873175515297 title (storefront-api.spec.ts:39)` (0ms)
-3. ✓ **Assert** `the-collection-snowboard-liquid variants (storefront-api.spec.ts:40)` (1ms)
+3. ✓ **Assert** `the-collection-snowboard-liquid variants (storefront-api.spec.ts:40)` (0ms)
 4. ✓ **Assert** `the-collection-snowboard-liquid has no images (storefront-api.spec.ts:41)` (0ms)
 5. ✓ **Assert** `the-collection-snowboard-liquid / Default Title price (storefront-api.spec.ts:42)` (0ms)
 6. ✓ **Assert** `product 8873175416993 title (storefront-api.spec.ts:39)` (0ms)
 7. ✓ **Assert** `the-collection-snowboard-oxygen variants (storefront-api.spec.ts:40)` (0ms)
 8. ✓ **Assert** `the-collection-snowboard-oxygen has no images (storefront-api.spec.ts:41)` (0ms)
 9. ✓ **Assert** `the-collection-snowboard-oxygen / Default Title price (storefront-api.spec.ts:42)` (0ms)
-10. ✓ **Assert** `product 8873175220385 title (storefront-api.spec.ts:39)` (1ms)
+10. ✓ **Assert** `product 8873175220385 title (storefront-api.spec.ts:39)` (0ms)
 11. ✓ **Assert** `the-collection-snowboard-hydrogen variants (storefront-api.spec.ts:40)` (0ms)
 12. ✓ **Assert** `the-collection-snowboard-hydrogen has no images (storefront-api.spec.ts:41)` (0ms)
 13. ✓ **Assert** `the-collection-snowboard-hydrogen / Default Title price (storefront-api.spec.ts:42)` (0ms)
@@ -2105,7 +2107,7 @@ expect(received).toEqual(expected) // deep equality
 15. ✓ **Assert** `the-multi-location-snowboard variants (storefront-api.spec.ts:40)` (0ms)
 16. ✓ **Assert** `the-multi-location-snowboard has no images (storefront-api.spec.ts:41)` (0ms)
 17. ✓ **Assert** `the-multi-location-snowboard / Default Title price (storefront-api.spec.ts:42)` (0ms)
-18. ✓ **Assert** `product 8873175351457 title (storefront-api.spec.ts:39)` (0ms)
+18. ✓ **Assert** `product 8873175351457 title (storefront-api.spec.ts:39)` (1ms)
 19. ✓ **Assert** `the-multi-managed-snowboard variants (storefront-api.spec.ts:40)` (0ms)
 20. ✓ **Assert** `the-multi-managed-snowboard has no images (storefront-api.spec.ts:41)` (0ms)
 21. ✓ **Assert** `the-multi-managed-snowboard / Default Title price (storefront-api.spec.ts:42)` (0ms)
@@ -2122,9 +2124,9 @@ expect(received).toEqual(expected) // deep equality
 32. ✓ **Assert** `the-complete-snowboard / Electric price (storefront-api.spec.ts:42)` (0ms)
 33. ✓ **Assert** `the-complete-snowboard / Sunset price (storefront-api.spec.ts:42)` (0ms)
 34. ✓ **Assert** `product 8873175089313 title (storefront-api.spec.ts:39)` (0ms)
-35. ✓ **Assert** `selling-plans-ski-wax variants (storefront-api.spec.ts:40)` (0ms)
+35. ✓ **Assert** `selling-plans-ski-wax variants (storefront-api.spec.ts:40)` (1ms)
 36. ✓ **Assert** `selling-plans-ski-wax has no images (storefront-api.spec.ts:41)` (0ms)
-37. ✓ **Assert** `selling-plans-ski-wax / Selling Plans Ski Wax price (storefront-api.spec.ts:42)` (0ms)
+37. ✓ **Assert** `selling-plans-ski-wax / Selling Plans Ski Wax price (storefront-api.spec.ts:42)` (1ms)
 38. ✓ **Assert** `selling-plans-ski-wax / Special Selling Plans Ski Wax price (storefront-api.spec.ts:42)` (0ms)
 39. ✓ **Assert** `selling-plans-ski-wax / Sample Selling Plans Ski Wax price (storefront-api.spec.ts:42)` (0ms)
 40. ✓ **Assert** `product 8873175056545 title (storefront-api.spec.ts:39)` (0ms)
@@ -2136,7 +2138,7 @@ expect(received).toEqual(expected) // deep equality
 46. ✓ **Assert** `the-compare-at-price-snowboard has no images (storefront-api.spec.ts:41)` (0ms)
 47. ✓ **Assert** `the-compare-at-price-snowboard / Default Title price (storefront-api.spec.ts:42)` (0ms)
 48. ✓ **Assert** `product 8873175122081 title (storefront-api.spec.ts:39)` (0ms)
-49. ✓ **Assert** `the-out-of-stock-snowboard variants (storefront-api.spec.ts:40)` (0ms)
+49. ✓ **Assert** `the-out-of-stock-snowboard variants (storefront-api.spec.ts:40)` (1ms)
 50. ✓ **Assert** `the-out-of-stock-snowboard has no images (storefront-api.spec.ts:41)` (0ms)
 51. ✓ **Assert** `the-out-of-stock-snowboard / Default Title price (storefront-api.spec.ts:42)` (0ms)
 52. ✓ **Assert** `product 8873174925473 title (storefront-api.spec.ts:39)` (0ms)
@@ -2168,7 +2170,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@api` `@edge` `@P2` |
 | Script | `tests/api/storefront-api.spec.ts:46` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup); requests sent from inside the browser session |
-| Result | API: 🚧 Blocked (10.4s) |
+| Result | API: 🚧 Blocked (10.5s) |
 
 **Test steps**
 1. Fetch /products/<nonexistent>.js.
@@ -2193,7 +2195,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@api` `@P2` |
 | Script | `tests/api/storefront-api.spec.ts:54` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup); requests sent from inside the browser session |
-| Result | API: 🚧 Blocked (10.3s) |
+| Result | API: 🚧 Blocked (10.5s) |
 
 **Test steps**
 1. GET /search/suggest.json?q=<product word>.
@@ -2218,7 +2220,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@api` `@P1` `@regression` |
 | Script | `tests/api/storefront-api.spec.ts:73` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup); requests sent from inside the browser session |
-| Result | API: 🚧 Blocked (10.4s) |
+| Result | API: 🚧 Blocked (10.5s) |
 
 **Test steps**
 1. Add 2 of an in-stock variant.
@@ -2243,7 +2245,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@api` `@edge` `@P1` |
 | Script | `tests/api/storefront-api.spec.ts:86` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup); requests sent from inside the browser session |
-| Result | API: 🚧 Blocked (10.2s) |
+| Result | API: 🚧 Blocked (10.4s) |
 
 **Test steps**
 1. Add 1 item, change it to 3 (expect item_count 3), then to 0 (expect empty cart).
@@ -2268,7 +2270,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@api` `@P2` |
 | Script | `tests/api/storefront-api.spec.ts:99` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup); requests sent from inside the browser session |
-| Result | API: 🚧 Blocked (10.2s) |
+| Result | API: 🚧 Blocked (10.5s) |
 
 **Test steps**
 1. Add an item, call /cart/clear.js.
@@ -2293,7 +2295,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@api` `@edge` `@P2` |
 | Script | `tests/api/storefront-api.spec.ts:110` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup); requests sent from inside the browser session |
-| Result | API: 🚧 Blocked (10.1s) |
+| Result | API: 🚧 Blocked (10.5s) |
 
 **Test steps**
 1. POST /cart/add.js with variant id 1.
@@ -2318,7 +2320,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@api` `@edge` `@P1` |
 | Script | `tests/api/storefront-api.spec.ts:121` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup); requests sent from inside the browser session |
-| Result | API: 🚧 Blocked (10.2s) |
+| Result | API: 🚧 Blocked (10.6s) |
 
 **Test steps**
 1. POST /cart/add.js with a sold-out variant.
@@ -2343,7 +2345,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@api` `@edge` `@P3` |
 | Script | `tests/api/storefront-api.spec.ts:132` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup); requests sent from inside the browser session |
-| Result | API: 🚧 Blocked (10.1s) |
+| Result | API: 🚧 Blocked (10.4s) |
 
 **Test steps**
 1. POST /cart/add.js with quantity -1.
@@ -2368,7 +2370,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@api` `@P3` |
 | Script | `tests/api/storefront-api.spec.ts:142` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup); requests sent from inside the browser session |
-| Result | API: 🚧 Blocked (10.2s) |
+| Result | API: 🚧 Blocked (10.4s) |
 
 **Test steps**
 1. GET /cart.js.
@@ -2393,7 +2395,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@api` `@edge` `@P2` |
 | Script | `tests/api/edge-cases.spec.ts:11` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup); requests sent from inside the browser session |
-| Result | API: 🚧 Blocked (10.5s) |
+| Result | API: 🚧 Blocked (11.2s) |
 
 **Test steps**
 1. POST /cart/add.js with quantity 0.
@@ -2418,7 +2420,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@api` `@edge` `@P2` |
 | Script | `tests/api/edge-cases.spec.ts:21` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup); requests sent from inside the browser session |
-| Result | API: 🚧 Blocked (10.6s) |
+| Result | API: 🚧 Blocked (11.1s) |
 
 **Test steps**
 1. POST /cart/add.js with quantity 999999.
@@ -2444,7 +2446,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@api` `@edge` `@P2` |
 | Script | `tests/api/edge-cases.spec.ts:36` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup); requests sent from inside the browser session |
-| Result | API: 🚧 Blocked (10.6s) |
+| Result | API: 🚧 Blocked (10.8s) |
 
 **Test steps**
 1. POST /cart/add.js with a broken JSON body.
@@ -2494,7 +2496,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@api` `@edge` `@P3` |
 | Script | `tests/api/edge-cases.spec.ts:60` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup); requests sent from inside the browser session |
-| Result | API: 🚧 Blocked (10.4s) |
+| Result | API: 🚧 Blocked (10.7s) |
 
 **Test steps**
 1. Add two products, then POST /cart/update.js with new quantities for both (3 and 0).
@@ -2519,7 +2521,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@api` `@edge` `@P3` |
 | Script | `tests/api/edge-cases.spec.ts:74` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup); requests sent from inside the browser session |
-| Result | API: 🚧 Blocked (10.5s) |
+| Result | API: 🚧 Blocked (10.8s) |
 
 **Test steps**
 1. POST /cart/add.js with id "abc", id 1.5 and no id at all.
@@ -2546,7 +2548,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@regression` `@P1` |
 | Script | `tests/regression/critical-journeys.spec.ts:12` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Regression: ✅ Passed (6.7s) |
+| Result | Regression: ✅ Passed (5.3s) |
 
 **Test steps**
 1. Shopper journey: home → Catalog → open product → Add to cart → cart page → Checkout.
@@ -2558,23 +2560,23 @@ expect(received).toEqual(expected) // deep equality
 
 <details><summary>Steps executed in this run (17)</summary>
 
-1. ✓ **Step** `Open home and go to the catalogue (critical-journeys.spec.ts:18)` (2136ms)
-2. ✓ `Navigate (fixtures.ts:55)` (884ms)
-3. ✓ `Click (critical-journeys.spec.ts:20)` (612ms)
-4. ✓ **Assert** `Expect "toHaveURL" (critical-journeys.spec.ts:21)` (369ms)
-5. ✓ **Step** `Open the product from the catalogue (critical-journeys.spec.ts:24)` (1195ms)
-6. ✓ `Click (critical-journeys.spec.ts:25)` (713ms)
-7. ✓ **Assert** `Expect "toHaveURL" (critical-journeys.spec.ts:26)` (479ms)
-8. ✓ **Step** `Add to cart (critical-journeys.spec.ts:30)` (869ms)
-9. ✓ `Click (ProductPage.ts:57)` (113ms)
-10. ✓ **Assert** `Expect "toBe" (critical-journeys.spec.ts:32)` (1ms)
-11. ✓ **Step** `Review cart (critical-journeys.spec.ts:35)` (562ms)
-12. ✓ `Navigate (fixtures.ts:55)` (413ms)
-13. ✓ **Assert** `Expect "toHaveCount" (critical-journeys.spec.ts:37)` (15ms)
-14. ✓ **Assert** `Expect "toContainText" (critical-journeys.spec.ts:38)` (13ms)
-15. ✓ **Step** `Proceed to checkout (critical-journeys.spec.ts:41)` (486ms)
-16. ✓ `Click (critical-journeys.spec.ts:42)` (198ms)
-17. ✓ **Assert** `Expect "toHaveURL" (critical-journeys.spec.ts:43)` (270ms)
+1. ✓ **Step** `Open home and go to the catalogue (critical-journeys.spec.ts:18)` (1224ms)
+2. ✓ `Navigate (fixtures.ts:55)` (636ms)
+3. ✓ `Click (critical-journeys.spec.ts:20)` (288ms)
+4. ✓ **Assert** `Expect "toHaveURL" (critical-journeys.spec.ts:21)` (133ms)
+5. ✓ **Step** `Open the product from the catalogue (critical-journeys.spec.ts:24)` (396ms)
+6. ✓ `Click (critical-journeys.spec.ts:25)` (378ms)
+7. ✓ **Assert** `Expect "toHaveURL" (critical-journeys.spec.ts:26)` (17ms)
+8. ✓ **Step** `Add to cart (critical-journeys.spec.ts:30)` (1742ms)
+9. ✓ `Click (ProductPage.ts:57)` (170ms)
+10. ✓ **Assert** `Expect "toBe" (critical-journeys.spec.ts:32)` (0ms)
+11. ✓ **Step** `Review cart (critical-journeys.spec.ts:35)` (415ms)
+12. ✓ `Navigate (fixtures.ts:55)` (284ms)
+13. ✓ **Assert** `Expect "toHaveCount" (critical-journeys.spec.ts:37)` (13ms)
+14. ✓ **Assert** `Expect "toContainText" (critical-journeys.spec.ts:38)` (10ms)
+15. ✓ **Step** `Proceed to checkout (critical-journeys.spec.ts:41)` (454ms)
+16. ✓ `Click (critical-journeys.spec.ts:42)` (194ms)
+17. ✓ **Assert** `Expect "toHaveURL" (critical-journeys.spec.ts:43)` (245ms)
 
 </details>
 
@@ -2595,7 +2597,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@regression` `@P1` |
 | Script | `tests/regression/critical-journeys.spec.ts:47` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Regression: ✅ Passed (4.9s) |
+| Result | Regression: ✅ Passed (3.9s) |
 
 **Test steps**
 1. Shopper journey via search: search for a product, open it from results, add to cart.
@@ -2605,14 +2607,14 @@ expect(received).toEqual(expected) // deep equality
 
 <details><summary>Steps executed in this run (8)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (813ms)
-2. ✓ `Click (BasePage.ts:52)` (106ms)
-3. ✓ `Fill "The Collection Snowboard: Liquid" (critical-journeys.spec.ts:54)` (57ms)
-4. ✓ `Press "Enter" (critical-journeys.spec.ts:55)` (391ms)
-5. ✓ `Click (critical-journeys.spec.ts:58)` (325ms)
-6. ✓ **Assert** `Expect "toHaveURL" (critical-journeys.spec.ts:59)` (202ms)
-7. ✓ `Click (ProductPage.ts:57)` (284ms)
-8. ✓ **Assert** `Expect "toBe" (critical-journeys.spec.ts:61)` (1ms)
+1. ✓ `Navigate (fixtures.ts:55)` (504ms)
+2. ✓ `Click (BasePage.ts:52)` (53ms)
+3. ✓ `Fill "The Collection Snowboard: Liquid" (critical-journeys.spec.ts:54)` (43ms)
+4. ✓ `Press "Enter" (critical-journeys.spec.ts:55)` (380ms)
+5. ✓ `Click (critical-journeys.spec.ts:58)` (331ms)
+6. ✓ **Assert** `Expect "toHaveURL" (critical-journeys.spec.ts:59)` (192ms)
+7. ✓ `Click (ProductPage.ts:57)` (150ms)
+8. ✓ **Assert** `Expect "toBe" (critical-journeys.spec.ts:61)` (0ms)
 
 </details>
 
@@ -2633,7 +2635,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@regression` `@visual` `@P2` |
 | Script | `tests/regression/critical-journeys.spec.ts:69` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Regression: ✅ Passed (5.6s) |
+| Result | Regression: ✅ Passed (7.1s) |
 
 **Test steps**
 1. Screenshot the top of the home page and compare it with the approved baseline.
@@ -2643,8 +2645,8 @@ expect(received).toEqual(expected) // deep equality
 
 <details><summary>Steps executed in this run (2)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (936ms)
-2. ✓ **Assert** `Expect "toHaveScreenshot(home.png)" (critical-journeys.spec.ts:75)` (501ms)
+1. ✓ `Navigate (fixtures.ts:55)` (449ms)
+2. ✓ **Assert** `Expect "toHaveScreenshot(home.png)" (critical-journeys.spec.ts:75)` (376ms)
 
 </details>
 
@@ -2665,7 +2667,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@regression` `@visual` `@P2` |
 | Script | `tests/regression/critical-journeys.spec.ts:78` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Regression: ✅ Passed (4.9s) |
+| Result | Regression: ✅ Passed (5.6s) |
 
 **Test steps**
 1. Screenshot the product page top section and compare it with the approved baseline.
@@ -2675,8 +2677,8 @@ expect(received).toEqual(expected) // deep equality
 
 <details><summary>Steps executed in this run (2)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (651ms)
-2. ✓ **Assert** `Expect "toHaveScreenshot(product.png)" (critical-journeys.spec.ts:85)` (354ms)
+1. ✓ `Navigate (fixtures.ts:55)` (337ms)
+2. ✓ **Assert** `Expect "toHaveScreenshot(product.png)" (critical-journeys.spec.ts:85)` (270ms)
 
 </details>
 
@@ -2697,7 +2699,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@regression` `@visual` `@P3` |
 | Script | `tests/regression/critical-journeys.spec.ts:88` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Regression: ✅ Passed (4.9s) |
+| Result | Regression: ✅ Passed (5.6s) |
 
 **Test steps**
 1. Screenshot the empty cart page and compare it with the approved baseline.
@@ -2707,8 +2709,8 @@ expect(received).toEqual(expected) // deep equality
 
 <details><summary>Steps executed in this run (2)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (501ms)
-2. ✓ **Assert** `Expect "toHaveScreenshot(cart-empty.png)" (critical-journeys.spec.ts:94)` (238ms)
+1. ✓ `Navigate (fixtures.ts:55)` (299ms)
+2. ✓ **Assert** `Expect "toHaveScreenshot(cart-empty.png)" (critical-journeys.spec.ts:94)` (179ms)
 
 </details>
 
