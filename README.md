@@ -289,6 +289,7 @@ Updated automatically by CI after every build.
 
 | Build | Date | Commit | Trigger | Executions | ✅ Passed | ❌ Failed | 🚧 Blocked | ⏭️ Skipped | Pass rate | Open defects | Time | Status |
 |---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| [#10](https://github.com/jfix1974QA/shopify-automation/actions/runs/43828764051) | 2026-11-16 08:07 UTC | [`97903cf`](https://github.com/jfix1974QA/shopify-automation/commit/97903cf) | schedule | 89 | 51 | 5 | 26 | 7 | 91.1% | 6 | 4m 7s | ❌ Failing |
 | [#9](https://github.com/jfix1974QA/shopify-automation/actions/runs/43687038414) | 2026-11-15 06:47 UTC | [`ef55b1a`](https://github.com/jfix1974QA/shopify-automation/commit/ef55b1a) | schedule | 89 | 55 | 5 | 22 | 7 | 91.7% | 6 | 4m 22s | ❌ Failing |
 | [#8](https://github.com/jfix1974QA/shopify-automation/actions/runs/43567738544) | 2026-11-14 06:43 UTC | [`704fd5c`](https://github.com/jfix1974QA/shopify-automation/commit/704fd5c) | schedule | 89 | 52 | 6 | 24 | 7 | 89.7% | 6 | 4m 12s | ❌ Failing |
 | [#7](https://github.com/jfix1974QA/shopify-automation/actions/runs/43381935024) | 2026-11-13 06:54 UTC | [`82200f0`](https://github.com/jfix1974QA/shopify-automation/commit/82200f0) | schedule | 89 | 50 | 6 | 26 | 7 | 89.3% | 6 | 4m 20s | ❌ Failing |
@@ -354,22 +355,22 @@ budgets met, security checks pass, no flaky tests.
 ## Metrics
 
 <!-- METRICS:START -->
-_Latest build [#9](https://github.com/jfix1974QA/shopify-automation/actions/runs/43687038414) · 2026-11-15 06:47 UTC · commit `ef55b1a` · updated automatically by CI_
+_Latest build [#10](https://github.com/jfix1974QA/shopify-automation/actions/runs/43828764051) · 2026-11-16 08:07 UTC · commit `97903cf` · updated automatically by CI_
 
 | Metric | Value |
 |---|---|
 | Test cases | **77** (89 executions across desktop and mobile) |
-| Passed / Failed / Blocked / Skipped | **55** / **5** / **22** / **7** |
-| Pass rate (verified tests) | **91.7%** |
+| Passed / Failed / Blocked / Skipped | **51** / **5** / **26** / **7** |
+| Pass rate (verified tests) | **91.1%** |
 | Requirements covered | **23/23** |
 | Open defects | **6** (Critical 0 · High 0 · Medium 4 · Low 2) |
-| CI build time | **4m 22s** (whole pipeline; packs run in parallel) |
+| CI build time | **4m 7s** (whole pipeline; packs run in parallel) |
 
 | Pack | Passed | Failed | Blocked | Skipped |
 |---|---:|---:|---:|---:|
 | ui | 9 | 2 | 0 | 1 |
 | ui-mobile | 10 | 0 | 0 | 2 |
-| functional | 18 | 0 | 6 | 4 |
+| functional | 14 | 0 | 10 | 4 |
 | non-functional | 12 | 3 | 0 | 0 |
 | api | 1 | 0 | 16 | 0 |
 | regression | 5 | 0 | 0 | 0 |
