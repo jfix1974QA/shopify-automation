@@ -10,24 +10,24 @@
 <title>Slowest 10 tests</title>
 <rect width="720" height="284" rx="8" fill="var(--surface)"/>
 <text x="190" y="28" font-size="12" fill="var(--ink)" text-anchor="end">NF-07 (non-functional)</text>
-<rect x="200" y="16" width="440.0" height="16" rx="3" fill="var(--s1)"><title>NF-07 (non-functional): 52.3s</title></rect>
-<text x="646.0" y="28" font-size="12" fill="var(--ink-2)">52.3s</text><text x="190" y="54" font-size="12" fill="var(--ink)" text-anchor="end">NF-14 (non-functional)</text>
-<rect x="200" y="42" width="107.8" height="16" rx="3" fill="var(--s1)"><title>NF-14 (non-functional): 12.8s</title></rect>
-<text x="313.8" y="54" font-size="12" fill="var(--ink-2)">12.8s</text><text x="190" y="80" font-size="12" fill="var(--ink)" text-anchor="end">UI-AI-04 (ui)</text>
-<rect x="200" y="68" width="73.4" height="16" rx="3" fill="var(--s1)"><title>UI-AI-04 (ui): 8.7s</title></rect>
-<text x="279.4" y="80" font-size="12" fill="var(--ink-2)">8.7s</text><text x="190" y="106" font-size="12" fill="var(--ink)" text-anchor="end">UI-AI-01 (ui)</text>
-<rect x="200" y="94" width="68.0" height="16" rx="3" fill="var(--s1)"><title>UI-AI-01 (ui): 8.1s</title></rect>
-<text x="274.0" y="106" font-size="12" fill="var(--ink-2)">8.1s</text><text x="190" y="132" font-size="12" fill="var(--ink)" text-anchor="end">UI-AI-02 (ui-mobile)</text>
-<rect x="200" y="120" width="65.2" height="16" rx="3" fill="var(--s1)"><title>UI-AI-02 (ui-mobile): 7.8s</title></rect>
-<text x="271.2" y="132" font-size="12" fill="var(--ink-2)">7.8s</text><text x="190" y="158" font-size="12" fill="var(--ink)" text-anchor="end">UI-05 (ui)</text>
-<rect x="200" y="146" width="47.0" height="16" rx="3" fill="var(--s1)"><title>UI-05 (ui): 5.6s</title></rect>
-<text x="253.0" y="158" font-size="12" fill="var(--ink-2)">5.6s</text><text x="190" y="184" font-size="12" fill="var(--ink)" text-anchor="end">NF-05 (non-functional)</text>
-<rect x="200" y="172" width="45.7" height="16" rx="3" fill="var(--s1)"><title>NF-05 (non-functional): 5.4s</title></rect>
-<text x="251.7" y="184" font-size="12" fill="var(--ink-2)">5.4s</text><text x="190" y="210" font-size="12" fill="var(--ink)" text-anchor="end">UI-AI-03 (ui-mobile)</text>
-<rect x="200" y="198" width="44.8" height="16" rx="3" fill="var(--s1)"><title>UI-AI-03 (ui-mobile): 5.3s</title></rect>
-<text x="250.8" y="210" font-size="12" fill="var(--ink-2)">5.3s</text><text x="190" y="236" font-size="12" fill="var(--ink)" text-anchor="end">UI-AI-01 (ui-mobile)</text>
-<rect x="200" y="224" width="43.8" height="16" rx="3" fill="var(--s1)"><title>UI-AI-01 (ui-mobile): 5.2s</title></rect>
-<text x="249.8" y="236" font-size="12" fill="var(--ink-2)">5.2s</text><text x="190" y="262" font-size="12" fill="var(--ink)" text-anchor="end">UI-AI-02 (ui)</text>
-<rect x="200" y="250" width="42.5" height="16" rx="3" fill="var(--s1)"><title>UI-AI-02 (ui): 5.0s</title></rect>
-<text x="248.5" y="262" font-size="12" fill="var(--ink-2)">5.0s</text>
+<rect x="200" y="16" width="440.0" height="16" rx="3" fill="var(--s1)"><title>NF-07 (non-functional): 51.9s</title></rect>
+<text x="646.0" y="28" font-size="12" fill="var(--ink-2)">51.9s</text><text x="190" y="54" font-size="12" fill="var(--ink)" text-anchor="end">NF-14 (non-functional)</text>
+<rect x="200" y="42" width="108.3" height="16" rx="3" fill="var(--s1)"><title>NF-14 (non-functional): 12.8s</title></rect>
+<text x="314.3" y="54" font-size="12" fill="var(--ink-2)">12.8s</text><text x="190" y="80" font-size="12" fill="var(--ink)" text-anchor="end">UI-AI-01 (ui)</text>
+<rect x="200" y="68" width="90.6" height="16" rx="3" fill="var(--s1)"><title>UI-AI-01 (ui): 10.7s</title></rect>
+<text x="296.6" y="80" font-size="12" fill="var(--ink-2)">10.7s</text><text x="190" y="106" font-size="12" fill="var(--ink)" text-anchor="end">UI-AI-01 (ui-mobile)</text>
+<rect x="200" y="94" width="88.2" height="16" rx="3" fill="var(--s1)"><title>UI-AI-01 (ui-mobile): 10.4s</title></rect>
+<text x="294.2" y="106" font-size="12" fill="var(--ink-2)">10.4s</text><text x="190" y="132" font-size="12" fill="var(--ink)" text-anchor="end">UI-AI-02 (ui-mobile)</text>
+<rect x="200" y="120" width="79.3" height="16" rx="3" fill="var(--s1)"><title>UI-AI-02 (ui-mobile): 9.4s</title></rect>
+<text x="285.3" y="132" font-size="12" fill="var(--ink-2)">9.4s</text><text x="190" y="158" font-size="12" fill="var(--ink)" text-anchor="end">UI-05 (ui)</text>
+<rect x="200" y="146" width="58.6" height="16" rx="3" fill="var(--s1)"><title>UI-05 (ui): 6.9s</title></rect>
+<text x="264.6" y="158" font-size="12" fill="var(--ink-2)">6.9s</text><text x="190" y="184" font-size="12" fill="var(--ink)" text-anchor="end">REG-01 (regression)</text>
+<rect x="200" y="172" width="53.5" height="16" rx="3" fill="var(--s1)"><title>REG-01 (regression): 6.3s</title></rect>
+<text x="259.5" y="184" font-size="12" fill="var(--ink-2)">6.3s</text><text x="190" y="210" font-size="12" fill="var(--ink)" text-anchor="end">REG-02 (regression)</text>
+<rect x="200" y="198" width="50.8" height="16" rx="3" fill="var(--s1)"><title>REG-02 (regression): 6.0s</title></rect>
+<text x="256.8" y="210" font-size="12" fill="var(--ink-2)">6.0s</text><text x="190" y="236" font-size="12" fill="var(--ink)" text-anchor="end">UI-AI-03 (ui-mobile)</text>
+<rect x="200" y="224" width="47.5" height="16" rx="3" fill="var(--s1)"><title>UI-AI-03 (ui-mobile): 5.6s</title></rect>
+<text x="253.5" y="236" font-size="12" fill="var(--ink-2)">5.6s</text><text x="190" y="262" font-size="12" fill="var(--ink)" text-anchor="end">UI-AI-04 (ui)</text>
+<rect x="200" y="250" width="47.1" height="16" rx="3" fill="var(--s1)"><title>UI-AI-04 (ui): 5.6s</title></rect>
+<text x="253.1" y="262" font-size="12" fill="var(--ink-2)">5.6s</text>
 </svg>
