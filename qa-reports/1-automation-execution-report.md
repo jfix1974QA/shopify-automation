@@ -2,19 +2,19 @@
 
 [Index](README.md) · [1. Execution report](1-automation-execution-report.md) · [2. Test scripts & scenarios](2-test-scripts-and-scenarios.md) · [3. Defect & QA summary](3-defect-and-qa-summary.md)
 
-**Store:** https://james-qa-shop.myshopify.com · **Run:** 2026-11-22 06:52 UTC · **Environment:** [CI run](https://github.com/jfix1974QA/shopify-automation/actions/runs/44995618568) · Playwright 1.65.0 · Node v22.23.5 · Linux 7.0.0-1020-azure
+**Store:** https://james-qa-shop.myshopify.com · **Run:** 2026-11-23 07:11 UTC · **Environment:** [CI run](https://github.com/jfix1974QA/shopify-automation/actions/runs/45129278455) · Playwright 1.65.0 · Node v22.23.5 · Linux 7.0.0-1020-azure
 
 ## Summary
 
 | Test cases | Executions | Passed | Failed | Blocked | Flaky | Skipped | Pass rate | Requirements covered | Time |
 |---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| 77 | 89 | 45 | 10 | 27 | 0 | 7 | **81.8%** | 23/23 | 3m 23s |
+| 77 | 89 | 46 | 10 | 26 | 0 | 7 | **82.1%** | 23/23 | 3m 6s |
 
 ![status-overview](charts/status-overview.svg)
 
 Pass rate is calculated over verified tests: skipped and blocked tests are excluded. UI tests run twice, on desktop Chrome and on an iPhone 14 (WebKit), so executions exceed test cases.
 
-> **27 executions are Blocked, not failed.** Shopify's bot protection stopped them before they could check anything (or the test was corrected after the run and is awaiting re-test). They say nothing about store quality and are not raised as defects. See "Blocked tests" below.
+> **26 executions are Blocked, not failed.** Shopify's bot protection stopped them before they could check anything (or the test was corrected after the run and is awaiting re-test). They say nothing about store quality and are not raised as defects. See "Blocked tests" below.
 
 
 ## Results by test pack
@@ -23,13 +23,13 @@ Pass rate is calculated over verified tests: skipped and blocked tests are exclu
 
 | Pack | Tests | Passed | Failed | Blocked | Flaky | Skipped | Pass rate | Time |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| UI (desktop) | 12 | 7 | 4 | 0 | 0 | 1 | 63.6% | 17.9s |
-| UI (mobile) | 12 | 7 | 3 | 0 | 0 | 2 | 70% | 21.6s |
-| Functional | 28 | 13 | 0 | 11 | 0 | 4 | 100% | 2m 53s |
-| Non-functional | 15 | 12 | 3 | 0 | 0 | 0 | 80% | 1m 30s |
-| API | 17 | 1 | 0 | 16 | 0 | 0 | 100% | 2m 45s |
-| Regression | 5 | 5 | 0 | 0 | 0 | 0 | 100% | 29.2s |
-| **Total** | **89** | **45** | **10** | **27** | **0** | **7** | **81.8%** | **8m 17s** |
+| UI (desktop) | 12 | 7 | 4 | 0 | 0 | 1 | 63.6% | 22.5s |
+| UI (mobile) | 12 | 7 | 3 | 0 | 0 | 2 | 70% | 25.7s |
+| Functional | 28 | 14 | 0 | 10 | 0 | 4 | 100% | 2m 35s |
+| Non-functional | 15 | 12 | 3 | 0 | 0 | 0 | 80% | 1m 31s |
+| API | 17 | 1 | 0 | 16 | 0 | 0 | 100% | 2m 48s |
+| Regression | 5 | 5 | 0 | 0 | 0 | 0 | 100% | 25.4s |
+| **Total** | **89** | **46** | **10** | **26** | **0** | **7** | **82.1%** | **8m 7s** |
 
 ![duration-by-pack](charts/duration-by-pack.svg)
 
@@ -39,7 +39,7 @@ Pass rate is calculated over verified tests: skipped and blocked tests are exclu
 
 | Priority | Passed | Failed | Blocked | Flaky | Skipped |
 |---|---:|---:|---:|---:|---:|
-| P1 (high) | 13 | 0 | 11 | 0 | 0 |
+| P1 (high) | 14 | 0 | 10 | 0 | 0 |
 | P2 (medium) | 23 | 8 | 10 | 0 | 5 |
 | P3 (low) | 9 | 2 | 6 | 0 | 2 |
 
@@ -61,7 +61,7 @@ Coverage includes **37** edge/negative test cases, **4** Claude-powered checks a
 | R05 | Cart | Add to cart | FN-02, FN-03, FN-18, FN-21, REG-01, REG-02, UI-08 | 8 | 4 | 0 | 2 | 2 | ⚠️ Partly verified |
 | R06 | Cart | Quantity validation | FN-15, FN-16, FN-17, API-10, API-12, API-13 | 6 | 0 | 0 | 3 | 3 | 🚧 Blocked |
 | R07 | Product | Inventory and sold-out handling | FN-04, API-09, FN-17 | 3 | 1 | 0 | 1 | 1 | ⚠️ Partly verified |
-| R08 | Cart | Cart management | FN-06, FN-07, FN-08, FN-19, FN-20, UI-04, UI-AI-03, REG-05 | 10 | 4 | 2 | 4 | 0 | ❌ Failing |
+| R08 | Cart | Cart management | FN-06, FN-07, FN-08, FN-19, FN-20, UI-04, UI-AI-03, REG-05 | 10 | 5 | 2 | 3 | 0 | ❌ Failing |
 | R09 | Cart | Pricing and discounts | FN-01, FN-19, FN-22, FN-23, API-05 | 5 | 2 | 0 | 3 | 0 | ⚠️ Partly verified |
 | R10 | Checkout | Checkout hand-off | FN-09, REG-01 | 2 | 1 | 0 | 1 | 0 | ⚠️ Partly verified |
 | R11 | Discovery | Search | FN-10, FN-11, FN-24, FN-25, FN-26, API-04, REG-02 | 7 | 5 | 0 | 2 | 0 | ⚠️ Partly verified |
@@ -127,7 +127,6 @@ These did not produce a result about the store and must be re-run (CI runs each 
 | FN-08 removing the only item empties the cart | functional | Blocked by Shopify bot protection (HTTP 429 "Verifying your connection") before the test could check anything. Environment issue, not a store defect; re-run from CI or after a cool-down. |
 | FN-09 Checkout button opens Shopify checkout | functional | Blocked by Shopify bot protection (HTTP 429 "Verifying your connection") before the test could check anything. Environment issue, not a store defect; re-run from CI or after a cool-down. |
 | FN-10 search by product name returns that product | functional | Blocked by Shopify bot protection (HTTP 429 "Verifying your connection") before the test could check anything. Environment issue, not a store defect; re-run from CI or after a cool-down. |
-| FN-20 cart survives a page reload and opening a new tab | functional | Blocked by Shopify bot protection (HTTP 429 "Verifying your connection") before the test could check anything. Environment issue, not a store defect; re-run from CI or after a cool-down. |
 | FN-21 double-clicking Add to cart adds only one item | functional | Blocked by Shopify bot protection (HTTP 429 "Verifying your connection") before the test could check anything. Environment issue, not a store defect; re-run from CI or after a cool-down. |
 | FN-22 invalid discount link does not change the cart total | functional | Blocked by Shopify bot protection (HTTP 429 "Verifying your connection") before the test could check anything. Environment issue, not a store defect; re-run from CI or after a cool-down. |
 | FN-23 sale product shows original and sale price everywhere | functional | Blocked by Shopify bot protection (HTTP 429 "Verifying your connection") before the test could check anything. Environment issue, not a store defect; re-run from CI or after a cool-down. |

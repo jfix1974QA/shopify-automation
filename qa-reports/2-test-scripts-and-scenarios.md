@@ -2,7 +2,7 @@
 
 [Index](README.md) · [1. Execution report](1-automation-execution-report.md) · [2. Test scripts & scenarios](2-test-scripts-and-scenarios.md) · [3. Defect & QA summary](3-defect-and-qa-summary.md)
 
-**Store:** https://james-qa-shop.myshopify.com · **Run:** 2026-11-22 06:52 UTC · **77 test cases** in 5 packs (89 executions)
+**Store:** https://james-qa-shop.myshopify.com · **Run:** 2026-11-23 07:11 UTC · **77 test cases** in 5 packs (89 executions)
 
 Each test case lists its planned steps and expected result (from the test definition), the steps the automation
 actually performed in this run (browser actions and assertions, with outcome), and the actual result.
@@ -16,83 +16,83 @@ Source code for every scenario is linked by file and line.
 
 | ID | Test case | Pack | Priority | Type | Result | Time |
 |---|---|---|---|---|---|---:|
-| [UI-01](#ui-01) | home page header, hero and footer render | ui | P1 | Standard | ✅ Passed | 1.2s / 1.7s |
-| [UI-02](#ui-02) | product page shows title, price, image, add to cart | ui | P1 | Standard | ✅ Passed | 1.3s / 1.5s |
-| [UI-03](#ui-03) | collection page shows a grid of product cards | ui | P2 | Standard | ✅ Passed | 1.1s / 1.8s |
-| [UI-04](#ui-04) | empty cart shows an empty-state message and a way back to shopping | ui | P2 | Edge | ✅ Passed | 1.0s / 1.1s |
-| [UI-05](#ui-05) | no images on the home page are broken | ui | P2 | Standard | ✅ Passed | 4.0s / 3.0s |
-| [UI-06](#ui-06) | page does not scroll horizontally (no layout overflow) | ui | P2 | Edge | ✅ Passed | 1.4s / 2.6s |
-| [UI-07](#ui-07) | mobile menu opens and lists the main navigation | ui | P2 | Standard | ✅ Passed | 0.2s / 2.5s |
-| [UI-08](#ui-08) | keyboard-only shopper can add to cart and reach the cart | ui | P2 | Edge | ✅ Passed | 2.3s / 0.5s |
-| [UI-AI-01](#ui-ai-01) | home page looks like a working, professional store | ui | P2 | Claude | ❌ Failed | 1.7s / 2.3s |
-| [UI-AI-02](#ui-ai-02) | product page shows everything a shopper needs | ui | P2 | Claude | ❌ Failed | 1.7s / 2.1s |
-| [UI-AI-03](#ui-ai-03) | cart page clearly shows the item and how to check out | ui | P2 | Claude | ❌ Failed | 2.0s / 2.6s |
+| [UI-01](#ui-01) | home page header, hero and footer render | ui | P1 | Standard | ✅ Passed | 1.3s / 1.8s |
+| [UI-02](#ui-02) | product page shows title, price, image, add to cart | ui | P1 | Standard | ✅ Passed | 1.3s / 2.0s |
+| [UI-03](#ui-03) | collection page shows a grid of product cards | ui | P2 | Standard | ✅ Passed | 1.4s / 2.0s |
+| [UI-04](#ui-04) | empty cart shows an empty-state message and a way back to shopping | ui | P2 | Edge | ✅ Passed | 0.9s / 1.5s |
+| [UI-05](#ui-05) | no images on the home page are broken | ui | P2 | Standard | ✅ Passed | 6.5s / 3.0s |
+| [UI-06](#ui-06) | page does not scroll horizontally (no layout overflow) | ui | P2 | Edge | ✅ Passed | 1.7s / 3.1s |
+| [UI-07](#ui-07) | mobile menu opens and lists the main navigation | ui | P2 | Standard | ✅ Passed | 0.2s / 2.8s |
+| [UI-08](#ui-08) | keyboard-only shopper can add to cart and reach the cart | ui | P2 | Edge | ✅ Passed | 2.6s / 0.8s |
+| [UI-AI-01](#ui-ai-01) | home page looks like a working, professional store | ui | P2 | Claude | ❌ Failed | 1.9s / 2.7s |
+| [UI-AI-02](#ui-ai-02) | product page shows everything a shopper needs | ui | P2 | Claude | ❌ Failed | 1.9s / 2.6s |
+| [UI-AI-03](#ui-ai-03) | cart page clearly shows the item and how to check out | ui | P2 | Claude | ❌ Failed | 2.5s / 3.4s |
 | [UI-AI-04](#ui-ai-04) | product descriptions have no typos or placeholder text | ui | P3 | Claude | ❌ Failed | 0.2s / 0.0s |
-| [FN-01](#fn-01) | product page data matches the catalogue | functional | P1 | Standard | ✅ Passed | 1.1s |
-| [FN-02](#fn-02) | Add to cart adds the selected variant | functional | P1 | Standard | 🚧 Blocked | 10.8s |
-| [FN-03](#fn-03) | quantity selector adds the chosen amount | functional | P2 | Standard | ⏭️ Skipped | 1.1s |
-| [FN-04](#fn-04) | sold-out product cannot be added to cart | functional | P1 | Edge | ✅ Passed | 1.0s |
-| [FN-05](#fn-05) | choosing a different variant updates the URL and price | functional | P2 | Standard | ✅ Passed | 1.4s |
-| [FN-06](#fn-06) | cart page lists the item with subtotal and checkout | functional | P1 | Standard | 🚧 Blocked | 10.6s |
-| [FN-07](#fn-07) | changing quantity in the cart updates the total | functional | P1 | Standard | 🚧 Blocked | 10.8s |
-| [FN-08](#fn-08) | removing the only item empties the cart | functional | P1 | Edge | 🚧 Blocked | 10.3s |
-| [FN-09](#fn-09) | Checkout button opens Shopify checkout | functional | P1 | Standard | 🚧 Blocked | 10.7s |
-| [FN-10](#fn-10) | search by product name returns that product | functional | P1 | Standard | 🚧 Blocked | 32.3s |
-| [FN-11](#fn-11) | search with no matches shows a no-results message | functional | P2 | Edge | ✅ Passed | 1.8s |
-| [FN-12](#fn-12) | sort by price low to high orders products correctly | functional | P2 | Standard | ✅ Passed | 1.1s |
-| [FN-13](#fn-13) | every catalogue product is reachable from the collection page | functional | P3 | Standard | ✅ Passed | 0.9s |
-| [FN-14](#fn-14) | contact form rejects a submission without an email | functional | P3 | Edge | ✅ Passed | 4.1s |
-| [FN-15](#fn-15) | product quantity input does not allow 0 or negative values | functional | P2 | Edge | ⏭️ Skipped | 2.0s |
-| [FN-16](#fn-16) | non-numeric quantity is never added as a broken line | functional | P3 | Edge | ⏭️ Skipped | 1.9s |
-| [FN-17](#fn-17) | requesting far more than is in stock is limited or rejected with a message | functional | P2 | Edge | ⏭️ Skipped | 1.7s |
-| [FN-18](#fn-18) | adding the same product twice merges into one line | functional | P1 | Edge | ✅ Passed | 5.1s |
-| [FN-19](#fn-19) | cart with two different products shows both and the correct subtotal | functional | P1 | Edge | ✅ Passed | 3.5s |
-| [FN-20](#fn-20) | cart survives a page reload and opening a new tab | functional | P1 | Edge | 🚧 Blocked | 10.4s |
-| [FN-21](#fn-21) | double-clicking Add to cart adds only one item | functional | P2 | Edge | 🚧 Blocked | 13.7s |
-| [FN-22](#fn-22) | invalid discount link does not change the cart total | functional | P3 | Edge | 🚧 Blocked | 10.4s |
-| [FN-23](#fn-23) | sale product shows original and sale price everywhere | functional | P2 | Edge | 🚧 Blocked | 10.9s |
-| [FN-24](#fn-24) | search escapes HTML and script input (no XSS) | functional | P1 | Edge | ✅ Passed | 2.3s |
-| [FN-25](#fn-25) | very long search query is handled without errors | functional | P3 | Edge | ✅ Passed | 0.8s |
-| [FN-26](#fn-26) | search ignores letter case and surrounding spaces | functional | P2 | Edge | ✅ Passed | 1.0s |
-| [FN-27](#fn-27) | product link with an invalid variant id falls back to a buyable variant | functional | P2 | Edge | 🚧 Blocked | 10.5s |
-| [FN-28](#fn-28) | unknown collection returns 404 | functional | P3 | Edge | ✅ Passed | 0.9s |
+| [FN-01](#fn-01) | product page data matches the catalogue | functional | P1 | Standard | ✅ Passed | 0.9s |
+| [FN-02](#fn-02) | Add to cart adds the selected variant | functional | P1 | Standard | 🚧 Blocked | 10.4s |
+| [FN-03](#fn-03) | quantity selector adds the chosen amount | functional | P2 | Standard | ⏭️ Skipped | 0.8s |
+| [FN-04](#fn-04) | sold-out product cannot be added to cart | functional | P1 | Edge | ✅ Passed | 0.8s |
+| [FN-05](#fn-05) | choosing a different variant updates the URL and price | functional | P2 | Standard | ✅ Passed | 0.9s |
+| [FN-06](#fn-06) | cart page lists the item with subtotal and checkout | functional | P1 | Standard | 🚧 Blocked | 10.2s |
+| [FN-07](#fn-07) | changing quantity in the cart updates the total | functional | P1 | Standard | 🚧 Blocked | 10.3s |
+| [FN-08](#fn-08) | removing the only item empties the cart | functional | P1 | Edge | 🚧 Blocked | 10.2s |
+| [FN-09](#fn-09) | Checkout button opens Shopify checkout | functional | P1 | Standard | 🚧 Blocked | 10.3s |
+| [FN-10](#fn-10) | search by product name returns that product | functional | P1 | Standard | 🚧 Blocked | 31.7s |
+| [FN-11](#fn-11) | search with no matches shows a no-results message | functional | P2 | Edge | ✅ Passed | 0.9s |
+| [FN-12](#fn-12) | sort by price low to high orders products correctly | functional | P2 | Standard | ✅ Passed | 0.8s |
+| [FN-13](#fn-13) | every catalogue product is reachable from the collection page | functional | P3 | Standard | ✅ Passed | 0.7s |
+| [FN-14](#fn-14) | contact form rejects a submission without an email | functional | P3 | Edge | ✅ Passed | 3.9s |
+| [FN-15](#fn-15) | product quantity input does not allow 0 or negative values | functional | P2 | Edge | ⏭️ Skipped | 1.5s |
+| [FN-16](#fn-16) | non-numeric quantity is never added as a broken line | functional | P3 | Edge | ⏭️ Skipped | 1.5s |
+| [FN-17](#fn-17) | requesting far more than is in stock is limited or rejected with a message | functional | P2 | Edge | ⏭️ Skipped | 1.2s |
+| [FN-18](#fn-18) | adding the same product twice merges into one line | functional | P1 | Edge | ✅ Passed | 3.5s |
+| [FN-19](#fn-19) | cart with two different products shows both and the correct subtotal | functional | P1 | Edge | ✅ Passed | 2.8s |
+| [FN-20](#fn-20) | cart survives a page reload and opening a new tab | functional | P1 | Edge | ✅ Passed | 2.5s |
+| [FN-21](#fn-21) | double-clicking Add to cart adds only one item | functional | P2 | Edge | 🚧 Blocked | 13.3s |
+| [FN-22](#fn-22) | invalid discount link does not change the cart total | functional | P3 | Edge | 🚧 Blocked | 10.3s |
+| [FN-23](#fn-23) | sale product shows original and sale price everywhere | functional | P2 | Edge | 🚧 Blocked | 10.7s |
+| [FN-24](#fn-24) | search escapes HTML and script input (no XSS) | functional | P1 | Edge | ✅ Passed | 2.1s |
+| [FN-25](#fn-25) | very long search query is handled without errors | functional | P3 | Edge | ✅ Passed | 0.7s |
+| [FN-26](#fn-26) | search ignores letter case and surrounding spaces | functional | P2 | Edge | ✅ Passed | 0.9s |
+| [FN-27](#fn-27) | product link with an invalid variant id falls back to a buyable variant | functional | P2 | Edge | 🚧 Blocked | 10.3s |
+| [FN-28](#fn-28) | unknown collection returns 404 | functional | P3 | Edge | ✅ Passed | 0.7s |
 | [NF-01](#nf-01) | home page loads within performance budget | non-functional | P2 | Standard | ✅ Passed | 2.3s |
-| [NF-02](#nf-02) | collection page loads within performance budget | non-functional | P2 | Standard | ✅ Passed | 2.3s |
+| [NF-02](#nf-02) | collection page loads within performance budget | non-functional | P2 | Standard | ✅ Passed | 2.4s |
 | [NF-03](#nf-03) | product page loads within performance budget | non-functional | P2 | Standard | ✅ Passed | 2.4s |
-| [NF-04](#nf-04) | no JavaScript errors on key pages | non-functional | P2 | Standard | ✅ Passed | 1.5s |
-| [NF-05](#nf-05) | no critical or serious WCAG 2.1 AA violations on key pages | non-functional | P2 | Standard | ❌ Failed | 5.2s |
-| [NF-06](#nf-06) | all images have alt text | non-functional | P3 | Standard | ✅ Passed | 2.7s |
-| [NF-07](#nf-07) | key pages have title, meta description, canonical and social image | non-functional | P3 | Standard | ❌ Failed | 51.9s |
-| [NF-08](#nf-08) | product page has Product structured data with price | non-functional | P3 | Standard | ✅ Passed | 1.0s |
+| [NF-04](#nf-04) | no JavaScript errors on key pages | non-functional | P2 | Standard | ✅ Passed | 1.7s |
+| [NF-05](#nf-05) | no critical or serious WCAG 2.1 AA violations on key pages | non-functional | P2 | Standard | ❌ Failed | 4.7s |
+| [NF-06](#nf-06) | all images have alt text | non-functional | P3 | Standard | ✅ Passed | 2.8s |
+| [NF-07](#nf-07) | key pages have title, meta description, canonical and social image | non-functional | P3 | Standard | ❌ Failed | 52.0s |
+| [NF-08](#nf-08) | product page has Product structured data with price | non-functional | P3 | Standard | ✅ Passed | 0.9s |
 | [NF-09](#nf-09) | HTTP redirects to HTTPS | non-functional | P1 | Edge | ✅ Passed | 0.7s |
 | [NF-10](#nf-10) | security headers are present | non-functional | P2 | Standard | ✅ Passed | 0.7s |
-| [NF-11](#nf-11) | session and cart cookies are Secure and HttpOnly where applicable | non-functional | P2 | Standard | ❌ Failed | 1.4s |
+| [NF-11](#nf-11) | session and cart cookies are Secure and HttpOnly where applicable | non-functional | P2 | Standard | ❌ Failed | 1.5s |
 | [NF-12](#nf-12) | unknown URLs return a proper 404 page | non-functional | P3 | Edge | ✅ Passed | 0.8s |
-| [NF-13](#nf-13) | without the storefront password, pages redirect to the password page | non-functional | P1 | Edge | ✅ Passed | 1.0s |
-| [NF-14](#nf-14) | product page is usable on a slow 3G connection | non-functional | P2 | Edge | ✅ Passed | 13.0s |
-| [NF-15](#nf-15) | going offline during Add to cart fails cleanly and recovers | non-functional | P3 | Edge | ✅ Passed | 3.6s |
-| [API-01](#api-01) | GET /products/{handle}.js returns a valid product | api | P1 | Standard | 🚧 Blocked | 10.2s |
+| [NF-13](#nf-13) | without the storefront password, pages redirect to the password page | non-functional | P1 | Edge | ✅ Passed | 1.1s |
+| [NF-14](#nf-14) | product page is usable on a slow 3G connection | non-functional | P2 | Edge | ✅ Passed | 12.9s |
+| [NF-15](#nf-15) | going offline during Add to cart fails cleanly and recovers | non-functional | P3 | Edge | ✅ Passed | 3.7s |
+| [API-01](#api-01) | GET /products/{handle}.js returns a valid product | api | P1 | Standard | 🚧 Blocked | 10.4s |
 | [API-02](#api-02) | catalogue data is complete (titles, prices, images, variants) | api | P2 | Standard | ✅ Passed | 1.0s |
-| [API-03](#api-03) | GET unknown product returns 404 | api | P2 | Edge | 🚧 Blocked | 10.3s |
-| [API-04](#api-04) | predictive search API returns matching products | api | P2 | Standard | 🚧 Blocked | 10.1s |
-| [API-05](#api-05) | POST /cart/add.js adds an item and totals are correct | api | P1 | Standard | 🚧 Blocked | 10.1s |
-| [API-06](#api-06) | POST /cart/change.js updates quantity; 0 removes the line | api | P1 | Edge | 🚧 Blocked | 10.0s |
-| [API-07](#api-07) | POST /cart/clear.js empties the cart | api | P2 | Standard | 🚧 Blocked | 10.1s |
-| [API-08](#api-08) | adding an invalid variant is rejected with an error | api | P2 | Edge | 🚧 Blocked | 10.0s |
-| [API-09](#api-09) | adding a sold-out variant is rejected | api | P1 | Edge | 🚧 Blocked | 10.1s |
-| [API-10](#api-10) | negative quantity is rejected | api | P3 | Edge | 🚧 Blocked | 10.1s |
-| [API-11](#api-11) | GET /cart.js returns the documented shape | api | P3 | Standard | 🚧 Blocked | 10.1s |
+| [API-03](#api-03) | GET unknown product returns 404 | api | P2 | Edge | 🚧 Blocked | 10.4s |
+| [API-04](#api-04) | predictive search API returns matching products | api | P2 | Standard | 🚧 Blocked | 10.5s |
+| [API-05](#api-05) | POST /cart/add.js adds an item and totals are correct | api | P1 | Standard | 🚧 Blocked | 10.4s |
+| [API-06](#api-06) | POST /cart/change.js updates quantity; 0 removes the line | api | P1 | Edge | 🚧 Blocked | 10.4s |
+| [API-07](#api-07) | POST /cart/clear.js empties the cart | api | P2 | Standard | 🚧 Blocked | 10.3s |
+| [API-08](#api-08) | adding an invalid variant is rejected with an error | api | P2 | Edge | 🚧 Blocked | 10.2s |
+| [API-09](#api-09) | adding a sold-out variant is rejected | api | P1 | Edge | 🚧 Blocked | 10.2s |
+| [API-10](#api-10) | negative quantity is rejected | api | P3 | Edge | 🚧 Blocked | 10.2s |
+| [API-11](#api-11) | GET /cart.js returns the documented shape | api | P3 | Standard | 🚧 Blocked | 10.2s |
 | [API-12](#api-12) | quantity 0 on add is rejected or ignored | api | P2 | Edge | 🚧 Blocked | 10.6s |
 | [API-13](#api-13) | very large quantity is limited by stock or rejected | api | P2 | Edge | 🚧 Blocked | 10.6s |
-| [API-14](#api-14) | malformed JSON body returns a 4xx, not a server error | api | P2 | Edge | 🚧 Blocked | 10.4s |
+| [API-14](#api-14) | malformed JSON body returns a 4xx, not a server error | api | P2 | Edge | 🚧 Blocked | 10.8s |
 | [API-15](#api-15) | changing a line that is not in the cart returns a 4xx | api | P3 | Edge | 🚧 Blocked | 10.5s |
-| [API-16](#api-16) | /cart/update.js sets several line quantities at once | api | P3 | Edge | 🚧 Blocked | 10.4s |
+| [API-16](#api-16) | /cart/update.js sets several line quantities at once | api | P3 | Edge | 🚧 Blocked | 10.6s |
 | [API-17](#api-17) | string, decimal and missing ids are rejected cleanly | api | P3 | Edge | 🚧 Blocked | 10.4s |
-| [REG-01](#reg-01) | browse → product → add to cart → checkout | regression | P1 | Standard | ✅ Passed | 6.9s |
-| [REG-02](#reg-02) | search → product → add to cart | regression | P1 | Standard | ✅ Passed | 6.6s |
-| [REG-03](#reg-03) | home page above the fold matches baseline | regression | P2 | Standard | ✅ Passed | 5.9s |
-| [REG-04](#reg-04) | product page matches baseline | regression | P2 | Standard | ✅ Passed | 5.4s |
-| [REG-05](#reg-05) | empty cart page matches baseline | regression | P3 | Standard | ✅ Passed | 4.5s |
+| [REG-01](#reg-01) | browse → product → add to cart → checkout | regression | P1 | Standard | ✅ Passed | 4.4s |
+| [REG-02](#reg-02) | search → product → add to cart | regression | P1 | Standard | ✅ Passed | 4.1s |
+| [REG-03](#reg-03) | home page above the fold matches baseline | regression | P2 | Standard | ✅ Passed | 5.8s |
+| [REG-04](#reg-04) | product page matches baseline | regression | P2 | Standard | ✅ Passed | 5.7s |
+| [REG-05](#reg-05) | empty cart page matches baseline | regression | P3 | Standard | ✅ Passed | 5.4s |
 
 ## UI pack
 
@@ -108,7 +108,7 @@ Source code for every scenario is linked by file and line.
 | Tags | `@ui` `@P1` `@regression` |
 | Script | `tests/ui/layout.spec.ts:9` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | UI (desktop): ✅ Passed (1.2s) · UI (mobile): ✅ Passed (1.7s) |
+| Result | UI (desktop): ✅ Passed (1.3s) · UI (mobile): ✅ Passed (1.8s) |
 
 **Test steps**
 1. Open home page.
@@ -118,12 +118,12 @@ Source code for every scenario is linked by file and line.
 
 <details><summary>Steps executed in this run (6)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (353ms)
-2. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:14)` (11ms)
-3. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:18)` (15ms)
+1. ✓ `Navigate (fixtures.ts:55)` (485ms)
+2. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:14)` (14ms)
+3. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:18)` (13ms)
 4. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:20)` (13ms)
-5. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:21)` (27ms)
-6. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:22)` (10ms)
+5. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:21)` (11ms)
+6. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:22)` (11ms)
 
 </details>
 
@@ -144,7 +144,7 @@ Source code for every scenario is linked by file and line.
 | Tags | `@ui` `@P1` `@regression` |
 | Script | `tests/ui/layout.spec.ts:25` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | UI (desktop): ✅ Passed (1.3s) · UI (mobile): ✅ Passed (1.5s) |
+| Result | UI (desktop): ✅ Passed (1.3s) · UI (mobile): ✅ Passed (2.0s) |
 
 **Test steps**
 1. Open an in-stock product.
@@ -154,11 +154,11 @@ Source code for every scenario is linked by file and line.
 
 <details><summary>Steps executed in this run (5)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (495ms)
-2. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:31)` (12ms)
-3. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:32)` (15ms)
-4. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:33)` (17ms)
-5. ✓ **Assert** `Expect "toBeEnabled" (layout.spec.ts:34)` (28ms)
+1. ✓ `Navigate (fixtures.ts:55)` (617ms)
+2. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:31)` (11ms)
+3. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:32)` (13ms)
+4. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:33)` (9ms)
+5. ✓ **Assert** `Expect "toBeEnabled" (layout.spec.ts:34)` (8ms)
 
 </details>
 
@@ -179,7 +179,7 @@ Source code for every scenario is linked by file and line.
 | Tags | `@ui` `@P2` |
 | Script | `tests/ui/layout.spec.ts:37` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | UI (desktop): ✅ Passed (1.1s) · UI (mobile): ✅ Passed (1.8s) |
+| Result | UI (desktop): ✅ Passed (1.4s) · UI (mobile): ✅ Passed (2.0s) |
 
 **Test steps**
 1. Open /collections/all.
@@ -189,21 +189,21 @@ Source code for every scenario is linked by file and line.
 
 <details><summary>Steps executed in this run (15)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (516ms)
-2. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:43)` (30ms)
+1. ✓ `Navigate (fixtures.ts:55)` (675ms)
+2. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:43)` (46ms)
 3. ✓ **Assert** `Expect "toBeGreaterThan" (layout.spec.ts:45)` (0ms)
-4. ✓ **Assert** `card 0 link (layout.spec.ts:48)` (14ms)
-5. ✓ **Assert** `card 0 price (layout.spec.ts:49)` (13ms)
-6. ✓ **Assert** `card 1 link (layout.spec.ts:48)` (11ms)
-7. ✓ **Assert** `card 1 price (layout.spec.ts:49)` (13ms)
+4. ✓ **Assert** `card 0 link (layout.spec.ts:48)` (24ms)
+5. ✓ **Assert** `card 0 price (layout.spec.ts:49)` (25ms)
+6. ✓ **Assert** `card 1 link (layout.spec.ts:48)` (20ms)
+7. ✓ **Assert** `card 1 price (layout.spec.ts:49)` (18ms)
 8. ✓ **Assert** `card 2 link (layout.spec.ts:48)` (13ms)
 9. ✓ **Assert** `card 2 price (layout.spec.ts:49)` (13ms)
-10. ✓ **Assert** `card 3 link (layout.spec.ts:48)` (12ms)
-11. ✓ **Assert** `card 3 price (layout.spec.ts:49)` (27ms)
-12. ✓ **Assert** `card 4 link (layout.spec.ts:48)` (11ms)
-13. ✓ **Assert** `card 4 price (layout.spec.ts:49)` (10ms)
-14. ✓ **Assert** `card 5 link (layout.spec.ts:48)` (15ms)
-15. ✓ **Assert** `card 5 price (layout.spec.ts:49)` (16ms)
+10. ✓ **Assert** `card 3 link (layout.spec.ts:48)` (13ms)
+11. ✓ **Assert** `card 3 price (layout.spec.ts:49)` (15ms)
+12. ✓ **Assert** `card 4 link (layout.spec.ts:48)` (19ms)
+13. ✓ **Assert** `card 4 price (layout.spec.ts:49)` (22ms)
+14. ✓ **Assert** `card 5 link (layout.spec.ts:48)` (51ms)
+15. ✓ **Assert** `card 5 price (layout.spec.ts:49)` (19ms)
 
 </details>
 
@@ -224,7 +224,7 @@ Source code for every scenario is linked by file and line.
 | Tags | `@ui` `@edge` `@P2` |
 | Script | `tests/ui/layout.spec.ts:53` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | UI (desktop): ✅ Passed (1.0s) · UI (mobile): ✅ Passed (1.1s) |
+| Result | UI (desktop): ✅ Passed (0.9s) · UI (mobile): ✅ Passed (1.5s) |
 
 **Test steps**
 1. Open /cart with no items.
@@ -234,9 +234,9 @@ Source code for every scenario is linked by file and line.
 
 <details><summary>Steps executed in this run (3)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (395ms)
-2. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:58)` (19ms)
-3. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:59)` (15ms)
+1. ✓ `Navigate (fixtures.ts:55)` (324ms)
+2. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:58)` (14ms)
+3. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:59)` (14ms)
 
 </details>
 
@@ -257,7 +257,7 @@ Source code for every scenario is linked by file and line.
 | Tags | `@ui` `@P2` |
 | Script | `tests/ui/layout.spec.ts:62` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | UI (desktop): ✅ Passed (4.0s) · UI (mobile): ✅ Passed (3.0s) |
+| Result | UI (desktop): ✅ Passed (6.5s) · UI (mobile): ✅ Passed (3.0s) |
 
 **Test steps**
 1. Scroll the home page so lazy images load.
@@ -267,7 +267,7 @@ Source code for every scenario is linked by file and line.
 
 <details><summary>Steps executed in this run (2)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (465ms)
+1. ✓ `Navigate (fixtures.ts:55)` (464ms)
 2. ✓ **Assert** `Broken images:  (layout.spec.ts:75)` (1ms)
 
 </details>
@@ -289,7 +289,7 @@ Source code for every scenario is linked by file and line.
 | Tags | `@ui` `@edge` `@P2` |
 | Script | `tests/ui/layout.spec.ts:78` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | UI (desktop): ✅ Passed (1.4s) · UI (mobile): ✅ Passed (2.6s) |
+| Result | UI (desktop): ✅ Passed (1.7s) · UI (mobile): ✅ Passed (3.1s) |
 
 **Test steps**
 1. On home, collection and product pages, the document must not be wider than the viewport.
@@ -299,11 +299,11 @@ Source code for every scenario is linked by file and line.
 
 <details><summary>Steps executed in this run (6)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (375ms)
-2. ✓ **Assert** `/ overflows horizontally by 0px (layout.spec.ts:86)` (0ms)
-3. ✓ `Navigate (fixtures.ts:55)` (308ms)
+1. ✓ `Navigate (fixtures.ts:55)` (464ms)
+2. ✓ **Assert** `/ overflows horizontally by 0px (layout.spec.ts:86)` (1ms)
+3. ✓ `Navigate (fixtures.ts:55)` (364ms)
 4. ✓ **Assert** `/collections/all overflows horizontally by 0px (layout.spec.ts:86)` (0ms)
-5. ✓ `Navigate (fixtures.ts:55)` (311ms)
+5. ✓ `Navigate (fixtures.ts:55)` (389ms)
 6. ✓ **Assert** `/products/the-collection-snowboard-liquid overflows horizontally by 0px (layout.spec.ts:86)` (0ms)
 
 </details>
@@ -325,7 +325,7 @@ Source code for every scenario is linked by file and line.
 | Tags | `@ui` `@P2` |
 | Script | `tests/ui/layout.spec.ts:134` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | UI (desktop): ⏭️ Skipped (0.2s) · UI (mobile): ✅ Passed (2.5s) |
+| Result | UI (desktop): ⏭️ Skipped (0.2s) · UI (mobile): ✅ Passed (2.8s) |
 
 **Test steps**
 1. Mobile only.
@@ -351,7 +351,7 @@ Source code for every scenario is linked by file and line.
 | Tags | `@ui` `@edge` `@a11y` `@P2` |
 | Script | `tests/ui/layout.spec.ts:90` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | UI (desktop): ✅ Passed (2.3s) · UI (mobile): ⏭️ Skipped (0.5s) |
+| Result | UI (desktop): ✅ Passed (2.6s) · UI (mobile): ⏭️ Skipped (0.8s) |
 
 **Test steps**
 1. Desktop only.
@@ -362,35 +362,35 @@ Source code for every scenario is linked by file and line.
 
 <details><summary>Steps executed in this run (29)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (382ms)
-2. ✓ `Press "Tab" (layout.spec.ts:100)` (11ms)
-3. ✓ `Press "Tab" (layout.spec.ts:100)` (6ms)
-4. ✓ `Press "Tab" (layout.spec.ts:100)` (7ms)
-5. ✓ `Press "Tab" (layout.spec.ts:100)` (10ms)
-6. ✓ `Press "Tab" (layout.spec.ts:100)` (6ms)
-7. ✓ `Press "Tab" (layout.spec.ts:100)` (9ms)
-8. ✓ `Press "Tab" (layout.spec.ts:100)` (8ms)
-9. ✓ `Press "Tab" (layout.spec.ts:100)` (6ms)
-10. ✓ `Press "Tab" (layout.spec.ts:100)` (6ms)
-11. ✓ `Press "Tab" (layout.spec.ts:100)` (7ms)
-12. ✓ `Press "Tab" (layout.spec.ts:100)` (6ms)
+1. ✓ `Navigate (fixtures.ts:55)` (398ms)
+2. ✓ `Press "Tab" (layout.spec.ts:100)` (16ms)
+3. ✓ `Press "Tab" (layout.spec.ts:100)` (14ms)
+4. ✓ `Press "Tab" (layout.spec.ts:100)` (11ms)
+5. ✓ `Press "Tab" (layout.spec.ts:100)` (11ms)
+6. ✓ `Press "Tab" (layout.spec.ts:100)` (11ms)
+7. ✓ `Press "Tab" (layout.spec.ts:100)` (14ms)
+8. ✓ `Press "Tab" (layout.spec.ts:100)` (12ms)
+9. ✓ `Press "Tab" (layout.spec.ts:100)` (13ms)
+10. ✓ `Press "Tab" (layout.spec.ts:100)` (10ms)
+11. ✓ `Press "Tab" (layout.spec.ts:100)` (19ms)
+12. ✓ `Press "Tab" (layout.spec.ts:100)` (9ms)
 13. ✓ **Assert** `Add to cart should show a visible focus indicator (layout.spec.ts:107)` (0ms)
-14. ✓ `Press "Enter" (layout.spec.ts:116)` (9ms)
-15. ✓ **Assert** `Expect "poll toBe" (layout.spec.ts:118)` (108ms)
-16. ✓ `Press "Escape" (layout.spec.ts:121)` (14ms)
-17. ✓ `Navigate (fixtures.ts:55)` (311ms)
-18. ✓ `Press "Tab" (layout.spec.ts:100)` (11ms)
-19. ✓ `Press "Tab" (layout.spec.ts:100)` (11ms)
-20. ✓ `Press "Tab" (layout.spec.ts:100)` (11ms)
-21. ✓ `Press "Tab" (layout.spec.ts:100)` (11ms)
-22. ✓ `Press "Tab" (layout.spec.ts:100)` (12ms)
-23. ✓ `Press "Tab" (layout.spec.ts:100)` (7ms)
-24. ✓ `Press "Tab" (layout.spec.ts:100)` (13ms)
-25. ✓ `Press "Tab" (layout.spec.ts:100)` (10ms)
-26. ✓ **Assert** `cart icon should show a visible focus indicator (layout.spec.ts:107)` (1ms)
-27. ✓ `Press "Enter" (layout.spec.ts:124)` (12ms)
+14. ✓ `Press "Enter" (layout.spec.ts:116)` (16ms)
+15. ✓ **Assert** `Expect "poll toBe" (layout.spec.ts:118)` (114ms)
+16. ✓ `Press "Escape" (layout.spec.ts:121)` (10ms)
+17. ✓ `Navigate (fixtures.ts:55)` (329ms)
+18. ✓ `Press "Tab" (layout.spec.ts:100)` (29ms)
+19. ✓ `Press "Tab" (layout.spec.ts:100)` (18ms)
+20. ✓ `Press "Tab" (layout.spec.ts:100)` (12ms)
+21. ✓ `Press "Tab" (layout.spec.ts:100)` (7ms)
+22. ✓ `Press "Tab" (layout.spec.ts:100)` (10ms)
+23. ✓ `Press "Tab" (layout.spec.ts:100)` (8ms)
+24. ✓ `Press "Tab" (layout.spec.ts:100)` (9ms)
+25. ✓ `Press "Tab" (layout.spec.ts:100)` (13ms)
+26. ✓ **Assert** `cart icon should show a visible focus indicator (layout.spec.ts:107)` (0ms)
+27. ✓ `Press "Enter" (layout.spec.ts:124)` (11ms)
 28. ✓ **Assert** `Expect "toPass" (layout.spec.ts:130)` (141ms)
-29. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:131)` (18ms)
+29. ✓ **Assert** `Expect "toBeVisible" (layout.spec.ts:131)` (14ms)
 
 </details>
 
@@ -411,7 +411,7 @@ Source code for every scenario is linked by file and line.
 | Tags | `@ui` `@ai` `@P2` |
 | Script | `tests/ui/ai-visual.spec.ts:13` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | UI (desktop): ❌ Failed (1.7s) · UI (mobile): ❌ Failed (2.3s) |
+| Result | UI (desktop): ❌ Failed (1.9s) · UI (mobile): ❌ Failed (2.7s) |
 
 **Test steps**
 1. Claude reviews a screenshot for layout bugs, broken images, overlapping text and placeholder copy.
@@ -421,14 +421,14 @@ Source code for every scenario is linked by file and line.
 
 <details><summary>Steps executed in this run (1)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (370ms)
+1. ✓ `Navigate (fixtures.ts:55)` (657ms)
 
 </details>
 
-**Actual result:** ❌ *UI (desktop):* Failed: BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011ChHXRNBzf3sav1FN6h8x8"}<br>*UI (mobile):* Failed: BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011ChHXSzAF2MzPjSJN8Ra1G"}
+**Actual result:** ❌ *UI (desktop):* Failed: BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011ChKSirENNq4A7VdxuHb4x"}<br>*UI (mobile):* Failed: BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011ChKSkW3yZWqFMpzUrnUvH"}
 
 ```
-BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011ChHXRNBzf3sav1FN6h8x8"}
+BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011ChKSirENNq4A7VdxuHb4x"}
 ```
 
 <img src="evidence/ui-ai-01-ui.png" alt="UI-AI-01 screenshot" width="420">
@@ -446,7 +446,7 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 | Tags | `@ui` `@ai` `@P2` |
 | Script | `tests/ui/ai-visual.spec.ts:25` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | UI (desktop): ❌ Failed (1.7s) · UI (mobile): ❌ Failed (2.1s) |
+| Result | UI (desktop): ❌ Failed (1.9s) · UI (mobile): ❌ Failed (2.6s) |
 
 **Test steps**
 1. Claude checks the product name, price, a matching photo and a visible Add to cart button.
@@ -456,14 +456,14 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 
 <details><summary>Steps executed in this run (1)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (654ms)
+1. ✓ `Navigate (fixtures.ts:55)` (715ms)
 
 </details>
 
-**Actual result:** ❌ *UI (desktop):* Failed: BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011ChHXRNXLT32K4Jm39u5Db"}<br>*UI (mobile):* Failed: BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011ChHXSyyKxu4Y5kKALqHuB"}
+**Actual result:** ❌ *UI (desktop):* Failed: BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011ChKSirAerrktCM1TNTa2r"}<br>*UI (mobile):* Failed: BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011ChKSkWZjZ8YijqW8aRAe2"}
 
 ```
-BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011ChHXRNXLT32K4Jm39u5Db"}
+BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011ChKSirAerrktCM1TNTa2r"}
 ```
 
 <img src="evidence/ui-ai-02-ui.png" alt="UI-AI-02 screenshot" width="420">
@@ -481,7 +481,7 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 | Tags | `@ui` `@ai` `@P2` |
 | Script | `tests/ui/ai-visual.spec.ts:37` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | UI (desktop): ❌ Failed (2.0s) · UI (mobile): ❌ Failed (2.6s) |
+| Result | UI (desktop): ❌ Failed (2.5s) · UI (mobile): ❌ Failed (3.4s) |
 
 **Test steps**
 1. Claude checks the cart shows the line item, price, quantity control, subtotal and checkout button.
@@ -491,15 +491,15 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 
 <details><summary>Steps executed in this run (2)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (459ms)
-2. ✓ `Navigate (fixtures.ts:55)` (316ms)
+1. ✓ `Navigate (fixtures.ts:55)` (717ms)
+2. ✓ `Navigate (fixtures.ts:55)` (281ms)
 
 </details>
 
-**Actual result:** ❌ *UI (desktop):* Failed: BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011ChHXRnGrL2MjQDAEMujmp"}<br>*UI (mobile):* Failed: BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011ChHXTVijo5zNiCM4CZuRH"}
+**Actual result:** ❌ *UI (desktop):* Failed: BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011ChKSjMfRc6RyBFJZUzZ4R"}<br>*UI (mobile):* Failed: BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011ChKSm9unxvdwuwzjhaY8F"}
 
 ```
-BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011ChHXRnGrL2MjQDAEMujmp"}
+BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011ChKSjMfRc6RyBFJZUzZ4R"}
 ```
 
 <img src="evidence/ui-ai-03-ui.png" alt="UI-AI-03 screenshot" width="420">
@@ -525,10 +525,10 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 **Expected result**
 - Claude reviews up to 10 product descriptions for spelling mistakes, placeholder text and title mismatches.
 
-**Actual result:** ❌ *UI (desktop):* Failed: BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011ChHXRXSsTdtT4feMn5tKR"}<br>*UI (mobile):* Not executed: Content check runs once, on desktop
+**Actual result:** ❌ *UI (desktop):* Failed: BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011ChKSj2cT51GJjKVKfAidY"}<br>*UI (mobile):* Not executed: Content check runs once, on desktop
 
 ```
-BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011ChHXRXSsTdtT4feMn5tKR"}
+BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011ChKSj2cT51GJjKVKfAidY"}
 ```
 
 
@@ -546,7 +546,7 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 | Tags | `@functional` `@P1` `@regression` |
 | Script | `tests/functional/shopping.spec.ts:14` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: ✅ Passed (1.1s) |
+| Result | Functional: ✅ Passed (0.9s) |
 
 **Test steps**
 1. Open an in-stock product.
@@ -556,8 +556,8 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 
 <details><summary>Steps executed in this run (3)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (487ms)
-2. ✓ **Assert** `Expect "toHaveText" (shopping.spec.ts:20)` (13ms)
+1. ✓ `Navigate (fixtures.ts:55)` (377ms)
+2. ✓ **Assert** `Expect "toHaveText" (shopping.spec.ts:20)` (12ms)
 3. ✓ **Assert** `Expect "toContain" (shopping.spec.ts:22)` (0ms)
 
 </details>
@@ -579,7 +579,7 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 | Tags | `@functional` `@P1` `@regression` |
 | Script | `tests/functional/shopping.spec.ts:25` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: 🚧 Blocked (10.8s) |
+| Result | Functional: 🚧 Blocked (10.4s) |
 
 **Test steps**
 1. Click Add to cart.
@@ -589,8 +589,8 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 
 <details><summary>Steps executed in this run (2)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (375ms)
-2. ✓ `Click (ProductPage.ts:57)` (73ms)
+1. ✓ `Navigate (fixtures.ts:55)` (348ms)
+2. ✓ `Click (ProductPage.ts:57)` (70ms)
 
 </details>
 
@@ -611,7 +611,7 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 | Tags | `@functional` `@P2` |
 | Script | `tests/functional/shopping.spec.ts:38` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: ⏭️ Skipped (1.1s) |
+| Result | Functional: ⏭️ Skipped (0.8s) |
 
 **Test steps**
 1. Set quantity to 3 on the product page and add to cart.
@@ -621,7 +621,7 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 
 <details><summary>Steps executed in this run (1)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (476ms)
+1. ✓ `Navigate (fixtures.ts:55)` (390ms)
 
 </details>
 
@@ -642,7 +642,7 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 | Tags | `@functional` `@edge` `@P1` |
 | Script | `tests/functional/shopping.spec.ts:51` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: ✅ Passed (1.0s) |
+| Result | Functional: ✅ Passed (0.8s) |
 
 **Test steps**
 1. Open a product with no stock.
@@ -652,9 +652,9 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 
 <details><summary>Steps executed in this run (3)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (407ms)
-2. ✓ **Assert** `Expect "toBeDisabled" (shopping.spec.ts:59)` (15ms)
-3. ✓ **Assert** `Expect "toContainText" (shopping.spec.ts:60)` (17ms)
+1. ✓ `Navigate (fixtures.ts:55)` (341ms)
+2. ✓ **Assert** `Expect "toBeDisabled" (shopping.spec.ts:59)` (14ms)
+3. ✓ **Assert** `Expect "toContainText" (shopping.spec.ts:60)` (13ms)
 
 </details>
 
@@ -675,7 +675,7 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 | Tags | `@functional` `@P2` |
 | Script | `tests/functional/shopping.spec.ts:63` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: ✅ Passed (1.4s) |
+| Result | Functional: ✅ Passed (0.9s) |
 
 **Test steps**
 1. On a multi-variant product, pick another option.
@@ -685,9 +685,9 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 
 <details><summary>Steps executed in this run (3)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (458ms)
-2. ✓ `Click (shopping.spec.ts:77)` (107ms)
-3. ✓ **Assert** `Expect "toHaveURL" (shopping.spec.ts:79)` (64ms)
+1. ✓ `Navigate (fixtures.ts:55)` (358ms)
+2. ✓ `Click (shopping.spec.ts:77)` (61ms)
+3. ✓ **Assert** `Expect "toHaveURL" (shopping.spec.ts:79)` (17ms)
 
 </details>
 
@@ -708,7 +708,7 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 | Tags | `@functional` `@P1` `@regression` |
 | Script | `tests/functional/shopping.spec.ts:90` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: 🚧 Blocked (10.6s) |
+| Result | Functional: 🚧 Blocked (10.2s) |
 
 **Test steps**
 1. With 1 item in the cart, /cart must list 1 line item, a subtotal and an enabled Checkout button.
@@ -733,7 +733,7 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 | Tags | `@functional` `@P1` |
 | Script | `tests/functional/shopping.spec.ts:100` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: 🚧 Blocked (10.8s) |
+| Result | Functional: 🚧 Blocked (10.3s) |
 
 **Test steps**
 1. Set the line quantity to 2.
@@ -758,7 +758,7 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 | Tags | `@functional` `@edge` `@P1` |
 | Script | `tests/functional/shopping.spec.ts:114` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: 🚧 Blocked (10.3s) |
+| Result | Functional: 🚧 Blocked (10.2s) |
 
 **Test steps**
 1. Click Remove on the line item.
@@ -783,7 +783,7 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 | Tags | `@functional` `@P1` `@regression` |
 | Script | `tests/functional/shopping.spec.ts:124` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: 🚧 Blocked (10.7s) |
+| Result | Functional: 🚧 Blocked (10.3s) |
 
 **Test steps**
 1. Click Checkout.
@@ -809,7 +809,7 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 | Tags | `@functional` `@P1` `@regression` |
 | Script | `tests/functional/shopping.spec.ts:135` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: 🚧 Blocked (32.3s) |
+| Result | Functional: 🚧 Blocked (31.7s) |
 
 **Test steps**
 1. Open search from the header, type a product name, press Enter.
@@ -819,10 +819,10 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 
 <details><summary>Steps executed in this run (4)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (436ms)
-2. ✓ `Click (BasePage.ts:52)` (56ms)
-3. ✓ `Fill "The Collection Snowboard: Liquid" (shopping.spec.ts:142)` (37ms)
-4. ✓ `Press "Enter" (shopping.spec.ts:143)` (112ms)
+1. ✓ `Navigate (fixtures.ts:55)` (399ms)
+2. ✓ `Click (BasePage.ts:52)` (55ms)
+3. ✓ `Fill "The Collection Snowboard: Liquid" (shopping.spec.ts:142)` (22ms)
+4. ✓ `Press "Enter" (shopping.spec.ts:143)` (114ms)
 
 </details>
 
@@ -843,7 +843,7 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 | Tags | `@functional` `@edge` `@P2` |
 | Script | `tests/functional/shopping.spec.ts:150` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: ✅ Passed (1.8s) |
+| Result | Functional: ✅ Passed (0.9s) |
 
 **Test steps**
 1. Search for a nonsense term.
@@ -853,9 +853,9 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 
 <details><summary>Steps executed in this run (3)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (919ms)
-2. ✓ **Assert** `Expect "toHaveCount" (shopping.spec.ts:155)` (49ms)
-3. ✓ **Assert** `Expect "toBeVisible" (shopping.spec.ts:156)` (23ms)
+1. ✓ `Navigate (fixtures.ts:55)` (582ms)
+2. ✓ **Assert** `Expect "toHaveCount" (shopping.spec.ts:155)` (22ms)
+3. ✓ **Assert** `Expect "toBeVisible" (shopping.spec.ts:156)` (9ms)
 
 </details>
 
@@ -876,7 +876,7 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 | Tags | `@functional` `@P2` |
 | Script | `tests/functional/shopping.spec.ts:159` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: ✅ Passed (1.1s) |
+| Result | Functional: ✅ Passed (0.8s) |
 
 **Test steps**
 1. Open /collections/all?sort_by=price-ascending.
@@ -886,7 +886,7 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 
 <details><summary>Steps executed in this run (3)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (629ms)
+1. ✓ `Navigate (fixtures.ts:55)` (507ms)
 2. ✓ **Assert** `Expect "toBeGreaterThan" (shopping.spec.ts:169)` (0ms)
 3. ✓ **Assert** `Expect "toEqual" (shopping.spec.ts:170)` (1ms)
 
@@ -909,7 +909,7 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 | Tags | `@functional` `@P3` |
 | Script | `tests/functional/shopping.spec.ts:173` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: ✅ Passed (0.9s) |
+| Result | Functional: ✅ Passed (0.7s) |
 
 **Test steps**
 1. Each product in the catalogue must appear as a link on /collections/all (first page, up to 24).
@@ -919,8 +919,8 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 
 <details><summary>Steps executed in this run (2)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (577ms)
-2. ✓ **Assert** `Not listed on /collections/all:  (shopping.spec.ts:183)` (0ms)
+1. ✓ `Navigate (fixtures.ts:55)` (420ms)
+2. ✓ **Assert** `Not listed on /collections/all:  (shopping.spec.ts:183)` (1ms)
 
 </details>
 
@@ -941,7 +941,7 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 | Tags | `@functional` `@edge` `@P3` |
 | Script | `tests/functional/shopping.spec.ts:186` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: ✅ Passed (4.1s) |
+| Result | Functional: ✅ Passed (3.9s) |
 
 **Test steps**
 1. Open /pages/contact and submit the form empty.
@@ -952,12 +952,12 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 
 <details><summary>Steps executed in this run (6)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (441ms)
-2. ✓ **Assert** `Expect "toBeVisible" (shopping.spec.ts:193)` (32ms)
-3. ✓ **Assert** `Expect "toHaveAttribute" (shopping.spec.ts:194)` (10ms)
-4. ✓ `Click (shopping.spec.ts:195)` (54ms)
-5. ✓ **Assert** `Expect "not toHaveURL" (shopping.spec.ts:199)` (15ms)
-6. ✓ **Assert** `Expect "toHaveCount" (shopping.spec.ts:200)` (14ms)
+1. ✓ `Navigate (fixtures.ts:55)` (449ms)
+2. ✓ **Assert** `Expect "toBeVisible" (shopping.spec.ts:193)` (21ms)
+3. ✓ **Assert** `Expect "toHaveAttribute" (shopping.spec.ts:194)` (7ms)
+4. ✓ `Click (shopping.spec.ts:195)` (46ms)
+5. ✓ **Assert** `Expect "not toHaveURL" (shopping.spec.ts:199)` (10ms)
+6. ✓ **Assert** `Expect "toHaveCount" (shopping.spec.ts:200)` (11ms)
 
 </details>
 
@@ -978,7 +978,7 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 | Tags | `@functional` `@edge` `@P2` |
 | Script | `tests/functional/edge-cases.spec.ts:13` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: ⏭️ Skipped (2.0s) |
+| Result | Functional: ⏭️ Skipped (1.5s) |
 
 **Test steps**
 1. Set the product page quantity to 0, then -1, and try to add to cart.
@@ -988,7 +988,7 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 
 <details><summary>Steps executed in this run (1)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (852ms)
+1. ✓ `Navigate (fixtures.ts:55)` (681ms)
 
 </details>
 
@@ -1009,7 +1009,7 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 | Tags | `@functional` `@edge` `@P3` |
 | Script | `tests/functional/edge-cases.spec.ts:32` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: ⏭️ Skipped (1.9s) |
+| Result | Functional: ⏭️ Skipped (1.5s) |
 
 **Test steps**
 1. Force the quantity field to "abc" and add to cart.
@@ -1019,7 +1019,7 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 
 <details><summary>Steps executed in this run (1)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (931ms)
+1. ✓ `Navigate (fixtures.ts:55)` (764ms)
 
 </details>
 
@@ -1040,7 +1040,7 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 | Tags | `@functional` `@edge` `@P2` |
 | Script | `tests/functional/edge-cases.spec.ts:50` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: ⏭️ Skipped (1.7s) |
+| Result | Functional: ⏭️ Skipped (1.2s) |
 
 **Test steps**
 1. Set quantity to 99999 and add to cart.
@@ -1051,7 +1051,7 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 
 <details><summary>Steps executed in this run (1)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (741ms)
+1. ✓ `Navigate (fixtures.ts:55)` (553ms)
 
 </details>
 
@@ -1072,7 +1072,7 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 | Tags | `@functional` `@edge` `@P1` `@regression` |
 | Script | `tests/functional/edge-cases.spec.ts:75` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: ✅ Passed (5.1s) |
+| Result | Functional: ✅ Passed (3.5s) |
 
 **Test steps**
 1. Add the same variant twice from the product page.
@@ -1082,15 +1082,15 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 
 <details><summary>Steps executed in this run (9)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (515ms)
-2. ✓ `Click (ProductPage.ts:57)` (104ms)
-3. ✓ `Navigate (fixtures.ts:55)` (514ms)
-4. ✓ `Click (ProductPage.ts:57)` (90ms)
+1. ✓ `Navigate (fixtures.ts:55)` (431ms)
+2. ✓ `Click (ProductPage.ts:57)` (68ms)
+3. ✓ `Navigate (fixtures.ts:55)` (406ms)
+4. ✓ `Click (ProductPage.ts:57)` (62ms)
 5. ✓ **Assert** `Expect "toHaveLength" (edge-cases.spec.ts:85)` (0ms)
 6. ✓ **Assert** `Expect "toBe" (edge-cases.spec.ts:86)` (0ms)
-7. ✓ `Navigate (fixtures.ts:55)` (336ms)
-8. ✓ **Assert** `Expect "toHaveCount" (edge-cases.spec.ts:88)` (19ms)
-9. ✓ **Assert** `Expect "toHaveValue" (edge-cases.spec.ts:89)` (28ms)
+7. ✓ `Navigate (fixtures.ts:55)` (219ms)
+8. ✓ **Assert** `Expect "toHaveCount" (edge-cases.spec.ts:88)` (10ms)
+9. ✓ **Assert** `Expect "toHaveValue" (edge-cases.spec.ts:89)` (8ms)
 
 </details>
 
@@ -1111,7 +1111,7 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 | Tags | `@functional` `@edge` `@P1` |
 | Script | `tests/functional/edge-cases.spec.ts:92` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: ✅ Passed (3.5s) |
+| Result | Functional: ✅ Passed (2.8s) |
 
 **Test steps**
 1. Add two different products.
@@ -1121,11 +1121,11 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 
 <details><summary>Steps executed in this run (5)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (1057ms)
-2. ✓ `Navigate (fixtures.ts:55)` (481ms)
-3. ✓ **Assert** `Expect "toHaveCount" (edge-cases.spec.ts:101)` (18ms)
+1. ✓ `Navigate (fixtures.ts:55)` (665ms)
+2. ✓ `Navigate (fixtures.ts:55)` (315ms)
+3. ✓ **Assert** `Expect "toHaveCount" (edge-cases.spec.ts:101)` (11ms)
 4. ✓ **Assert** `Expect "toBe" (edge-cases.spec.ts:103)` (0ms)
-5. ✓ **Assert** `Expect "toContain" (edge-cases.spec.ts:105)` (1ms)
+5. ✓ **Assert** `Expect "toContain" (edge-cases.spec.ts:105)` (0ms)
 
 </details>
 
@@ -1146,7 +1146,7 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 | Tags | `@functional` `@edge` `@P1` |
 | Script | `tests/functional/edge-cases.spec.ts:108` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: 🚧 Blocked (10.4s) |
+| Result | Functional: ✅ Passed (2.5s) |
 
 **Test steps**
 1. Add an item, reload the page, then open the cart in a new tab of the same browser session.
@@ -1154,13 +1154,19 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 **Expected result**
 - The item must still be there both times.
 
-<details><summary>Steps executed in this run (1)</summary>
+<details><summary>Steps executed in this run (7)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (492ms)
+1. ✓ `Navigate (fixtures.ts:55)` (482ms)
+2. ✓ `Reload (edge-cases.spec.ts:115)` (480ms)
+3. ✓ **Assert** `Expect "toBe" (edge-cases.spec.ts:116)` (0ms)
+4. ✓ `Create page (edge-cases.spec.ts:117)` (45ms)
+5. ✓ `Navigate (edge-cases.spec.ts:118)` (423ms)
+6. ✓ **Assert** `Expect "toBe" (edge-cases.spec.ts:119)` (0ms)
+7. ✓ `Close page (edge-cases.spec.ts:120)` (50ms)
 
 </details>
 
-**Actual result:** 🚧 Not verified: Blocked by Shopify bot protection (HTTP 429 "Verifying your connection") before the test could check anything. Environment issue, not a store defect; re-run from CI or after a cool-down.
+**Actual result:** ✅ As expected. 2/2 assertions passed.
 
 <img src="evidence/fn-20-functional.png" alt="FN-20 screenshot" width="420">
 
@@ -1177,7 +1183,7 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 | Tags | `@functional` `@edge` `@P2` |
 | Script | `tests/functional/edge-cases.spec.ts:123` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: 🚧 Blocked (13.7s) |
+| Result | Functional: 🚧 Blocked (13.3s) |
 
 **Test steps**
 1. Double-click Add to cart quickly.
@@ -1187,8 +1193,8 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 
 <details><summary>Steps executed in this run (2)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (538ms)
-2. ✓ `Double click (edge-cases.spec.ts:129)` (87ms)
+1. ✓ `Navigate (fixtures.ts:55)` (413ms)
+2. ✓ `Double click (edge-cases.spec.ts:129)` (69ms)
 
 </details>
 
@@ -1209,7 +1215,7 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 | Tags | `@functional` `@edge` `@P3` |
 | Script | `tests/functional/edge-cases.spec.ts:134` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: 🚧 Blocked (10.4s) |
+| Result | Functional: 🚧 Blocked (10.3s) |
 
 **Test steps**
 1. With an item in the cart, open /discount/NOT-A-REAL-CODE.
@@ -1219,7 +1225,7 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 
 <details><summary>Steps executed in this run (1)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (476ms)
+1. ✓ `Navigate (fixtures.ts:55)` (488ms)
 
 </details>
 
@@ -1240,7 +1246,7 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 | Tags | `@functional` `@edge` `@P2` |
 | Script | `tests/functional/edge-cases.spec.ts:147` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: 🚧 Blocked (10.9s) |
+| Result | Functional: 🚧 Blocked (10.7s) |
 
 **Test steps**
 1. For a variant with a compare-at price, the product page must show both the sale price and the struck-through original price, and the cart must charge the sale price.
@@ -1250,10 +1256,10 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 
 <details><summary>Steps executed in this run (4)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (527ms)
-2. ✓ **Assert** `Expect "toBeVisible" (edge-cases.spec.ts:157)` (22ms)
-3. ✓ **Assert** `Expect "toBeVisible" (edge-cases.spec.ts:158)` (15ms)
-4. ✓ `Click (ProductPage.ts:57)` (76ms)
+1. ✓ `Navigate (fixtures.ts:55)` (740ms)
+2. ✓ **Assert** `Expect "toBeVisible" (edge-cases.spec.ts:157)` (15ms)
+3. ✓ **Assert** `Expect "toBeVisible" (edge-cases.spec.ts:158)` (16ms)
+4. ✓ `Click (ProductPage.ts:57)` (64ms)
 
 </details>
 
@@ -1274,7 +1280,7 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 | Tags | `@functional` `@edge` `@security` `@P1` |
 | Script | `tests/functional/edge-cases.spec.ts:165` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: ✅ Passed (2.3s) |
+| Result | Functional: ✅ Passed (2.1s) |
 
 **Test steps**
 1. Search for a script/HTML payload.
@@ -1284,7 +1290,7 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 
 <details><summary>Steps executed in this run (5)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (712ms)
+1. ✓ `Navigate (fixtures.ts:55)` (716ms)
 2. ✓ **Assert** `Expect "toBe" (edge-cases.spec.ts:173)` (0ms)
 3. ✓ **Assert** `Expect "toBeUndefined" (edge-cases.spec.ts:175)` (0ms)
 4. ✓ **Assert** `Expect "toBe" (edge-cases.spec.ts:176)` (0ms)
@@ -1309,7 +1315,7 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 | Tags | `@functional` `@edge` `@P3` |
 | Script | `tests/functional/edge-cases.spec.ts:180` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: ✅ Passed (0.8s) |
+| Result | Functional: ✅ Passed (0.7s) |
 
 **Test steps**
 1. Search for a 1,000-character string.
@@ -1319,9 +1325,9 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 
 <details><summary>Steps executed in this run (3)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (473ms)
+1. ✓ `Navigate (fixtures.ts:55)` (431ms)
 2. ✓ **Assert** `Expect "toBeLessThan" (edge-cases.spec.ts:185)` (0ms)
-3. ✓ **Assert** `Expect "toBeVisible" (edge-cases.spec.ts:186)` (29ms)
+3. ✓ **Assert** `Expect "toBeVisible" (edge-cases.spec.ts:186)` (23ms)
 
 </details>
 
@@ -1342,7 +1348,7 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 | Tags | `@functional` `@edge` `@P2` |
 | Script | `tests/functional/edge-cases.spec.ts:189` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: ✅ Passed (1.0s) |
+| Result | Functional: ✅ Passed (0.9s) |
 
 **Test steps**
 1. Search for a product name in UPPER CASE with leading and trailing spaces.
@@ -1352,8 +1358,8 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 
 <details><summary>Steps executed in this run (2)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (625ms)
-2. ✓ **Assert** `Expect "toBeVisible" (edge-cases.spec.ts:195)` (32ms)
+1. ✓ `Navigate (fixtures.ts:55)` (623ms)
+2. ✓ **Assert** `Expect "toBeVisible" (edge-cases.spec.ts:195)` (23ms)
 
 </details>
 
@@ -1374,7 +1380,7 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 | Tags | `@functional` `@edge` `@P2` |
 | Script | `tests/functional/edge-cases.spec.ts:200` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: 🚧 Blocked (10.5s) |
+| Result | Functional: 🚧 Blocked (10.3s) |
 
 **Test steps**
 1. Open /products/<handle>?variant=123 (not a real variant).
@@ -1384,10 +1390,10 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 
 <details><summary>Steps executed in this run (4)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (564ms)
+1. ✓ `Navigate (fixtures.ts:55)` (516ms)
 2. ✓ **Assert** `Expect "toBe" (edge-cases.spec.ts:206)` (0ms)
-3. ✓ **Assert** `Expect "toHaveText" (edge-cases.spec.ts:207)` (19ms)
-4. ✓ `Click (ProductPage.ts:57)` (93ms)
+3. ✓ **Assert** `Expect "toHaveText" (edge-cases.spec.ts:207)` (14ms)
+4. ✓ `Click (ProductPage.ts:57)` (54ms)
 
 </details>
 
@@ -1408,7 +1414,7 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 | Tags | `@functional` `@edge` `@P3` |
 | Script | `tests/functional/edge-cases.spec.ts:212` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Functional: ✅ Passed (0.9s) |
+| Result | Functional: ✅ Passed (0.7s) |
 
 **Test steps**
 1. Open /collections/this-collection-does-not-exist.
@@ -1418,7 +1424,7 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 
 <details><summary>Steps executed in this run (2)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (522ms)
+1. ✓ `Navigate (fixtures.ts:55)` (457ms)
 2. ✓ **Assert** `Expect "toBe" (edge-cases.spec.ts:217)` (1ms)
 
 </details>
@@ -1452,16 +1458,16 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 
 <details><summary>Steps executed in this run (6)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (355ms)
-2. ✓ **Assert** `ttfbMs 44 exceeds budget 1500 (performance.spec.ts:53)` (0ms)
-3. ✓ **Assert** `domContentLoadedMs 200 exceeds budget 4000 (performance.spec.ts:53)` (0ms)
-4. ✓ **Assert** `loadMs 335 exceeds budget 8000 (performance.spec.ts:53)` (0ms)
-5. ✓ **Assert** `lcpMs 228 exceeds budget 4000 (performance.spec.ts:53)` (0ms)
-6. ✓ **Assert** `pageWeightKb 1149 exceeds budget 4000 (performance.spec.ts:53)` (0ms)
+1. ✓ `Navigate (fixtures.ts:55)` (398ms)
+2. ✓ **Assert** `ttfbMs 7 exceeds budget 1500 (performance.spec.ts:53)` (1ms)
+3. ✓ **Assert** `domContentLoadedMs 237 exceeds budget 4000 (performance.spec.ts:53)` (0ms)
+4. ✓ **Assert** `loadMs 378 exceeds budget 8000 (performance.spec.ts:53)` (0ms)
+5. ✓ **Assert** `lcpMs 280 exceeds budget 4000 (performance.spec.ts:53)` (0ms)
+6. ✓ **Assert** `pageWeightKb 1137 exceeds budget 4000 (performance.spec.ts:53)` (0ms)
 
 </details>
 
-**Actual result:** ✅ As expected. 5/5 assertions passed. Measured: ttfbMs=44, domContentLoadedMs=200, loadMs=335, lcpMs=228, pageWeightKb=1149.
+**Actual result:** ✅ As expected. 5/5 assertions passed. Measured: ttfbMs=7, domContentLoadedMs=237, loadMs=378, lcpMs=280, pageWeightKb=1137.
 
 <img src="evidence/nf-01-non-functional.png" alt="NF-01 screenshot" width="420">
 
@@ -1478,7 +1484,7 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 | Tags | `@non-functional` `@performance` `@P2` |
 | Script | `tests/non-functional/performance.spec.ts:42` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Non-functional: ✅ Passed (2.3s) |
+| Result | Non-functional: ✅ Passed (2.4s) |
 
 **Test steps**
 1. Measure TTFB (<1500ms), DOMContentLoaded (<4000ms), load (<8000ms), LCP (<4000ms) and transfer size (<4000KB).
@@ -1488,16 +1494,16 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 
 <details><summary>Steps executed in this run (6)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (396ms)
-2. ✓ **Assert** `ttfbMs 13 exceeds budget 1500 (performance.spec.ts:53)` (0ms)
-3. ✓ **Assert** `domContentLoadedMs 234 exceeds budget 4000 (performance.spec.ts:53)` (0ms)
-4. ✓ **Assert** `loadMs 364 exceeds budget 8000 (performance.spec.ts:53)` (1ms)
-5. ✓ **Assert** `lcpMs 216 exceeds budget 4000 (performance.spec.ts:53)` (0ms)
-6. ✓ **Assert** `pageWeightKb 1124 exceeds budget 4000 (performance.spec.ts:53)` (0ms)
+1. ✓ `Navigate (fixtures.ts:55)` (528ms)
+2. ✓ **Assert** `ttfbMs 11 exceeds budget 1500 (performance.spec.ts:53)` (0ms)
+3. ✓ **Assert** `domContentLoadedMs 363 exceeds budget 4000 (performance.spec.ts:53)` (0ms)
+4. ✓ **Assert** `loadMs 503 exceeds budget 8000 (performance.spec.ts:53)` (0ms)
+5. ✓ **Assert** `lcpMs 344 exceeds budget 4000 (performance.spec.ts:53)` (0ms)
+6. ✓ **Assert** `pageWeightKb 1140 exceeds budget 4000 (performance.spec.ts:53)` (0ms)
 
 </details>
 
-**Actual result:** ✅ As expected. 5/5 assertions passed. Measured: ttfbMs=13, domContentLoadedMs=234, loadMs=364, lcpMs=216, pageWeightKb=1124.
+**Actual result:** ✅ As expected. 5/5 assertions passed. Measured: ttfbMs=11, domContentLoadedMs=363, loadMs=503, lcpMs=344, pageWeightKb=1140.
 
 <img src="evidence/nf-02-non-functional.png" alt="NF-02 screenshot" width="420">
 
@@ -1524,16 +1530,16 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 
 <details><summary>Steps executed in this run (6)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (448ms)
-2. ✓ **Assert** `ttfbMs 13 exceeds budget 1500 (performance.spec.ts:53)` (0ms)
-3. ✓ **Assert** `domContentLoadedMs 239 exceeds budget 4000 (performance.spec.ts:53)` (0ms)
-4. ✓ **Assert** `loadMs 414 exceeds budget 8000 (performance.spec.ts:53)` (0ms)
-5. ✓ **Assert** `lcpMs 212 exceeds budget 4000 (performance.spec.ts:53)` (0ms)
-6. ✓ **Assert** `pageWeightKb 1215 exceeds budget 4000 (performance.spec.ts:53)` (0ms)
+1. ✓ `Navigate (fixtures.ts:55)` (512ms)
+2. ✓ **Assert** `ttfbMs 12 exceeds budget 1500 (performance.spec.ts:53)` (0ms)
+3. ✓ **Assert** `domContentLoadedMs 314 exceeds budget 4000 (performance.spec.ts:53)` (1ms)
+4. ✓ **Assert** `loadMs 489 exceeds budget 8000 (performance.spec.ts:53)` (0ms)
+5. ✓ **Assert** `lcpMs 288 exceeds budget 4000 (performance.spec.ts:53)` (0ms)
+6. ✓ **Assert** `pageWeightKb 1181 exceeds budget 4000 (performance.spec.ts:53)` (0ms)
 
 </details>
 
-**Actual result:** ✅ As expected. 5/5 assertions passed. Measured: ttfbMs=13, domContentLoadedMs=239, loadMs=414, lcpMs=212, pageWeightKb=1215.
+**Actual result:** ✅ As expected. 5/5 assertions passed. Measured: ttfbMs=12, domContentLoadedMs=314, loadMs=489, lcpMs=288, pageWeightKb=1181.
 
 <img src="evidence/nf-03-non-functional.png" alt="NF-03 screenshot" width="420">
 
@@ -1550,7 +1556,7 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 | Tags | `@non-functional` `@P2` `@regression` |
 | Script | `tests/non-functional/performance.spec.ts:58` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Non-functional: ✅ Passed (1.5s) |
+| Result | Non-functional: ✅ Passed (1.7s) |
 
 **Test steps**
 1. Visit home, collection, product and cart pages.
@@ -1562,10 +1568,10 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 
 <details><summary>Steps executed in this run (5)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (360ms)
-2. ✓ `Navigate (fixtures.ts:55)` (262ms)
-3. ✓ `Navigate (fixtures.ts:55)` (292ms)
-4. ✓ `Navigate (fixtures.ts:55)` (199ms)
+1. ✓ `Navigate (fixtures.ts:55)` (384ms)
+2. ✓ `Navigate (fixtures.ts:55)` (331ms)
+3. ✓ `Navigate (fixtures.ts:55)` (396ms)
+4. ✓ `Navigate (fixtures.ts:55)` (234ms)
 5. ✓ **Assert** `Expect "toEqual" (performance.spec.ts:68)` (0ms)
 
 </details>
@@ -1587,7 +1593,7 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 | Tags | `@non-functional` `@a11y` `@P2` |
 | Script | `tests/non-functional/accessibility-seo.spec.ts:11` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Non-functional: ❌ Failed (5.2s) |
+| Result | Non-functional: ❌ Failed (4.7s) |
 
 **Test steps**
 1. Run axe-core (WCAG 2.0/2.1 A + AA rules) on home, collection, product and cart pages.
@@ -1599,21 +1605,21 @@ BadRequestError: 400 {"type":"error","error":{"type":"invalid_request_error","me
 
 <details><summary>Steps executed in this run (16)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (408ms)
-2. ✓ `Create page (index.mjs:315)` (56ms)
+1. ✓ `Navigate (fixtures.ts:55)` (453ms)
+2. ✓ `Create page (index.mjs:315)` (53ms)
 3. ✓ `Close page (index.mjs:336)` (27ms)
 4. ✗ **Assert** `/ (accessibility-seo.spec.ts:28)` (3ms)
-5. ✓ `Navigate (fixtures.ts:55)` (260ms)
-6. ✓ `Create page (index.mjs:315)` (41ms)
-7. ✓ `Close page (index.mjs:336)` (25ms)
+5. ✓ `Navigate (fixtures.ts:55)` (321ms)
+6. ✓ `Create page (index.mjs:315)` (33ms)
+7. ✓ `Close page (index.mjs:336)` (22ms)
 8. ✗ **Assert** `/collections/all (accessibility-seo.spec.ts:28)` (0ms)
-9. ✓ `Navigate (fixtures.ts:55)` (345ms)
-10. ✓ `Create page (index.mjs:315)` (40ms)
-11. ✓ `Close page (index.mjs:336)` (110ms)
-12. ✗ **Assert** `/products/the-collection-snowboard-liquid (accessibility-seo.spec.ts:28)` (0ms)
-13. ✓ `Navigate (fixtures.ts:55)` (232ms)
-14. ✓ `Create page (index.mjs:315)` (38ms)
-15. ✓ `Close page (index.mjs:336)` (43ms)
+9. ✓ `Navigate (fixtures.ts:55)` (291ms)
+10. ✓ `Create page (index.mjs:315)` (33ms)
+11. ✓ `Close page (index.mjs:336)` (22ms)
+12. ✗ **Assert** `/products/the-collection-snowboard-liquid (accessibility-seo.spec.ts:28)` (2ms)
+13. ✓ `Navigate (fixtures.ts:55)` (242ms)
+14. ✓ `Create page (index.mjs:315)` (35ms)
+15. ✓ `Close page (index.mjs:336)` (20ms)
 16. ✓ **Assert** `/cart (accessibility-seo.spec.ts:28)` (0ms)
 
 </details>
@@ -1646,7 +1652,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@non-functional` `@a11y` `@P3` |
 | Script | `tests/non-functional/accessibility-seo.spec.ts:33` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Non-functional: ✅ Passed (2.7s) |
+| Result | Non-functional: ✅ Passed (2.8s) |
 
 **Test steps**
 1. Every <img> on key pages must have an alt attribute (empty alt allowed for decorative images).
@@ -1656,13 +1662,13 @@ expect(received).toEqual(expected) // deep equality
 
 <details><summary>Steps executed in this run (8)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (713ms)
+1. ✓ `Navigate (fixtures.ts:55)` (779ms)
 2. ✓ **Assert** `/: images without alt (accessibility-seo.spec.ts:40)` (1ms)
-3. ✓ `Navigate (fixtures.ts:55)` (501ms)
-4. ✓ **Assert** `/collections/all: images without alt (accessibility-seo.spec.ts:40)` (0ms)
-5. ✓ `Navigate (fixtures.ts:55)` (429ms)
+3. ✓ `Navigate (fixtures.ts:55)` (477ms)
+4. ✓ **Assert** `/collections/all: images without alt (accessibility-seo.spec.ts:40)` (1ms)
+5. ✓ `Navigate (fixtures.ts:55)` (497ms)
 6. ✓ **Assert** `/products/the-collection-snowboard-liquid: images without alt (accessibility-seo.spec.ts:40)` (0ms)
-7. ✓ `Navigate (fixtures.ts:55)` (245ms)
+7. ✓ `Navigate (fixtures.ts:55)` (384ms)
 8. ✓ **Assert** `/cart: images without alt (accessibility-seo.spec.ts:40)` (0ms)
 
 </details>
@@ -1684,7 +1690,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@non-functional` `@seo` `@P3` |
 | Script | `tests/non-functional/accessibility-seo.spec.ts:46` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Non-functional: ❌ Failed (51.9s) |
+| Result | Non-functional: ❌ Failed (52.0s) |
 
 **Test steps**
 1. Home, collection and product pages need a <title>, meta description (20+ chars), canonical URL and og:image.
@@ -1694,21 +1700,21 @@ expect(received).toEqual(expected) // deep equality
 
 <details><summary>Steps executed in this run (15)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (381ms)
-2. ✓ **Assert** `/: title (accessibility-seo.spec.ts:52)` (26ms)
+1. ✓ `Navigate (fixtures.ts:55)` (464ms)
+2. ✓ **Assert** `/: title (accessibility-seo.spec.ts:52)` (24ms)
 3. ✗ **Assert** `/: meta description (accessibility-seo.spec.ts:53)` (10010ms)
-4. ✓ **Assert** `/: canonical (accessibility-seo.spec.ts:54)` (8ms)
-5. ✗ **Assert** `/: og:image (accessibility-seo.spec.ts:55)` (10008ms)
-6. ✓ `Navigate (fixtures.ts:55)` (291ms)
-7. ✓ **Assert** `/collections/all: title (accessibility-seo.spec.ts:52)` (96ms)
-8. ✗ **Assert** `/collections/all: meta description (accessibility-seo.spec.ts:53)` (10019ms)
-9. ✓ **Assert** `/collections/all: canonical (accessibility-seo.spec.ts:54)` (10ms)
-10. ✗ **Assert** `/collections/all: og:image (accessibility-seo.spec.ts:55)` (10009ms)
-11. ✓ `Navigate (fixtures.ts:55)` (328ms)
-12. ✓ **Assert** `/products/the-collection-snowboard-liquid: title (accessibility-seo.spec.ts:52)` (51ms)
-13. ✗ **Assert** `/products/the-collection-snowboard-liquid: meta description (accessibility-seo.spec.ts:53)` (10015ms)
-14. ✓ **Assert** `/products/the-collection-snowboard-liquid: canonical (accessibility-seo.spec.ts:54)` (8ms)
-15. ✓ **Assert** `/products/the-collection-snowboard-liquid: og:image (accessibility-seo.spec.ts:55)` (9ms)
+4. ✓ **Assert** `/: canonical (accessibility-seo.spec.ts:54)` (7ms)
+5. ✗ **Assert** `/: og:image (accessibility-seo.spec.ts:55)` (10007ms)
+6. ✓ `Navigate (fixtures.ts:55)` (325ms)
+7. ✓ **Assert** `/collections/all: title (accessibility-seo.spec.ts:52)` (28ms)
+8. ✗ **Assert** `/collections/all: meta description (accessibility-seo.spec.ts:53)` (10012ms)
+9. ✓ **Assert** `/collections/all: canonical (accessibility-seo.spec.ts:54)` (9ms)
+10. ✗ **Assert** `/collections/all: og:image (accessibility-seo.spec.ts:55)` (10006ms)
+11. ✓ `Navigate (fixtures.ts:55)` (317ms)
+12. ✓ **Assert** `/products/the-collection-snowboard-liquid: title (accessibility-seo.spec.ts:52)` (40ms)
+13. ✗ **Assert** `/products/the-collection-snowboard-liquid: meta description (accessibility-seo.spec.ts:53)` (10016ms)
+14. ✓ **Assert** `/products/the-collection-snowboard-liquid: canonical (accessibility-seo.spec.ts:54)` (18ms)
+15. ✓ **Assert** `/products/the-collection-snowboard-liquid: og:image (accessibility-seo.spec.ts:55)` (8ms)
 
 </details>
 
@@ -1740,7 +1746,7 @@ Call log:
 | Tags | `@non-functional` `@seo` `@P3` |
 | Script | `tests/non-functional/accessibility-seo.spec.ts:59` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Non-functional: ✅ Passed (1.0s) |
+| Result | Non-functional: ✅ Passed (0.9s) |
 
 **Test steps**
 1. Product page must include JSON-LD of @type Product with offers and a price, for Google rich results.
@@ -1750,9 +1756,9 @@ Call log:
 
 <details><summary>Steps executed in this run (3)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (547ms)
+1. ✓ `Navigate (fixtures.ts:55)` (469ms)
 2. ✓ **Assert** `No Product JSON-LD (accessibility-seo.spec.ts:67)` (0ms)
-3. ✓ **Assert** `Expect "toMatch" (accessibility-seo.spec.ts:68)` (1ms)
+3. ✓ **Assert** `Expect "toMatch" (accessibility-seo.spec.ts:68)` (0ms)
 
 </details>
 
@@ -1783,7 +1789,7 @@ Call log:
 
 <details><summary>Steps executed in this run (2)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (404ms)
+1. ✓ `Navigate (fixtures.ts:55)` (432ms)
 2. ✓ **Assert** `Expect "toMatch" (accessibility-seo.spec.ts:78)` (0ms)
 
 </details>
@@ -1815,7 +1821,7 @@ Call log:
 
 <details><summary>Steps executed in this run (4)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (380ms)
+1. ✓ `Navigate (fixtures.ts:55)` (405ms)
 2. ✓ **Assert** `Strict-Transport-Security (accessibility-seo.spec.ts:88)` (0ms)
 3. ✓ **Assert** `X-Content-Type-Options (accessibility-seo.spec.ts:89)` (0ms)
 4. ✓ **Assert** `CSP frame-ancestors or X-Frame-Options (accessibility-seo.spec.ts:91)` (0ms)
@@ -1839,7 +1845,7 @@ Call log:
 | Tags | `@non-functional` `@security` `@P2` |
 | Script | `tests/non-functional/accessibility-seo.spec.ts:94` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Non-functional: ❌ Failed (1.4s) |
+| Result | Non-functional: ❌ Failed (1.5s) |
 
 **Test steps**
 1. Preference cookies (e.g.
@@ -1850,7 +1856,7 @@ Call log:
 
 <details><summary>Steps executed in this run (3)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (416ms)
+1. ✓ `Navigate (fixtures.ts:55)` (443ms)
 2. ✓ **Assert** `expected at least one session/cart cookie (accessibility-seo.spec.ts:107)` (1ms)
 3. ✗ **Assert** `Session/cart cookies without Secure flag: cart (accessibility-seo.spec.ts:109)` (3ms)
 
@@ -1894,9 +1900,9 @@ expect(received).toEqual(expected) // deep equality
 
 <details><summary>Steps executed in this run (3)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (512ms)
+1. ✓ `Navigate (fixtures.ts:55)` (509ms)
 2. ✓ **Assert** `Expect "toBe" (accessibility-seo.spec.ts:119)` (0ms)
-3. ✓ **Assert** `Expect "toBeVisible" (accessibility-seo.spec.ts:120)` (25ms)
+3. ✓ **Assert** `Expect "toBeVisible" (accessibility-seo.spec.ts:120)` (24ms)
 
 </details>
 
@@ -1917,7 +1923,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@non-functional` `@edge` `@security` `@P1` |
 | Script | `tests/non-functional/edge-cases.spec.ts:10` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Non-functional: ✅ Passed (1.0s) |
+| Result | Non-functional: ✅ Passed (1.1s) |
 
 **Test steps**
 1. In a new session with no password cookie, open home, a product and the cart.
@@ -1927,15 +1933,15 @@ expect(received).toEqual(expected) // deep equality
 
 <details><summary>Steps executed in this run (9)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (298ms)
-2. ✓ **Assert** `/ should redirect to /password (edge-cases.spec.ts:18)` (20ms)
-3. ✓ **Assert** `/ password form (edge-cases.spec.ts:19)` (5ms)
-4. ✓ `Navigate (fixtures.ts:55)` (214ms)
-5. ✓ **Assert** `/products/the-collection-snowboard-liquid should redirect to /password (edge-cases.spec.ts:18)` (19ms)
+1. ✓ `Navigate (fixtures.ts:55)` (321ms)
+2. ✓ **Assert** `/ should redirect to /password (edge-cases.spec.ts:18)` (21ms)
+3. ✓ **Assert** `/ password form (edge-cases.spec.ts:19)` (4ms)
+4. ✓ `Navigate (fixtures.ts:55)` (267ms)
+5. ✓ **Assert** `/products/the-collection-snowboard-liquid should redirect to /password (edge-cases.spec.ts:18)` (17ms)
 6. ✓ **Assert** `/products/the-collection-snowboard-liquid password form (edge-cases.spec.ts:19)` (4ms)
-7. ✓ `Navigate (fixtures.ts:55)` (260ms)
-8. ✓ **Assert** `/cart should redirect to /password (edge-cases.spec.ts:18)` (20ms)
-9. ✓ **Assert** `/cart password form (edge-cases.spec.ts:19)` (6ms)
+7. ✓ `Navigate (fixtures.ts:55)` (364ms)
+8. ✓ **Assert** `/cart should redirect to /password (edge-cases.spec.ts:18)` (22ms)
+9. ✓ **Assert** `/cart password form (edge-cases.spec.ts:19)` (5ms)
 
 </details>
 
@@ -1956,7 +1962,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@non-functional` `@edge` `@performance` `@P2` |
 | Script | `tests/non-functional/edge-cases.spec.ts:25` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Non-functional: ✅ Passed (13.0s) |
+| Result | Non-functional: ✅ Passed (12.9s) |
 
 **Test steps**
 1. Throttle to slow 3G (400 ms latency, ~400 kbps).
@@ -1966,13 +1972,13 @@ expect(received).toEqual(expected) // deep equality
 
 <details><summary>Steps executed in this run (3)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (12586ms)
-2. ✓ **Assert** `Expect "toBeVisible" (edge-cases.spec.ts:42)` (32ms)
-3. ✓ **Assert** `Expect "toBeEnabled" (edge-cases.spec.ts:43)` (9ms)
+1. ✓ `Navigate (fixtures.ts:55)` (12536ms)
+2. ✓ **Assert** `Expect "toBeVisible" (edge-cases.spec.ts:42)` (24ms)
+3. ✓ **Assert** `Expect "toBeEnabled" (edge-cases.spec.ts:43)` (10ms)
 
 </details>
 
-**Actual result:** ✅ As expected. 2/2 assertions passed. Measured: usable after 12683ms on slow 3G.
+**Actual result:** ✅ As expected. 2/2 assertions passed. Measured: usable after 12599ms on slow 3G.
 
 <img src="evidence/nf-14-non-functional.png" alt="NF-14 screenshot" width="420">
 
@@ -1989,7 +1995,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@non-functional` `@edge` `@P3` |
 | Script | `tests/non-functional/edge-cases.spec.ts:47` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Non-functional: ✅ Passed (3.6s) |
+| Result | Non-functional: ✅ Passed (3.7s) |
 
 **Test steps**
 1. Load a product, go offline, click Add to cart.
@@ -2000,14 +2006,14 @@ expect(received).toEqual(expected) // deep equality
 
 <details><summary>Steps executed in this run (8)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (366ms)
-2. ✓ `Set offline mode (edge-cases.spec.ts:55)` (2ms)
-3. ✓ `Click (edge-cases.spec.ts:56)` (62ms)
+1. ✓ `Navigate (fixtures.ts:55)` (438ms)
+2. ✓ `Set offline mode (edge-cases.spec.ts:55)` (1ms)
+3. ✓ `Click (edge-cases.spec.ts:56)` (67ms)
 4. ✓ `Set offline mode (edge-cases.spec.ts:58)` (1ms)
-5. ✓ **Assert** `offline click must not add anything (edge-cases.spec.ts:60)` (0ms)
-6. ✓ **Assert** `Expect "toBeVisible" (edge-cases.spec.ts:61)` (8ms)
-7. ✓ `Click (ProductPage.ts:57)` (21ms)
-8. ✓ **Assert** `Expect "toBe" (edge-cases.spec.ts:63)` (1ms)
+5. ✓ **Assert** `offline click must not add anything (edge-cases.spec.ts:60)` (1ms)
+6. ✓ **Assert** `Expect "toBeVisible" (edge-cases.spec.ts:61)` (7ms)
+7. ✓ `Click (ProductPage.ts:57)` (27ms)
+8. ✓ **Assert** `Expect "toBe" (edge-cases.spec.ts:63)` (0ms)
 
 </details>
 
@@ -2030,7 +2036,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@api` `@P1` `@regression` |
 | Script | `tests/api/storefront-api.spec.ts:15` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup); requests sent from inside the browser session |
-| Result | API: 🚧 Blocked (10.2s) |
+| Result | API: 🚧 Blocked (10.4s) |
 
 **Test steps**
 1. Fetch an in-stock product.
@@ -2067,7 +2073,7 @@ expect(received).toEqual(expected) // deep equality
 
 1. ✓ **Assert** `Expect "toBeGreaterThan" (storefront-api.spec.ts:37)` (1ms)
 2. ✓ **Assert** `product 8873175515297 title (storefront-api.spec.ts:39)` (0ms)
-3. ✓ **Assert** `the-collection-snowboard-liquid variants (storefront-api.spec.ts:40)` (0ms)
+3. ✓ **Assert** `the-collection-snowboard-liquid variants (storefront-api.spec.ts:40)` (1ms)
 4. ✓ **Assert** `the-collection-snowboard-liquid has no images (storefront-api.spec.ts:41)` (0ms)
 5. ✓ **Assert** `the-collection-snowboard-liquid / Default Title price (storefront-api.spec.ts:42)` (0ms)
 6. ✓ **Assert** `product 8873175416993 title (storefront-api.spec.ts:39)` (0ms)
@@ -2079,7 +2085,7 @@ expect(received).toEqual(expected) // deep equality
 12. ✓ **Assert** `the-collection-snowboard-hydrogen has no images (storefront-api.spec.ts:41)` (0ms)
 13. ✓ **Assert** `the-collection-snowboard-hydrogen / Default Title price (storefront-api.spec.ts:42)` (0ms)
 14. ✓ **Assert** `product 8873175384225 title (storefront-api.spec.ts:39)` (0ms)
-15. ✓ **Assert** `the-multi-location-snowboard variants (storefront-api.spec.ts:40)` (0ms)
+15. ✓ **Assert** `the-multi-location-snowboard variants (storefront-api.spec.ts:40)` (1ms)
 16. ✓ **Assert** `the-multi-location-snowboard has no images (storefront-api.spec.ts:41)` (0ms)
 17. ✓ **Assert** `the-multi-location-snowboard / Default Title price (storefront-api.spec.ts:42)` (0ms)
 18. ✓ **Assert** `product 8873175351457 title (storefront-api.spec.ts:39)` (0ms)
@@ -2100,7 +2106,7 @@ expect(received).toEqual(expected) // deep equality
 33. ✓ **Assert** `the-complete-snowboard / Sunset price (storefront-api.spec.ts:42)` (0ms)
 34. ✓ **Assert** `product 8873175089313 title (storefront-api.spec.ts:39)` (0ms)
 35. ✓ **Assert** `selling-plans-ski-wax variants (storefront-api.spec.ts:40)` (0ms)
-36. ✓ **Assert** `selling-plans-ski-wax has no images (storefront-api.spec.ts:41)` (0ms)
+36. ✓ **Assert** `selling-plans-ski-wax has no images (storefront-api.spec.ts:41)` (4ms)
 37. ✓ **Assert** `selling-plans-ski-wax / Selling Plans Ski Wax price (storefront-api.spec.ts:42)` (0ms)
 38. ✓ **Assert** `selling-plans-ski-wax / Special Selling Plans Ski Wax price (storefront-api.spec.ts:42)` (0ms)
 39. ✓ **Assert** `selling-plans-ski-wax / Sample Selling Plans Ski Wax price (storefront-api.spec.ts:42)` (0ms)
@@ -2115,9 +2121,9 @@ expect(received).toEqual(expected) // deep equality
 48. ✓ **Assert** `product 8873175122081 title (storefront-api.spec.ts:39)` (0ms)
 49. ✓ **Assert** `the-out-of-stock-snowboard variants (storefront-api.spec.ts:40)` (0ms)
 50. ✓ **Assert** `the-out-of-stock-snowboard has no images (storefront-api.spec.ts:41)` (0ms)
-51. ✓ **Assert** `the-out-of-stock-snowboard / Default Title price (storefront-api.spec.ts:42)` (1ms)
+51. ✓ **Assert** `the-out-of-stock-snowboard / Default Title price (storefront-api.spec.ts:42)` (0ms)
 52. ✓ **Assert** `product 8873174925473 title (storefront-api.spec.ts:39)` (0ms)
-53. ✓ **Assert** `the-inventory-not-tracked-snowboard variants (storefront-api.spec.ts:40)` (1ms)
+53. ✓ **Assert** `the-inventory-not-tracked-snowboard variants (storefront-api.spec.ts:40)` (0ms)
 54. ✓ **Assert** `the-inventory-not-tracked-snowboard has no images (storefront-api.spec.ts:41)` (0ms)
 55. ✓ **Assert** `the-inventory-not-tracked-snowboard / Default Title price (storefront-api.spec.ts:42)` (0ms)
 56. ✓ **Assert** `product 8873174892705 title (storefront-api.spec.ts:39)` (0ms)
@@ -2145,7 +2151,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@api` `@edge` `@P2` |
 | Script | `tests/api/storefront-api.spec.ts:46` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup); requests sent from inside the browser session |
-| Result | API: 🚧 Blocked (10.3s) |
+| Result | API: 🚧 Blocked (10.4s) |
 
 **Test steps**
 1. Fetch /products/<nonexistent>.js.
@@ -2170,7 +2176,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@api` `@P2` |
 | Script | `tests/api/storefront-api.spec.ts:54` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup); requests sent from inside the browser session |
-| Result | API: 🚧 Blocked (10.1s) |
+| Result | API: 🚧 Blocked (10.5s) |
 
 **Test steps**
 1. GET /search/suggest.json?q=<product word>.
@@ -2195,7 +2201,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@api` `@P1` `@regression` |
 | Script | `tests/api/storefront-api.spec.ts:73` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup); requests sent from inside the browser session |
-| Result | API: 🚧 Blocked (10.1s) |
+| Result | API: 🚧 Blocked (10.4s) |
 
 **Test steps**
 1. Add 2 of an in-stock variant.
@@ -2220,7 +2226,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@api` `@edge` `@P1` |
 | Script | `tests/api/storefront-api.spec.ts:86` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup); requests sent from inside the browser session |
-| Result | API: 🚧 Blocked (10.0s) |
+| Result | API: 🚧 Blocked (10.4s) |
 
 **Test steps**
 1. Add 1 item, change it to 3 (expect item_count 3), then to 0 (expect empty cart).
@@ -2245,7 +2251,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@api` `@P2` |
 | Script | `tests/api/storefront-api.spec.ts:99` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup); requests sent from inside the browser session |
-| Result | API: 🚧 Blocked (10.1s) |
+| Result | API: 🚧 Blocked (10.3s) |
 
 **Test steps**
 1. Add an item, call /cart/clear.js.
@@ -2270,7 +2276,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@api` `@edge` `@P2` |
 | Script | `tests/api/storefront-api.spec.ts:110` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup); requests sent from inside the browser session |
-| Result | API: 🚧 Blocked (10.0s) |
+| Result | API: 🚧 Blocked (10.2s) |
 
 **Test steps**
 1. POST /cart/add.js with variant id 1.
@@ -2295,7 +2301,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@api` `@edge` `@P1` |
 | Script | `tests/api/storefront-api.spec.ts:121` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup); requests sent from inside the browser session |
-| Result | API: 🚧 Blocked (10.1s) |
+| Result | API: 🚧 Blocked (10.2s) |
 
 **Test steps**
 1. POST /cart/add.js with a sold-out variant.
@@ -2320,7 +2326,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@api` `@edge` `@P3` |
 | Script | `tests/api/storefront-api.spec.ts:132` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup); requests sent from inside the browser session |
-| Result | API: 🚧 Blocked (10.1s) |
+| Result | API: 🚧 Blocked (10.2s) |
 
 **Test steps**
 1. POST /cart/add.js with quantity -1.
@@ -2345,7 +2351,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@api` `@P3` |
 | Script | `tests/api/storefront-api.spec.ts:142` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup); requests sent from inside the browser session |
-| Result | API: 🚧 Blocked (10.1s) |
+| Result | API: 🚧 Blocked (10.2s) |
 
 **Test steps**
 1. GET /cart.js.
@@ -2421,7 +2427,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@api` `@edge` `@P2` |
 | Script | `tests/api/edge-cases.spec.ts:36` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup); requests sent from inside the browser session |
-| Result | API: 🚧 Blocked (10.4s) |
+| Result | API: 🚧 Blocked (10.8s) |
 
 **Test steps**
 1. POST /cart/add.js with a broken JSON body.
@@ -2471,7 +2477,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@api` `@edge` `@P3` |
 | Script | `tests/api/edge-cases.spec.ts:60` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup); requests sent from inside the browser session |
-| Result | API: 🚧 Blocked (10.4s) |
+| Result | API: 🚧 Blocked (10.6s) |
 
 **Test steps**
 1. Add two products, then POST /cart/update.js with new quantities for both (3 and 0).
@@ -2523,7 +2529,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@regression` `@P1` |
 | Script | `tests/regression/critical-journeys.spec.ts:12` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Regression: ✅ Passed (6.9s) |
+| Result | Regression: ✅ Passed (4.4s) |
 
 **Test steps**
 1. Shopper journey: home → Catalog → open product → Add to cart → cart page → Checkout.
@@ -2535,23 +2541,23 @@ expect(received).toEqual(expected) // deep equality
 
 <details><summary>Steps executed in this run (17)</summary>
 
-1. ✓ **Step** `Open home and go to the catalogue (critical-journeys.spec.ts:18)` (1695ms)
-2. ✓ `Navigate (fixtures.ts:55)` (784ms)
-3. ✓ `Click (critical-journeys.spec.ts:20)` (480ms)
-4. ✓ **Assert** `Expect "toHaveURL" (critical-journeys.spec.ts:21)` (162ms)
-5. ✓ **Step** `Open the product from the catalogue (critical-journeys.spec.ts:24)` (781ms)
-6. ✓ `Click (critical-journeys.spec.ts:25)` (435ms)
-7. ✓ **Assert** `Expect "toHaveURL" (critical-journeys.spec.ts:26)` (342ms)
-8. ✓ **Step** `Add to cart (critical-journeys.spec.ts:30)` (841ms)
-9. ✓ `Click (ProductPage.ts:57)` (175ms)
-10. ✓ **Assert** `Expect "toBe" (critical-journeys.spec.ts:32)` (0ms)
-11. ✓ **Step** `Review cart (critical-journeys.spec.ts:35)` (773ms)
-12. ✓ `Navigate (fixtures.ts:55)` (488ms)
-13. ✓ **Assert** `Expect "toHaveCount" (critical-journeys.spec.ts:37)` (31ms)
-14. ✓ **Assert** `Expect "toContainText" (critical-journeys.spec.ts:38)` (33ms)
-15. ✓ **Step** `Proceed to checkout (critical-journeys.spec.ts:41)` (829ms)
-16. ✓ `Click (critical-journeys.spec.ts:42)` (299ms)
-17. ✓ **Assert** `Expect "toHaveURL" (critical-journeys.spec.ts:43)` (491ms)
+1. ✓ **Step** `Open home and go to the catalogue (critical-journeys.spec.ts:18)` (1201ms)
+2. ✓ `Navigate (fixtures.ts:55)` (600ms)
+3. ✓ `Click (critical-journeys.spec.ts:20)` (256ms)
+4. ✓ **Assert** `Expect "toHaveURL" (critical-journeys.spec.ts:21)` (150ms)
+5. ✓ **Step** `Open the product from the catalogue (critical-journeys.spec.ts:24)` (481ms)
+6. ✓ `Click (critical-journeys.spec.ts:25)` (238ms)
+7. ✓ **Assert** `Expect "toHaveURL" (critical-journeys.spec.ts:26)` (241ms)
+8. ✓ **Step** `Add to cart (critical-journeys.spec.ts:30)` (1005ms)
+9. ✓ `Click (ProductPage.ts:57)` (104ms)
+10. ✓ **Assert** `Expect "toBe" (critical-journeys.spec.ts:32)` (1ms)
+11. ✓ **Step** `Review cart (critical-journeys.spec.ts:35)` (385ms)
+12. ✓ `Navigate (fixtures.ts:55)` (260ms)
+13. ✓ **Assert** `Expect "toHaveCount" (critical-journeys.spec.ts:37)` (10ms)
+14. ✓ **Assert** `Expect "toContainText" (critical-journeys.spec.ts:38)` (14ms)
+15. ✓ **Step** `Proceed to checkout (critical-journeys.spec.ts:41)` (546ms)
+16. ✓ `Click (critical-journeys.spec.ts:42)` (175ms)
+17. ✓ **Assert** `Expect "toHaveURL" (critical-journeys.spec.ts:43)` (359ms)
 
 </details>
 
@@ -2572,7 +2578,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@regression` `@P1` |
 | Script | `tests/regression/critical-journeys.spec.ts:47` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Regression: ✅ Passed (6.6s) |
+| Result | Regression: ✅ Passed (4.1s) |
 
 **Test steps**
 1. Shopper journey via search: search for a product, open it from results, add to cart.
@@ -2582,14 +2588,14 @@ expect(received).toEqual(expected) // deep equality
 
 <details><summary>Steps executed in this run (8)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (758ms)
-2. ✓ `Click (BasePage.ts:52)` (61ms)
-3. ✓ `Fill "The Collection Snowboard: Liquid" (critical-journeys.spec.ts:54)` (76ms)
-4. ✓ `Press "Enter" (critical-journeys.spec.ts:55)` (721ms)
-5. ✓ `Click (critical-journeys.spec.ts:58)` (662ms)
-6. ✓ **Assert** `Expect "toHaveURL" (critical-journeys.spec.ts:59)` (476ms)
-7. ✓ `Click (ProductPage.ts:57)` (128ms)
-8. ✓ **Assert** `Expect "toBe" (critical-journeys.spec.ts:61)` (1ms)
+1. ✓ `Navigate (fixtures.ts:55)` (483ms)
+2. ✓ `Click (BasePage.ts:52)` (45ms)
+3. ✓ `Fill "The Collection Snowboard: Liquid" (critical-journeys.spec.ts:54)` (55ms)
+4. ✓ `Press "Enter" (critical-journeys.spec.ts:55)` (600ms)
+5. ✓ `Click (critical-journeys.spec.ts:58)` (680ms)
+6. ✓ **Assert** `Expect "toHaveURL" (critical-journeys.spec.ts:59)` (18ms)
+7. ✓ `Click (ProductPage.ts:57)` (149ms)
+8. ✓ **Assert** `Expect "toBe" (critical-journeys.spec.ts:61)` (0ms)
 
 </details>
 
@@ -2610,7 +2616,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@regression` `@visual` `@P2` |
 | Script | `tests/regression/critical-journeys.spec.ts:69` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Regression: ✅ Passed (5.9s) |
+| Result | Regression: ✅ Passed (5.8s) |
 
 **Test steps**
 1. Screenshot the top of the home page and compare it with the approved baseline.
@@ -2620,8 +2626,8 @@ expect(received).toEqual(expected) // deep equality
 
 <details><summary>Steps executed in this run (2)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (491ms)
-2. ✓ **Assert** `Expect "toHaveScreenshot(home.png)" (critical-journeys.spec.ts:75)` (519ms)
+1. ✓ `Navigate (fixtures.ts:55)` (403ms)
+2. ✓ **Assert** `Expect "toHaveScreenshot(home.png)" (critical-journeys.spec.ts:75)` (388ms)
 
 </details>
 
@@ -2642,7 +2648,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@regression` `@visual` `@P2` |
 | Script | `tests/regression/critical-journeys.spec.ts:78` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Regression: ✅ Passed (5.4s) |
+| Result | Regression: ✅ Passed (5.7s) |
 
 **Test steps**
 1. Screenshot the product page top section and compare it with the approved baseline.
@@ -2652,8 +2658,8 @@ expect(received).toEqual(expected) // deep equality
 
 <details><summary>Steps executed in this run (2)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (936ms)
-2. ✓ **Assert** `Expect "toHaveScreenshot(product.png)" (critical-journeys.spec.ts:85)` (375ms)
+1. ✓ `Navigate (fixtures.ts:55)` (385ms)
+2. ✓ **Assert** `Expect "toHaveScreenshot(product.png)" (critical-journeys.spec.ts:85)` (295ms)
 
 </details>
 
@@ -2674,7 +2680,7 @@ expect(received).toEqual(expected) // deep equality
 | Tags | `@regression` `@visual` `@P3` |
 | Script | `tests/regression/critical-journeys.spec.ts:88` |
 | Preconditions | Storefront password entered; product catalogue loaded (global setup) |
-| Result | Regression: ✅ Passed (4.5s) |
+| Result | Regression: ✅ Passed (5.4s) |
 
 **Test steps**
 1. Screenshot the empty cart page and compare it with the approved baseline.
@@ -2684,8 +2690,8 @@ expect(received).toEqual(expected) // deep equality
 
 <details><summary>Steps executed in this run (2)</summary>
 
-1. ✓ `Navigate (fixtures.ts:55)` (402ms)
-2. ✓ **Assert** `Expect "toHaveScreenshot(cart-empty.png)" (critical-journeys.spec.ts:94)` (227ms)
+1. ✓ `Navigate (fixtures.ts:55)` (304ms)
+2. ✓ **Assert** `Expect "toHaveScreenshot(cart-empty.png)" (critical-journeys.spec.ts:94)` (195ms)
 
 </details>
 
