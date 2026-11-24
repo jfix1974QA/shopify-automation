@@ -10,16 +10,16 @@
 <title>Execution time by pack</title>
 <rect width="720" height="180" rx="8" fill="var(--surface)"/>
 <text x="160" y="28" font-size="12" fill="var(--ink)" text-anchor="end">UI (desktop)</text>
-<rect x="170" y="16" width="62.9" height="16" rx="3" fill="var(--s1)"><title>UI (desktop): 22.5s</title></rect>
-<text x="238.9" y="28" font-size="12" fill="var(--ink-2)">22.5s</text><text x="160" y="54" font-size="12" fill="var(--ink)" text-anchor="end">UI (mobile)</text>
-<rect x="170" y="42" width="72.1" height="16" rx="3" fill="var(--s1)"><title>UI (mobile): 25.7s</title></rect>
-<text x="248.1" y="54" font-size="12" fill="var(--ink-2)">25.7s</text><text x="160" y="80" font-size="12" fill="var(--ink)" text-anchor="end">Functional</text>
-<rect x="170" y="68" width="433.4" height="16" rx="3" fill="var(--s1)"><title>Functional: 2m 35s</title></rect>
-<text x="609.4" y="80" font-size="12" fill="var(--ink-2)">2m 35s</text><text x="160" y="106" font-size="12" fill="var(--ink)" text-anchor="end">Non-functional</text>
-<rect x="170" y="94" width="254.1" height="16" rx="3" fill="var(--s1)"><title>Non-functional: 1m 31s</title></rect>
-<text x="430.1" y="106" font-size="12" fill="var(--ink-2)">1m 31s</text><text x="160" y="132" font-size="12" fill="var(--ink)" text-anchor="end">API</text>
-<rect x="170" y="120" width="470.0" height="16" rx="3" fill="var(--s1)"><title>API: 2m 48s</title></rect>
-<text x="646.0" y="132" font-size="12" fill="var(--ink-2)">2m 48s</text><text x="160" y="158" font-size="12" fill="var(--ink)" text-anchor="end">Regression</text>
-<rect x="170" y="146" width="71.1" height="16" rx="3" fill="var(--s1)"><title>Regression: 25.4s</title></rect>
-<text x="247.1" y="158" font-size="12" fill="var(--ink-2)">25.4s</text>
+<rect x="170" y="16" width="55.5" height="16" rx="3" fill="var(--s1)"><title>UI (desktop): 20.3s</title></rect>
+<text x="231.5" y="28" font-size="12" fill="var(--ink-2)">20.3s</text><text x="160" y="54" font-size="12" fill="var(--ink)" text-anchor="end">UI (mobile)</text>
+<rect x="170" y="42" width="61.0" height="16" rx="3" fill="var(--s1)"><title>UI (mobile): 22.3s</title></rect>
+<text x="237.0" y="54" font-size="12" fill="var(--ink-2)">22.3s</text><text x="160" y="80" font-size="12" fill="var(--ink)" text-anchor="end">Functional</text>
+<rect x="170" y="68" width="431.2" height="16" rx="3" fill="var(--s1)"><title>Functional: 2m 38s</title></rect>
+<text x="607.2" y="80" font-size="12" fill="var(--ink-2)">2m 38s</text><text x="160" y="106" font-size="12" fill="var(--ink)" text-anchor="end">Non-functional</text>
+<rect x="170" y="94" width="266.9" height="16" rx="3" fill="var(--s1)"><title>Non-functional: 1m 38s</title></rect>
+<text x="442.9" y="106" font-size="12" fill="var(--ink-2)">1m 38s</text><text x="160" y="132" font-size="12" fill="var(--ink)" text-anchor="end">API</text>
+<rect x="170" y="120" width="470.0" height="16" rx="3" fill="var(--s1)"><title>API: 2m 52s</title></rect>
+<text x="646.0" y="132" font-size="12" fill="var(--ink-2)">2m 52s</text><text x="160" y="158" font-size="12" fill="var(--ink)" text-anchor="end">Regression</text>
+<rect x="170" y="146" width="77.4" height="16" rx="3" fill="var(--s1)"><title>Regression: 28.3s</title></rect>
+<text x="253.4" y="158" font-size="12" fill="var(--ink-2)">28.3s</text>
 </svg>
