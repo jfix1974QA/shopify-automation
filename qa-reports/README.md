@@ -1,6 +1,6 @@
 # QA Reports: https://james-qa-shop.myshopify.com
 
-Generated from the automated test run on **2026-11-24 06:56 UTC**.
+Generated from the automated test run on **2026-11-25 06:59 UTC**.
 
 | Report | Contents | Markdown | HTML |
 |---|---|---|---|
@@ -9,7 +9,7 @@ Generated from the automated test run on **2026-11-24 06:56 UTC**.
 | 3. Defect and QA summary | 6 defects with severity, evidence, root cause, recommendations; quality gates and verdict | [view](3-defect-and-qa-summary.md) | [html](3-defect-and-qa-summary.html) |
 | Build history | Results of every CI build, with trend charts | [view](build-history.md) | [html](build-history.html) |
 
-**Headline:** 47 passed, 10 failed, 0 flaky, 7 skipped of 89 executions (82.5% pass rate) · 6 defects · QA verdict: **Not yet verified**.
+**Headline:** 46 passed, 10 failed, 0 flaky, 7 skipped of 89 executions (82.1% pass rate) · 6 defects · QA verdict: **Not yet verified**.
 
 The Markdown files render on GitHub with their charts. The HTML files are richer (hover details, dark mode); open them locally or publish `qa-reports/` with GitHub Pages.
 Rebuild after a test run with `npm run qa-reports`.
