@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 518" width="720" height="518" role="img" aria-label="Pass rate per build (verified tests)" class="viz" font-family="system-ui,-apple-system,Segoe UI,sans-serif" style="max-width:100%;height:auto">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 544" width="720" height="544" role="img" aria-label="Pass rate per build (verified tests)" class="viz" font-family="system-ui,-apple-system,Segoe UI,sans-serif" style="max-width:100%;height:auto">
 <style>svg{
   --surface:#fcfcfb; --ink:#0b0b0b; --ink-2:#52514e; --grid:#e4e3df;
   --good:#0ca30c; --critical:#d03b3b; --serious:#ec835a; --warning:#fab219; --neutral:#b5b4ae;
@@ -8,7 +8,7 @@
   --s1:#3987e5;
   --seq-0:#2a2a28; --seq-1:#0d366b; --seq-2:#184f95; --seq-3:#256abf; --seq-4:#3987e5; --seq-5:#86b6ef;}}</style>
 <title>Pass rate per build (verified tests)</title>
-<rect width="720" height="518" rx="8" fill="var(--surface)"/>
+<rect width="720" height="544" rx="8" fill="var(--surface)"/>
 <text x="130" y="28" font-size="12" fill="var(--ink)" text-anchor="end">#1 (2eaea0b)</text>
 <rect x="140" y="16" width="474.2" height="16" rx="3" fill="var(--good)"><title>#1 (2eaea0b): 88.1%</title></rect>
 <text x="620.2" y="28" font-size="12" fill="var(--ink-2)">88.1%</text><text x="130" y="54" font-size="12" fill="var(--ink)" text-anchor="end">#2 (6b424bc)</text>
@@ -47,5 +47,7 @@
 <rect x="140" y="458" width="444.0" height="16" rx="3" fill="var(--good)"><title>#18 (cce43f1): 82.5%</title></rect>
 <text x="590.0" y="470" font-size="12" fill="var(--ink-2)">82.5%</text><text x="130" y="496" font-size="12" fill="var(--ink)" text-anchor="end">#19 (699ec9a)</text>
 <rect x="140" y="484" width="441.9" height="16" rx="3" fill="var(--good)"><title>#19 (699ec9a): 82.1%</title></rect>
-<text x="587.9" y="496" font-size="12" fill="var(--ink-2)">82.1%</text>
+<text x="587.9" y="496" font-size="12" fill="var(--ink-2)">82.1%</text><text x="130" y="522" font-size="12" fill="var(--ink)" text-anchor="end">#20 (75eda96)</text>
+<rect x="140" y="510" width="445.6" height="16" rx="3" fill="var(--good)"><title>#20 (75eda96): 82.8%</title></rect>
+<text x="591.6" y="522" font-size="12" fill="var(--ink-2)">82.8%</text>
 </svg>

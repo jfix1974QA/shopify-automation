@@ -289,6 +289,7 @@ Updated automatically by CI after every build.
 
 | Build | Date | Commit | Trigger | Executions | ✅ Passed | ❌ Failed | 🚧 Blocked | ⏭️ Skipped | Pass rate | Open defects | Time | Status |
 |---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| [#20](https://github.com/jfix1974QA/shopify-automation/actions/runs/45771807140) | 2026-11-26 06:57 UTC | [`75eda96`](https://github.com/jfix1974QA/shopify-automation/commit/75eda96) | schedule | 89 | 48 | 10 | 24 | 7 | 82.8% | 6 | 4m 17s | ❌ Failing |
 | [#19](https://github.com/jfix1974QA/shopify-automation/actions/runs/45564586233) | 2026-11-25 06:58 UTC | [`699ec9a`](https://github.com/jfix1974QA/shopify-automation/commit/699ec9a) | schedule | 89 | 46 | 10 | 26 | 7 | 82.1% | 6 | 4m 28s | ❌ Failing |
 | [#18](https://github.com/jfix1974QA/shopify-automation/actions/runs/45344158712) | 2026-11-24 06:56 UTC | [`cce43f1`](https://github.com/jfix1974QA/shopify-automation/commit/cce43f1) | schedule | 89 | 47 | 10 | 25 | 7 | 82.5% | 6 | 4m 26s | ❌ Failing |
 | [#17](https://github.com/jfix1974QA/shopify-automation/actions/runs/45129278455) | 2026-11-23 07:11 UTC | [`ece0341`](https://github.com/jfix1974QA/shopify-automation/commit/ece0341) | schedule | 89 | 46 | 10 | 26 | 7 | 82.1% | 6 | 3m 59s | ❌ Failing |
@@ -298,7 +299,6 @@ Updated automatically by CI after every build.
 | [#13](https://github.com/jfix1974QA/shopify-automation/actions/runs/44475880992) | 2026-11-19 06:56 UTC | [`8a8b8ed`](https://github.com/jfix1974QA/shopify-automation/commit/8a8b8ed) | schedule | 89 | 54 | 6 | 22 | 7 | 90% | 6 | 3m 55s | ❌ Failing |
 | [#12](https://github.com/jfix1974QA/shopify-automation/actions/runs/44255062108) | 2026-11-18 06:56 UTC | [`3b1677d`](https://github.com/jfix1974QA/shopify-automation/commit/3b1677d) | schedule | 89 | 52 | 4 | 26 | 7 | 92.9% | 6 | 8m 31s | ❌ Failing |
 | [#11](https://github.com/jfix1974QA/shopify-automation/actions/runs/44035012355) | 2026-11-17 06:57 UTC | [`0480e9f`](https://github.com/jfix1974QA/shopify-automation/commit/0480e9f) | schedule | 89 | 53 | 6 | 23 | 7 | 89.8% | 6 | 4m 18s | ❌ Failing |
-| [#10](https://github.com/jfix1974QA/shopify-automation/actions/runs/43828764051) | 2026-11-16 08:07 UTC | [`97903cf`](https://github.com/jfix1974QA/shopify-automation/commit/97903cf) | schedule | 89 | 51 | 5 | 26 | 7 | 91.1% | 6 | 4m 7s | ❌ Failing |
 
 [Full build history →](qa-reports/build-history.md)
 <!-- BUILDS:END -->
@@ -355,22 +355,22 @@ budgets met, security checks pass, no flaky tests.
 ## Metrics
 
 <!-- METRICS:START -->
-_Latest build [#19](https://github.com/jfix1974QA/shopify-automation/actions/runs/45564586233) · 2026-11-25 06:58 UTC · commit `699ec9a` · updated automatically by CI_
+_Latest build [#20](https://github.com/jfix1974QA/shopify-automation/actions/runs/45771807140) · 2026-11-26 06:57 UTC · commit `75eda96` · updated automatically by CI_
 
 | Metric | Value |
 |---|---|
 | Test cases | **77** (89 executions across desktop and mobile) |
-| Passed / Failed / Blocked / Skipped | **46** / **10** / **26** / **7** |
-| Pass rate (verified tests) | **82.1%** |
+| Passed / Failed / Blocked / Skipped | **48** / **10** / **24** / **7** |
+| Pass rate (verified tests) | **82.8%** |
 | Requirements covered | **23/23** |
 | Open defects | **6** (Critical 0 · High 0 · Medium 4 · Low 2) |
-| CI build time | **4m 28s** (whole pipeline; packs run in parallel) |
+| CI build time | **4m 17s** (whole pipeline; packs run in parallel) |
 
 | Pack | Passed | Failed | Blocked | Skipped |
 |---|---:|---:|---:|---:|
 | ui | 7 | 4 | 0 | 1 |
 | ui-mobile | 7 | 3 | 0 | 2 |
-| functional | 14 | 0 | 10 | 4 |
+| functional | 16 | 0 | 8 | 4 |
 | non-functional | 12 | 3 | 0 | 0 |
 | api | 1 | 0 | 16 | 0 |
 | regression | 5 | 0 | 0 | 0 |
