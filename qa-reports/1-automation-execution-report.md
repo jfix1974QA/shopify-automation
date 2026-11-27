@@ -2,13 +2,13 @@
 
 [Index](README.md) · [1. Execution report](1-automation-execution-report.md) · [2. Test scripts & scenarios](2-test-scripts-and-scenarios.md) · [3. Defect & QA summary](3-defect-and-qa-summary.md)
 
-**Store:** https://james-qa-shop.myshopify.com · **Run:** 2026-11-26 06:58 UTC · **Environment:** [CI run](https://github.com/jfix1974QA/shopify-automation/actions/runs/45771807140) · Playwright 1.65.0 · Node v22.23.5 · Linux 7.0.0-1020-azure
+**Store:** https://james-qa-shop.myshopify.com · **Run:** 2026-11-27 07:00 UTC · **Environment:** [CI run](https://github.com/jfix1974QA/shopify-automation/actions/runs/45955402383) · Playwright 1.65.0 · Node v22.23.5 · Linux 7.0.0-1020-azure
 
 ## Summary
 
 | Test cases | Executions | Passed | Failed | Blocked | Flaky | Skipped | Pass rate | Requirements covered | Time |
 |---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| 77 | 89 | 48 | 10 | 24 | 0 | 7 | **82.8%** | 23/23 | 3m 13s |
+| 77 | 89 | 48 | 10 | 24 | 0 | 7 | **82.8%** | 23/23 | 3m 24s |
 
 ![status-overview](charts/status-overview.svg)
 
@@ -23,13 +23,13 @@ Pass rate is calculated over verified tests: skipped and blocked tests are exclu
 
 | Pack | Tests | Passed | Failed | Blocked | Flaky | Skipped | Pass rate | Time |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| UI (desktop) | 12 | 7 | 4 | 0 | 0 | 1 | 63.6% | 26.3s |
-| UI (mobile) | 12 | 7 | 3 | 0 | 0 | 2 | 70% | 31.6s |
-| Functional | 28 | 16 | 0 | 8 | 0 | 4 | 100% | 2m 25s |
-| Non-functional | 15 | 12 | 3 | 0 | 0 | 0 | 80% | 1m 28s |
-| API | 17 | 1 | 0 | 16 | 0 | 0 | 100% | 2m 50s |
-| Regression | 5 | 5 | 0 | 0 | 0 | 0 | 100% | 24.4s |
-| **Total** | **89** | **48** | **10** | **24** | **0** | **7** | **82.8%** | **8m 6s** |
+| UI (desktop) | 12 | 7 | 4 | 0 | 0 | 1 | 63.6% | 22.1s |
+| UI (mobile) | 12 | 7 | 3 | 0 | 0 | 2 | 70% | 25.0s |
+| Functional | 28 | 16 | 0 | 8 | 0 | 4 | 100% | 2m 26s |
+| Non-functional | 15 | 12 | 3 | 0 | 0 | 0 | 80% | 1m 38s |
+| API | 17 | 1 | 0 | 16 | 0 | 0 | 100% | 2m 45s |
+| Regression | 5 | 5 | 0 | 0 | 0 | 0 | 100% | 24.8s |
+| **Total** | **89** | **48** | **10** | **24** | **0** | **7** | **82.8%** | **8m 1s** |
 
 ![duration-by-pack](charts/duration-by-pack.svg)
 

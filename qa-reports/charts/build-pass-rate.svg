@@ -9,45 +9,45 @@
   --seq-0:#2a2a28; --seq-1:#0d366b; --seq-2:#184f95; --seq-3:#256abf; --seq-4:#3987e5; --seq-5:#86b6ef;}}</style>
 <title>Pass rate per build (verified tests)</title>
 <rect width="720" height="544" rx="8" fill="var(--surface)"/>
-<text x="130" y="28" font-size="12" fill="var(--ink)" text-anchor="end">#1 (2eaea0b)</text>
-<rect x="140" y="16" width="474.2" height="16" rx="3" fill="var(--good)"><title>#1 (2eaea0b): 88.1%</title></rect>
-<text x="620.2" y="28" font-size="12" fill="var(--ink-2)">88.1%</text><text x="130" y="54" font-size="12" fill="var(--ink)" text-anchor="end">#2 (6b424bc)</text>
-<rect x="140" y="42" width="491.9" height="16" rx="3" fill="var(--good)"><title>#2 (6b424bc): 91.4%</title></rect>
-<text x="637.9" y="54" font-size="12" fill="var(--ink-2)">91.4%</text><text x="130" y="80" font-size="12" fill="var(--ink)" text-anchor="end">#3 (3a17b31)</text>
-<rect x="140" y="68" width="479.5" height="16" rx="3" fill="var(--good)"><title>#3 (3a17b31): 89.1%</title></rect>
-<text x="625.5" y="80" font-size="12" fill="var(--ink-2)">89.1%</text><text x="130" y="106" font-size="12" fill="var(--ink)" text-anchor="end">#4 (e6a951e)</text>
-<rect x="140" y="94" width="489.2" height="16" rx="3" fill="var(--good)"><title>#4 (e6a951e): 90.9%</title></rect>
-<text x="635.2" y="106" font-size="12" fill="var(--ink-2)">90.9%</text><text x="130" y="132" font-size="12" fill="var(--ink)" text-anchor="end">#5 (f2e9fbd)</text>
-<rect x="140" y="120" width="498.9" height="16" rx="3" fill="var(--good)"><title>#5 (f2e9fbd): 92.7%</title></rect>
-<text x="644.9" y="132" font-size="12" fill="var(--ink-2)">92.7%</text><text x="130" y="158" font-size="12" fill="var(--ink)" text-anchor="end">#6 (78d2e56)</text>
-<rect x="140" y="146" width="491.9" height="16" rx="3" fill="var(--good)"><title>#6 (78d2e56): 91.4%</title></rect>
-<text x="637.9" y="158" font-size="12" fill="var(--ink-2)">91.4%</text><text x="130" y="184" font-size="12" fill="var(--ink)" text-anchor="end">#7 (82200f0)</text>
-<rect x="140" y="172" width="480.6" height="16" rx="3" fill="var(--good)"><title>#7 (82200f0): 89.3%</title></rect>
-<text x="626.6" y="184" font-size="12" fill="var(--ink-2)">89.3%</text><text x="130" y="210" font-size="12" fill="var(--ink)" text-anchor="end">#8 (704fd5c)</text>
-<rect x="140" y="198" width="482.8" height="16" rx="3" fill="var(--good)"><title>#8 (704fd5c): 89.7%</title></rect>
-<text x="628.8" y="210" font-size="12" fill="var(--ink-2)">89.7%</text><text x="130" y="236" font-size="12" fill="var(--ink)" text-anchor="end">#9 (ef55b1a)</text>
-<rect x="140" y="224" width="493.5" height="16" rx="3" fill="var(--good)"><title>#9 (ef55b1a): 91.7%</title></rect>
-<text x="639.5" y="236" font-size="12" fill="var(--ink-2)">91.7%</text><text x="130" y="262" font-size="12" fill="var(--ink)" text-anchor="end">#10 (97903cf)</text>
-<rect x="140" y="250" width="490.3" height="16" rx="3" fill="var(--good)"><title>#10 (97903cf): 91.1%</title></rect>
-<text x="636.3" y="262" font-size="12" fill="var(--ink-2)">91.1%</text><text x="130" y="288" font-size="12" fill="var(--ink)" text-anchor="end">#11 (0480e9f)</text>
-<rect x="140" y="276" width="483.3" height="16" rx="3" fill="var(--good)"><title>#11 (0480e9f): 89.8%</title></rect>
-<text x="629.3" y="288" font-size="12" fill="var(--ink-2)">89.8%</text><text x="130" y="314" font-size="12" fill="var(--ink)" text-anchor="end">#12 (3b1677d)</text>
-<rect x="140" y="302" width="500.0" height="16" rx="3" fill="var(--good)"><title>#12 (3b1677d): 92.9%</title></rect>
-<text x="646.0" y="314" font-size="12" fill="var(--ink-2)">92.9%</text><text x="130" y="340" font-size="12" fill="var(--ink)" text-anchor="end">#13 (8a8b8ed)</text>
-<rect x="140" y="328" width="484.4" height="16" rx="3" fill="var(--good)"><title>#13 (8a8b8ed): 90%</title></rect>
-<text x="630.4" y="340" font-size="12" fill="var(--ink-2)">90%</text><text x="130" y="366" font-size="12" fill="var(--ink)" text-anchor="end">#14 (3504f8a)</text>
-<rect x="140" y="354" width="493.5" height="16" rx="3" fill="var(--good)"><title>#14 (3504f8a): 91.7%</title></rect>
-<text x="639.5" y="366" font-size="12" fill="var(--ink-2)">91.7%</text><text x="130" y="392" font-size="12" fill="var(--ink)" text-anchor="end">#15 (b5d8b10)</text>
-<rect x="140" y="380" width="491.9" height="16" rx="3" fill="var(--good)"><title>#15 (b5d8b10): 91.4%</title></rect>
-<text x="637.9" y="392" font-size="12" fill="var(--ink-2)">91.4%</text><text x="130" y="418" font-size="12" fill="var(--ink)" text-anchor="end">#16 (1b4646e)</text>
-<rect x="140" y="406" width="440.3" height="16" rx="3" fill="var(--good)"><title>#16 (1b4646e): 81.8%</title></rect>
-<text x="586.3" y="418" font-size="12" fill="var(--ink-2)">81.8%</text><text x="130" y="444" font-size="12" fill="var(--ink)" text-anchor="end">#17 (ece0341)</text>
-<rect x="140" y="432" width="441.9" height="16" rx="3" fill="var(--good)"><title>#17 (ece0341): 82.1%</title></rect>
-<text x="587.9" y="444" font-size="12" fill="var(--ink-2)">82.1%</text><text x="130" y="470" font-size="12" fill="var(--ink)" text-anchor="end">#18 (cce43f1)</text>
-<rect x="140" y="458" width="444.0" height="16" rx="3" fill="var(--good)"><title>#18 (cce43f1): 82.5%</title></rect>
-<text x="590.0" y="470" font-size="12" fill="var(--ink-2)">82.5%</text><text x="130" y="496" font-size="12" fill="var(--ink)" text-anchor="end">#19 (699ec9a)</text>
-<rect x="140" y="484" width="441.9" height="16" rx="3" fill="var(--good)"><title>#19 (699ec9a): 82.1%</title></rect>
-<text x="587.9" y="496" font-size="12" fill="var(--ink-2)">82.1%</text><text x="130" y="522" font-size="12" fill="var(--ink)" text-anchor="end">#20 (75eda96)</text>
-<rect x="140" y="510" width="445.6" height="16" rx="3" fill="var(--good)"><title>#20 (75eda96): 82.8%</title></rect>
+<text x="130" y="28" font-size="12" fill="var(--ink)" text-anchor="end">#2 (6b424bc)</text>
+<rect x="140" y="16" width="491.9" height="16" rx="3" fill="var(--good)"><title>#2 (6b424bc): 91.4%</title></rect>
+<text x="637.9" y="28" font-size="12" fill="var(--ink-2)">91.4%</text><text x="130" y="54" font-size="12" fill="var(--ink)" text-anchor="end">#3 (3a17b31)</text>
+<rect x="140" y="42" width="479.5" height="16" rx="3" fill="var(--good)"><title>#3 (3a17b31): 89.1%</title></rect>
+<text x="625.5" y="54" font-size="12" fill="var(--ink-2)">89.1%</text><text x="130" y="80" font-size="12" fill="var(--ink)" text-anchor="end">#4 (e6a951e)</text>
+<rect x="140" y="68" width="489.2" height="16" rx="3" fill="var(--good)"><title>#4 (e6a951e): 90.9%</title></rect>
+<text x="635.2" y="80" font-size="12" fill="var(--ink-2)">90.9%</text><text x="130" y="106" font-size="12" fill="var(--ink)" text-anchor="end">#5 (f2e9fbd)</text>
+<rect x="140" y="94" width="498.9" height="16" rx="3" fill="var(--good)"><title>#5 (f2e9fbd): 92.7%</title></rect>
+<text x="644.9" y="106" font-size="12" fill="var(--ink-2)">92.7%</text><text x="130" y="132" font-size="12" fill="var(--ink)" text-anchor="end">#6 (78d2e56)</text>
+<rect x="140" y="120" width="491.9" height="16" rx="3" fill="var(--good)"><title>#6 (78d2e56): 91.4%</title></rect>
+<text x="637.9" y="132" font-size="12" fill="var(--ink-2)">91.4%</text><text x="130" y="158" font-size="12" fill="var(--ink)" text-anchor="end">#7 (82200f0)</text>
+<rect x="140" y="146" width="480.6" height="16" rx="3" fill="var(--good)"><title>#7 (82200f0): 89.3%</title></rect>
+<text x="626.6" y="158" font-size="12" fill="var(--ink-2)">89.3%</text><text x="130" y="184" font-size="12" fill="var(--ink)" text-anchor="end">#8 (704fd5c)</text>
+<rect x="140" y="172" width="482.8" height="16" rx="3" fill="var(--good)"><title>#8 (704fd5c): 89.7%</title></rect>
+<text x="628.8" y="184" font-size="12" fill="var(--ink-2)">89.7%</text><text x="130" y="210" font-size="12" fill="var(--ink)" text-anchor="end">#9 (ef55b1a)</text>
+<rect x="140" y="198" width="493.5" height="16" rx="3" fill="var(--good)"><title>#9 (ef55b1a): 91.7%</title></rect>
+<text x="639.5" y="210" font-size="12" fill="var(--ink-2)">91.7%</text><text x="130" y="236" font-size="12" fill="var(--ink)" text-anchor="end">#10 (97903cf)</text>
+<rect x="140" y="224" width="490.3" height="16" rx="3" fill="var(--good)"><title>#10 (97903cf): 91.1%</title></rect>
+<text x="636.3" y="236" font-size="12" fill="var(--ink-2)">91.1%</text><text x="130" y="262" font-size="12" fill="var(--ink)" text-anchor="end">#11 (0480e9f)</text>
+<rect x="140" y="250" width="483.3" height="16" rx="3" fill="var(--good)"><title>#11 (0480e9f): 89.8%</title></rect>
+<text x="629.3" y="262" font-size="12" fill="var(--ink-2)">89.8%</text><text x="130" y="288" font-size="12" fill="var(--ink)" text-anchor="end">#12 (3b1677d)</text>
+<rect x="140" y="276" width="500.0" height="16" rx="3" fill="var(--good)"><title>#12 (3b1677d): 92.9%</title></rect>
+<text x="646.0" y="288" font-size="12" fill="var(--ink-2)">92.9%</text><text x="130" y="314" font-size="12" fill="var(--ink)" text-anchor="end">#13 (8a8b8ed)</text>
+<rect x="140" y="302" width="484.4" height="16" rx="3" fill="var(--good)"><title>#13 (8a8b8ed): 90%</title></rect>
+<text x="630.4" y="314" font-size="12" fill="var(--ink-2)">90%</text><text x="130" y="340" font-size="12" fill="var(--ink)" text-anchor="end">#14 (3504f8a)</text>
+<rect x="140" y="328" width="493.5" height="16" rx="3" fill="var(--good)"><title>#14 (3504f8a): 91.7%</title></rect>
+<text x="639.5" y="340" font-size="12" fill="var(--ink-2)">91.7%</text><text x="130" y="366" font-size="12" fill="var(--ink)" text-anchor="end">#15 (b5d8b10)</text>
+<rect x="140" y="354" width="491.9" height="16" rx="3" fill="var(--good)"><title>#15 (b5d8b10): 91.4%</title></rect>
+<text x="637.9" y="366" font-size="12" fill="var(--ink-2)">91.4%</text><text x="130" y="392" font-size="12" fill="var(--ink)" text-anchor="end">#16 (1b4646e)</text>
+<rect x="140" y="380" width="440.3" height="16" rx="3" fill="var(--good)"><title>#16 (1b4646e): 81.8%</title></rect>
+<text x="586.3" y="392" font-size="12" fill="var(--ink-2)">81.8%</text><text x="130" y="418" font-size="12" fill="var(--ink)" text-anchor="end">#17 (ece0341)</text>
+<rect x="140" y="406" width="441.9" height="16" rx="3" fill="var(--good)"><title>#17 (ece0341): 82.1%</title></rect>
+<text x="587.9" y="418" font-size="12" fill="var(--ink-2)">82.1%</text><text x="130" y="444" font-size="12" fill="var(--ink)" text-anchor="end">#18 (cce43f1)</text>
+<rect x="140" y="432" width="444.0" height="16" rx="3" fill="var(--good)"><title>#18 (cce43f1): 82.5%</title></rect>
+<text x="590.0" y="444" font-size="12" fill="var(--ink-2)">82.5%</text><text x="130" y="470" font-size="12" fill="var(--ink)" text-anchor="end">#19 (699ec9a)</text>
+<rect x="140" y="458" width="441.9" height="16" rx="3" fill="var(--good)"><title>#19 (699ec9a): 82.1%</title></rect>
+<text x="587.9" y="470" font-size="12" fill="var(--ink-2)">82.1%</text><text x="130" y="496" font-size="12" fill="var(--ink)" text-anchor="end">#20 (75eda96)</text>
+<rect x="140" y="484" width="445.6" height="16" rx="3" fill="var(--good)"><title>#20 (75eda96): 82.8%</title></rect>
+<text x="591.6" y="496" font-size="12" fill="var(--ink-2)">82.8%</text><text x="130" y="522" font-size="12" fill="var(--ink)" text-anchor="end">#21 (f69020e)</text>
+<rect x="140" y="510" width="445.6" height="16" rx="3" fill="var(--good)"><title>#21 (f69020e): 82.8%</title></rect>
 <text x="591.6" y="522" font-size="12" fill="var(--ink-2)">82.8%</text>
 </svg>
