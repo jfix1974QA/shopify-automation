@@ -12,6 +12,7 @@ Pass rate is over verified tests (excludes skipped and blocked).
 
 | Build | Date | Commit | Trigger | Executions | ✅ Passed | ❌ Failed | 🚧 Blocked | ⏭️ Skipped | Pass rate | Open defects | Time | Status |
 |---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| [#22](https://github.com/jfix1974QA/shopify-automation/actions/runs/46118763187) | 2026-11-28 06:54 UTC | [`48001f7`](https://github.com/jfix1974QA/shopify-automation/commit/48001f7) | schedule | 89 | 47 | 10 | 25 | 7 | 82.5% | 6 | 4m 9s | ❌ Failing |
 | [#21](https://github.com/jfix1974QA/shopify-automation/actions/runs/45955402383) | 2026-11-27 06:59 UTC | [`f69020e`](https://github.com/jfix1974QA/shopify-automation/commit/f69020e) | schedule | 89 | 48 | 10 | 24 | 7 | 82.8% | 6 | 4m 28s | ❌ Failing |
 | [#20](https://github.com/jfix1974QA/shopify-automation/actions/runs/45771807140) | 2026-11-26 06:57 UTC | [`75eda96`](https://github.com/jfix1974QA/shopify-automation/commit/75eda96) | schedule | 89 | 48 | 10 | 24 | 7 | 82.8% | 6 | 4m 17s | ❌ Failing |
 | [#19](https://github.com/jfix1974QA/shopify-automation/actions/runs/45564586233) | 2026-11-25 06:58 UTC | [`699ec9a`](https://github.com/jfix1974QA/shopify-automation/commit/699ec9a) | schedule | 89 | 46 | 10 | 26 | 7 | 82.1% | 6 | 4m 28s | ❌ Failing |
@@ -34,15 +35,15 @@ Pass rate is over verified tests (excludes skipped and blocked).
 | [#2](https://github.com/jfix1974QA/shopify-automation/actions/runs/42827257169) | 2026-11-10 13:44 UTC | [`6b424bc`](https://github.com/jfix1974QA/shopify-automation/commit/6b424bc) | workflow_dispatch | 89 | 53 | 5 | 24 | 7 | 91.4% | 6 | 12m 48s | ❌ Failing |
 | [#1](https://github.com/jfix1974QA/shopify-automation/actions/runs/42822779517) | 2026-11-10 13:14 UTC | [`2eaea0b`](https://github.com/jfix1974QA/shopify-automation/commit/2eaea0b) | push | 89 | 52 | 7 | 23 | 7 | 88.1% | 6 | 21m 25s | ❌ Failing |
 
-## Latest build by pack ([#21](https://github.com/jfix1974QA/shopify-automation/actions/runs/45955402383))
+## Latest build by pack ([#22](https://github.com/jfix1974QA/shopify-automation/actions/runs/46118763187))
 
 | Pack | Passed | Failed | Blocked | Skipped |
 |---|---:|---:|---:|---:|
 | ui | 7 | 4 | 0 | 1 |
 | ui-mobile | 7 | 3 | 0 | 2 |
-| functional | 16 | 0 | 8 | 4 |
+| functional | 13 | 0 | 11 | 4 |
 | non-functional | 12 | 3 | 0 | 0 |
-| api | 1 | 0 | 16 | 0 |
+| api | 3 | 0 | 14 | 0 |
 | regression | 5 | 0 | 0 | 0 |
 
 ---
